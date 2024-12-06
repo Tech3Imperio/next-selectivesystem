@@ -90,7 +90,7 @@ const AluminiumWindows = () => {
             >
               <Image
                 src={item.imgSrc}
-                alt=""
+                alt="heri Image"
                 className="w-full h-full object-cover"
               />
               <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
@@ -160,7 +160,8 @@ const AluminiumWindows = () => {
             >
               <Image
                 src={item.imgSrc}
-                alt=""
+                alt="hero image"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-[20px] shadow-md"
               />
             </div>
@@ -181,66 +182,6 @@ const AluminiumWindows = () => {
           </button>
         </div>
       </div>
-      {/* products all */}
-      {/* basic cards data */}
-      {/* <div
-        className="grid -ml-2 -mr-2 mb-5 px-5 grid-cols-2 py-14 md:ml-10 md:mr-14 lg:-ml-[0.5rem] lg:-mr-[0.5rem]  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-center"
-        data-aos="slide-up"
-        style={{ gap: "15px" }}
-      >
-        {AluminiumData.map((item, index) => (
-          <div
-            key={index}
-            className=" h-[25.5rem] w-[11.rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[18.2rem]"
-            // style={{
-            //   height: "32rem",
-            // }} // Fixed height for all cards
-          >
-            <div className="flex items-center justify-center h-[17rem] w-full">
-              <img
-                src={item.img}
-                title={item.title}
-                alt={item.alt}
-                className="h-[5.rem] w-[5rem] mt-1 mb-2 md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[10rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
-              />
-            </div>
-            <div className="p-2 flex-grow">
-              <h3 className="mt-2 text-xl md:text-2xl font-semibold">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-gray-600 text-sm md:text-base  harmony-regular">
-                {item.desc}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div> */}
-
-      {/* image hidden hover time */}
-      {/* <div className="grid grid-cols-1 gap-4 py-14 px-5 md:grid-cols-3 harmony-regular">
-        {AluminiumData.map((item, index) => (
-          <div
-            key={index}
-            className="relative group h-[20rem] w-[20rem] bg-white hover:border shadow hover:shadow-black rounded-lg cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out"
-          >
-            <div className="flex items-center justify-center h-full w-full overflow-hidden">
-              <img
-                src={item.img}
-                title={item.title}
-                alt={item.alt}
-                className="transition-transform duration-300 ease-in-out group-hover:scale-90 object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out"> */}
-      {/* <h3 className="text-xl font-semibold">{item.title}</h3> */}
-      {/* <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
-            </div>
-            <div className="absolute bottom-2 w-full px-4">
-              <p className="text-lg font-medium">{item.title}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
 
       {/* table data */}
       <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
@@ -254,6 +195,7 @@ const AluminiumWindows = () => {
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
+                loading="lazy"
                 className="transition-transform duration-700 ease-in-out group-hover:scale-90 object-cover"
               />
             </div>

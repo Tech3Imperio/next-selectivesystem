@@ -58,7 +58,7 @@ export const Footer = () => {
           <Link
             href="/"
             target="_blank"
-            className="text-black-300 hover:underline font-raleway font-semibold"
+            className="text-black-300 hover:underline poppins-extralight"
           >
             Charni Road, Mumbai - 400004
           </Link>
@@ -66,26 +66,26 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
         <div className="mb-2">
-          <h5 className="font-raleway text-xl">
+          <h5 className="poppins-regular text-xl">
             <b>Contact Us</b>
           </h5>
           <div className="mt-2">
-            <p className=" font-semibold">
-              <span className="font-raleway">Phone Number :</span> +91
+            <p className=" poppins-regular">
+              <span className="poppins-extralight">Phone Number :</span> +91
               9372593981
             </p>
-            <p className=" font-semibold">
-              <span className="font-raleway">Email : </span>
+            <p className="poppins-regular">
+              <span className="poppins-extralight">Email : </span>
               info@selectivesystems.in
             </p>
-            <p className=" font-semibold">
-              <span className="font-raleway">Website :</span>
+            <p className=" poppins-regular">
+              <span className="poppins-extralight">Website :</span>
               www.selectivesystems.in
             </p>
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start text-xl">
-          <h5 className="font-raleway">
+          <h5 className="poppins-regular">
             <b>Follow Us</b>
           </h5>
           <div className="flex justify-start gap-4 text-xl">
@@ -120,7 +120,7 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className=" bg-[#25D366] text-white harmony-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
+            className=" bg-[#25D366] text-white poppins-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
             id="button"
           >
             Subscribe
@@ -133,7 +133,7 @@ export const Footer = () => {
             Subscribed
           </div>
         </form>
-        <div className="text-center md:text-left mt-4 opacity-50 font-bold">
+        <div className="text-center md:text-left mt-4 opacity-50 poppins-extralight">
           <p>&copy; 2024 Selective-Systems</p>
         </div>
       </div>

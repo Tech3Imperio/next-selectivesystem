@@ -56,7 +56,7 @@ const OurProducts = () => {
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
-        className="text-3xl font-semibold text-primary harmony-regular text-left pb-10 uppercase md:text-2xl md:font-semibold lg:font-semibold lg:text-3xl xl:mb-4 xl:font-semibold"
+        className="text-3xl flex justify-center p-4 text-primary poppins-regular text-left pb-10 uppercase md:text-2xl md:font-semibold lg:text-3xl xl:mb-4"
       >
         Our Products
       </motion.h1>
@@ -76,10 +76,10 @@ const OurProducts = () => {
                 className="h-[12rem] w-[18.5rem] -mt-8 m-1 py-2 px-1 scale-110 transform-translate-y-6 rounded-3xl sm:h-[12rem] sm:w-[19rem] md:h-[14rem] md:w-[18rem] md:m-2 md:-mt-8 lg:h-[15rem] lg:w-[22.5rem] lg:m-4 lg:-mt-10 lg:rounded-[2rem] xl:h-[10.2rem] xl:w-[16rem] xl:-ml-0 xl:m-2 xl:-mt-7"
               />
               <div>
-                <h1 className="text-lg font-harmony mb-2 md:text-base md:mb-2 harmony-regular lg:text-lg lg:mb-2 xl:text-xl xl:mb-2">
+                <h1 className="text-lg mb-2 md:text-base md:mb-2 poppins-regular lg:text-lg lg:mb-2 xl:text-xl xl:mb-2">
                   {product.title}
                 </h1>
-                <h1 className="text-base harmony-light md:text-sm lg:text-sm xl:text-sm">
+                <h1 className="text-base text-center text-[#6d6e70] poppins-extralight md:text-sm lg:text-sm xl:text-xs">
                   {product.Description}
                 </h1>
               </div>

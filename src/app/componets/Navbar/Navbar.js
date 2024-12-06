@@ -496,7 +496,7 @@ export default function Navbar() {
                   </Link> */}
                   <Link
                     onClick={toggleSidebar}
-                    href="/ContactUs"
+                    href="/contact"
                     className="p-3 text-xl flex items-center justify-center"
                   >
                     Contact Us
@@ -532,7 +532,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-base hover:text-white flex items-center harmony-regular gap-1"
+                    className="px-3 py-2 rounded-md text-base hover:text-white flex items-center poppins-regular gap-1"
                   >
                     {item.name}
                     {item.name === "Products" && (
@@ -564,7 +564,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link href="/contact">
-                <button className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]">
+                <button className="border-none text-sm transition duration-700 bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]">
                   GET IN TOUCH
                 </button>
               </Link>

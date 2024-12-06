@@ -11,8 +11,8 @@ import OurProducts from "../OurProducts/OurProducts";
 const HeroImageSlider = () => {
   return (
     <main className="relative">
-      <section className="w-screen h-screen flex justify-center items-center">
-        <div className="container bg-gray-800 w-[22rem] h-[47rem] rounded-[3rem] grid gris-cols-1 md:grid-cols-2 relative  font-harmony overflow-hidden md:w-[46rem] md:h-[28rem] md:rounded-[5rem] lg:w-[60rem] lg:h-[31rem] lg:rounded-[5rem] xl:w-[91rem] xl:h-[32rem] xl:rounded-[6rem]">
+      <section className="w-screen min-h-screen p-4 flex justify-center items-center">
+        <div className="container bg-gray-800 rounded-[3rem] grid gris-cols-1 md:grid-cols-2 relative overflow-hidden md:w-[46rem] md:h-[28rem] md:rounded-[5rem] lg:w-[60rem] lg:h-[31rem] lg:rounded-[5rem] xl:w-[91rem] xl:h-[32rem] xl:rounded-[6rem]">
           {/* product info */}
           <div className="flex flex-col justify-center py-14 mb-4 md:py-0 relative z-10">
             <div className=" text-center md:text-left space-y-2 lg:max-w-[25rem]">
@@ -20,7 +20,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(0.6)}
                 initial="hidden"
                 animate="visible"
-                className="text-4xl text-primary harmony-regular  leading-relaxed xl:leading-loose md:ml-12 md:text-3xl md:-mb-[25px] lg:mb-2 lg:text-3xl lg:ml-14 lg:mt-12 xl:text-5xl xl:ml-36 xl:-mb-8"
+                className="text-4xl text-primary poppins-regular  leading-relaxed xl:leading-loose md:ml-12 md:text-3xl md:-mb-[25px] lg:mb-2 lg:text-3xl lg:ml-14 lg:mt-12 xl:text-5xl xl:ml-36 xl:-mb-8"
               >
                 Aluminum
               </motion.h1>
@@ -29,7 +29,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(0.9)}
                 initial="hidden"
                 animate="visible"
-                className="text-2xl px-4 text-secondary font-raleway md:ml-8 lg:ml-8 xl:-px-14 xl:ml-[8rem] xl:w-[29rem] xl:-px-14"
+                className="text-2xl px-4 text-gray-300  poppins-regular md:ml-8 lg:ml-8 xl:-px-14 xl:ml-[8rem] xl:w-[29rem] xl:-px-14"
               >
                 Modern Glass Windows{" "}
               </motion.h1>
@@ -45,7 +45,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(1.3)}
                 initial="hidden"
                 animate="visible"
-                className="text-gray-300 flex  m-[1.4rem]  text-[0.650rem] font-raleway md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
+                className="text-gray-300 flex text-justify m-[1.4rem] text-sm poppins-extralight md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
               >
                 Upgrade your home or office with modern glass windows featuring
                 durable aluminum frames. Our glass door windows are designed for
@@ -67,7 +67,7 @@ const HeroImageSlider = () => {
                   variants={FadeRight(1.5)}
                   initial="hidden"
                   animate="visible"
-                  className="flex justify-center font-raleway md:justify-centre border-none ml-10 text-[0.700rem] bg-[#14ff72cb] text-[#fff] w-[6rem] h-[2.5rem] mt-4 px-1 rounded-[2rem] cursor-pointer md:h-[3rem] md:w-[8rem] md:ml-12 md:mt-4 md:font-semibold lg:h-[3rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:ml-11 lg:mt-4 lg:text-sm xl:h-[3rem] xl:w-[8.4rem] xl:text-sm xl:ml-36 xl:py-4  hover:bg-[#e4e4e4] hover:text-[#000]"
+                  className="flex justify-center poppins-regular md:justify-centre border-none ml-10 text-[0.700rem] bg-[#14ff72cb] text-[#fff] w-[6rem] h-[2.5rem] mt-4 px-1 rounded-[2rem] cursor-pointer md:h-[3rem] md:w-[8rem] md:ml-12 md:mt-4 md:font-semibold lg:h-[3rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:ml-11 lg:mt-4 lg:text-sm xl:h-[3rem] xl:w-[8.4rem] xl:text-sm xl:ml-36 xl:py-4  hover:bg-[#e4e4e4] hover:text-[#000]"
                 >
                   <button>GET IN TOUCH</button>
                 </motion.div>
@@ -83,8 +83,8 @@ const HeroImageSlider = () => {
           >
             <Image
               src={circle}
-              alt="fdhytj"
-              className=" h-[18rem] w-[18rem] -mt-14 rounded-full md:mt-2 md:ml-28 md:h-[14rem] md:w-[14rem] lg:h-[20rem] lg:w-[20rem] xl:h-[23rem] xl:w-[23rem] "
+              alt="circle-image"
+              className=" h-[18rem] w-[18rem] pb-1 -mt-14 rounded-full md:mt-2 md:ml-28 md:h-[14rem] md:w-[14rem] lg:h-[20rem] lg:w-[20rem] xl:h-[23rem] xl:w-[23rem] "
             />
           </motion.div>
         </div>

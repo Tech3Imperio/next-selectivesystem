@@ -105,7 +105,7 @@ const Home = () => {
                 className="w-full h-full object-cover"
               />
               <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-              <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow harmony-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base">
+              <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base">
                 <motion.div
                   className="title text-[3em] font-bold leading-[1.3em]"
                   initial={{ opacity: 0, y: 20 }}
@@ -150,7 +150,7 @@ const Home = () => {
                 >
                   <Link href="/contact">
                     <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
+                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -172,6 +172,7 @@ const Home = () => {
               <Image
                 src={item.imgSrc}
                 alt="items something"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-[20px] shadow-md"
               />
             </div>
