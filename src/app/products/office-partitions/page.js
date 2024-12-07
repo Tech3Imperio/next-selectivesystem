@@ -2,7 +2,7 @@ import React from "react";
 import OfficePartitions from "./OfficePartitions";
 
 export const metadata = {
-  title: "Big Aluminium Windows: Office Partition | Selective-Systems",
+  title: "Selective System: Office Partition | Modern Office Glass Partition",
   description:
     "Elevate your office space with Glass Office Windows. Selective-System offers office partition with easy installation to enhance your office space. Get a Qoute Now!",
   keywords: [
@@ -37,11 +37,11 @@ export const metadata = {
     "office partition solutions",
   ],
   icon: "./favicon.ico",
-  content: "https://selectivesystems.in/queue-manager",
+  content: "https://selectivesystems.in/products/office-partitions",
   openGraph: {
     type: "website",
   },
-  url: "https://selectivesystems.in/queue-manager",
+  url: "https://selectivesystems.in/products/office-partitions",
 };
 
 export default function page() {

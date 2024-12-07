@@ -2,7 +2,8 @@ import React from "react";
 import InvisibleGrill from "./InvisibleGrill";
 
 export const metadata = {
-  title: "Invisible Grill | Stylish & Safe Balconies | Selective-Systems",
+  title:
+    "Selective System: Invisible Grill | Stylish & Safe Balconies | Selective-Systems",
   description:
     "Elevate your balcony space with Invisible Grill. Selective-System offers invisible grill with easy installation to enhance your balcony space. Get a Qoute Now!",
   keywords: [
@@ -27,7 +28,7 @@ export const metadata = {
     "safety grilles for homes",
     "invisible grills for apartments",
   ],
-  url: "https://selectivesystems.in/office-partitions",
+  url: "https://selectivesystems.in/products/invisiblegrill",
 };
 export default function page() {
   return <InvisibleGrill />;

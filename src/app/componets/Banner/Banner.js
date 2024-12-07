@@ -75,7 +75,7 @@ const Banner = () => {
               Quality Assurance ensures that every product and process
               consistently meets the highest standards.
             </motion.p>
-            {/* <motion.div 
+            {/* <motion.div
                     variants={FadeUp(3.1)}
                     initial="hidden"
                     animate="visible"
@@ -142,7 +142,7 @@ const Banner = () => {
                 top-rated results.
               </motion.p>
 
-              {/* <motion.div 
+              {/* <motion.div
                     variants={FadeUp(3.4)}
                     initial="hidden"
                     animate="visible"
@@ -209,7 +209,7 @@ const Banner = () => {
               Customer satisfaction drives success by ensuring tailored
               solutions and responsive support that exceed client expectations.
             </motion.p>
-            {/* <motion.div 
+            {/* <motion.div
                     variants={FadeUp(5.3)}
                     initial="hidden"
                     animate="visible"
@@ -277,7 +277,7 @@ const Banner = () => {
                 safeguarding products from damage throughout their journey.
               </motion.p>
 
-              {/* <motion.div 
+              {/* <motion.div
                     variants={FadeUp(3.4)}
                     initial="hidden"
                     animate="visible"
@@ -342,7 +342,7 @@ const Banner = () => {
               Consistent on-time delivery boosts reliability and customer
               confidence by ensuring prompt and efficient service.
             </motion.p>
-            {/* <motion.div 
+            {/* <motion.div
                     variants={FadeUp(3.1)}
                     initial="hidden"
                     animate="visible"
@@ -357,3 +357,176 @@ const Banner = () => {
 };
 
 export default Banner;
+
+// "use client";
+
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
+// import Image from "next/image";
+
+// const features = [
+//   {
+//     title: "Quality Assurance",
+//     description:
+//       "Quality Assurance is not merely a checkpoint but a relentless pursuit of excellence at every phase. Its the commitment to perfection and the precision in each step that defines true quality.",
+//   },
+//   {
+//     title: "End-to-End Service",
+//     description:
+//       "End-to-end service ensures seamless integration and execution from initial concept to final delivery. By providing comprehensive support at every stage, it enhances efficiency and maintains high-quality standards throughout the entire process.",
+//   },
+//   {
+//     title: "Customer Satisfaction",
+//     description:
+//       "Customer satisfaction is the cornerstone of exceptional service, achieved through tailored solutions and responsive support. By prioritizing client needs and continuously improving based on feedback, businesses can foster long-term loyalty and exceed expectations.",
+//   },
+//   {
+//     title: "Robust Packaging",
+//     description:
+//       "Robust packaging is essential for ensuring the safety and integrity of products during transit and storage. With advanced materials and design techniques, it provides superior protection, reducing the risk of damage and enhancing overall product quality.",
+//   },
+//   {
+//     title: "On-Time Delivery",
+//     description:
+//       "On-time delivery is crucial for maintaining customer satisfaction and trust. By adhering to strict timelines and optimizing logistics, businesses ensure that products and services are delivered promptly and efficiently.",
+//   },
+// ];
+
+// const services = [
+//   "Stylish Aluminium Windows",
+//   "Glass Railing Systems",
+//   "Invisible Grill",
+//   "Door Seals",
+//   "Modern Office Glass Partition",
+// ];
+
+// // const testimonials = [
+// //   {
+// //     author: "John Doe",
+// //     company: "Tech Innovators",
+// //     text: "Selective Systems has transformed our operations with their cutting-edge solutions.",
+// //   },
+// //   {
+// //     author: "Jane Smith",
+// //     company: "Global Enterprises",
+// //     text: "The level of professionalism and expertise at Selective Systems is unmatched.",
+// //   },
+// //   {
+// //     author: "Mike Johnson",
+// //     company: "Future Corp",
+// //     text: "We ve seen a significant boost in efficiency since partnering with Selective Systems.",
+// //   },
+// // ];
+
+// const Section = ({ title, children }) => (
+//   <section className="py-16 px-4">
+//     <div className="container mx-auto">
+//       <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+//         {title}
+//       </h2>
+//       {children}
+//     </div>
+//   </section>
+// );
+
+// const FeatureCard = ({ feature, index }) => {
+//   const [isHovered, setIsHovered] = useState(true);
+
+//   return (
+//     <motion.div
+//       className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out h-full"
+//       whileHover={{ scale: 1.05 }}
+//       onHoverStart={() => setIsHovered(true)}
+//       onHoverEnd={() => setIsHovered(true)}
+//     >
+//       <div className="p-6 h-full flex flex-col">
+//         <h3 className="text-2xl  drop-shadow-lg mb-4 poppins-extralight">
+//           {feature.title}
+//         </h3>
+//         <motion.p
+//           className="text-gray-600 flex-grow"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: isHovered ? 1 : 0 }}
+//           transition={{ duration: 0.3 }}
+//         >
+//           {feature.description}
+//         </motion.p>
+//       </div>
+//     </motion.div>
+//   );
+// };
+
+// const ServiceItem = ({ service }) => (
+//   <motion.li
+//     className="bg-gray-800 text-gray-300 rounded-full px-4 py-2 text-sm poppins-semibold"
+//     whileHover={{ scale: 1.1 }}
+//   >
+//     <Image src="" />
+//     {service}
+//   </motion.li>
+// );
+
+// // const TestimonialCard = ({ testimonial }) => (
+// //   <motion.div
+// //     className="bg-gray-100 rounded-lg p-6 shadow-md"
+// //     whileHover={{ y: -5 }}
+// //   >
+// //     <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
+// //     <p className="text-gray-900 font-semibold">{testimonial.author}</p>
+// //     <p className="text-gray-600 text-sm">{testimonial.company}</p>
+// //   </motion.div>
+// // );
+
+// const Banner = () => {
+//   return (
+//     <div className="bg-gray-50">
+//       <Section>
+//         <h3 className="text-primary flex justify-center text-5xl poppins-semibold items-center m-8 drop-shadow-lg pb-4">
+//           Why Selective Systems?
+//         </h3>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {features.map((feature, index) => (
+//             <FeatureCard key={index} feature={feature} index={index} />
+//           ))}
+//         </div>
+//       </Section>
+
+//       <Section>
+//         <h3 className="text-primary flex justify-center items-center text-4xl poppins-semibold m-8 drop-shadow-lg">
+//           Our Services
+//         </h3>
+//         <ul className="flex flex-wrap justify-center gap-4">
+//           {services.map((service, index) => (
+//             <ServiceItem key={index} service={service} />
+//           ))}
+//         </ul>
+//       </Section>
+
+//       {/* <Section title="What Our Clients Say">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {testimonials.map((testimonial, index) => (
+//             <TestimonialCard key={index} testimonial={testimonial} />
+//           ))}
+//         </div>
+//       </Section> */}
+
+//       <Section title="Ready to Get Started?">
+//         <div className="text-center">
+//           <p className="text-xl text-gray-700 mb-8">
+//             Experience the Selective Systems difference today. Let's build
+//             something amazing together.
+//           </p>
+//           <motion.button
+//             className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg"
+//             whileHover={{ scale: 1.05 }}
+//             whileTap={{ scale: 0.95 }}
+//           >
+//             Contact Us
+//           </motion.button>
+//         </div>
+//       </Section>
+//     </div>
+//   );
+// };
+
+// export default Banner;
