@@ -428,7 +428,7 @@ export default function Navbar() {
                       <ul className="flex flex-col justify-around h-auto w-full">
                         <Link
                           onClick={toggleSidebar}
-                          href="/products/AluminiumWindows"
+                          href="/products/aluminium-windows"
                           className="p-2 text-[1.25rem] whitespace-nowrap flex items-center justify-center"
                         >
                           Aluminium Windows
@@ -456,29 +456,29 @@ export default function Navbar() {
                         </Link>
                         <Link
                           onClick={toggleSidebar}
-                          href="/products/office-partition"
+                          href="/products/office-partitions"
                           className="p-2 text-[1.25rem] whitespace-nowrap flex items-center justify-center"
                         >
                           Office Partition
                         </Link>
                         <Link
                           onClick={toggleSidebar}
-                          href="/products/bathroom-partition"
+                          href="/products/bathroom-partitions"
                           className="p-2 text-[1.25rem] flex items-center justify-center"
                         >
                           Bathroom Partition
                         </Link>
-                        <Link
+                        {/* <Link
                           onClick={toggleSidebar}
                           href="/products/ssWireRope"
                           className="p-2 text-[1.25rem] flex items-center justify-center"
                         >
                           Stainless Steel Wire Rope
-                        </Link>
+                        </Link> */}
 
                         <Link
                           onClick={toggleSidebar}
-                          href="/products/ssQueueManager"
+                          href="/products/queue-manager"
                           className="p-2 text-[1.25rem] flex items-center justify-center"
                         >
                           Queue Manager
