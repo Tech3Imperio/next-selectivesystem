@@ -1,12 +1,11 @@
-import AluminiumWindows from "./AluminiumWindows";
+import AluminiumWindows from "../../componets/Aluminium/AluminiumWindows";
 
 export const metadata = {
   title:
-    "Selective System: Leading Aluminium Windows | Modern Aluminium Windows And Doors",
+    "Selective System: Leading Aluminium Windows | Modern Aluminium Windows and Doors",
   description:
-    "Selective Syatem aluminium company which manufactures aluminum windows and doors in India. Explore the best-in-class Indian aluminum products for your modern windows and doors. Get a Quote Now!",
+    "Selective System, based in Mumbai, offers industry-leading aluminium windows and doors. With cutting-edge technology, our products are energy-efficient, stylish, and globally recognized, serving markets like the UAE, Tajikistan, and more.",
   keywords: [
-    "Aluminium windows",
     "Aluminium windows",
     "Aluminium window frames",
     "Energy-efficient aluminium windows",
@@ -20,6 +19,11 @@ export const metadata = {
     "Affordable aluminium windows",
     "Custom aluminium windows",
     "Aluminium window contractors",
+    "Aluminium windows UAE",
+    "Aluminium windows Dubai",
+    "Aluminium windows Tajikistan",
+    "Mumbai aluminium windows",
+    "Global aluminium window suppliers",
   ],
   url: "https://selectivesystems.in/products/aluminium-windows",
 };
