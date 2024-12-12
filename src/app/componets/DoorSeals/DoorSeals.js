@@ -1,23 +1,26 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-// import SelectingSystemDesktop from "../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens above 1024px
-// import SelectingSystemMobile from "../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens up to 1024px
-import DoorData from "../../Data/DoorSeals/Doorseals";
-import Image from "next/image";
+
+import DoorSealProduct from "./page";
 
 const DoorSeals = () => {
   const videoRef = useRef(null);
-  const [isMobile, setIsMobile] = useState();
+
+  // Initially set to false, will update based on screen size
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 1024); // Set mobile flag based on screen width <= 1024px
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-    };
+    // Attach the resize listener
     window.addEventListener("resize", handleResize);
 
     // Initial check
     handleResize();
 
+    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -49,7 +52,6 @@ const DoorSeals = () => {
       }
     };
   }, []);
-
   return (
     <main className="relative">
       <div className="bg-gray-100 flex items-center justify-center h-screen">
@@ -69,12 +71,14 @@ const DoorSeals = () => {
             }
             type="video/mp4"
           />
-          Your browser does not support the video tag.
+          {/* Your browser does not support the video tag. */}
         </video>
       </div>
 
       {/* product start */}
-      <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
+      <DoorSealProduct />
+
+      {/* <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
         {DoorData.map((item, index) => (
           <div
             key={index}
@@ -135,7 +139,7 @@ const DoorSeals = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </main>
   );
 };

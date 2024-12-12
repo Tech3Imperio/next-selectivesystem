@@ -328,11 +328,137 @@
 
 // export default Banner;
 
+// "use client";
+
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// const features = [
+//   {
+//     title: "Quality Assurance",
+//     description:
+//       "Quality Assurance is not merely a checkpoint but a relentless pursuit of excellence at every phase. It's the commitment to perfection and the precision in each step that defines true quality.",
+//   },
+//   {
+//     title: "End-to-End Service",
+//     description:
+//       "End-to-end service ensures seamless integration and execution from initial concept to final delivery. By providing comprehensive support at every stage, it enhances efficiency and maintains high-quality standards throughout the entire process.",
+//   },
+//   {
+//     title: "Customer Satisfaction",
+//     description:
+//       "Customer satisfaction is the cornerstone of exceptional service, achieved through tailored solutions and responsive support. By prioritizing client needs and continuously improving based on feedback, businesses can foster long-term loyalty and exceed expectations.",
+//   },
+//   {
+//     title: "Robust Packaging",
+//     description:
+//       "Robust packaging is essential for ensuring the safety and integrity of products during transit and storage. With advanced materials and design techniques, it provides superior protection, reducing the risk of damage and enhancing overall product quality.",
+//   },
+//   {
+//     title: "On-Time Delivery",
+//     description:
+//       "On-time delivery is crucial for maintaining customer satisfaction and trust. By adhering to strict timelines and optimizing logistics, businesses ensure that products and services are delivered promptly and efficiently.",
+//   },
+// ];
+
+// const services = [
+//   {
+//     name: "Aluminium Windows",
+//     description:
+//       "Experience superior durability and modern elegance with our Aluminium Windows, perfect for any contemporary architecture.",
+//   },
+//   {
+//     name: "Glass Railing Systems",
+//     description:
+//       "Enhance your space with our Glass Railing systems, offering clarity, style, and safety in one sophisticated package.",
+//   },
+//   {
+//     name: "Aluminium Glass Office Partition",
+//     description:
+//       "Create modern and efficient workspaces with our Office Partition solutions, designed for flexibility and aesthetics.",
+//   },
+//   {
+//     name: "Stainless Steel Queue Manager",
+//     description:
+//       "Ensure smooth crowd control with our robust Queue Manager Stainless Steel, combining strength and sleek design.",
+//   },
+// ];
+
+// const Section = ({ title, children }) => (
+//   <section className="py-16 px-4">
+//     <div className="container mx-auto">
+//       <motion.h2
+//         className="text-3xl md:text-4xl font-bold text-center text-primary  drop-shadow-lg mb-12"
+//         initial={{ opacity: 0, y: -50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.5 }}
+//       >
+//         {title}
+//       </motion.h2>
+//       {children}
+//     </div>
+//   </section>
+// );
+
+// const FeatureCard = ({ feature }) => (
+//   <motion.div
+//     className="bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
+//     initial={{ opacity: 0, y: 50 }}
+//     animate={{ opacity: 1, y: 0 }}
+//     transition={{ duration: 0.5 }}
+//   >
+//     <h3 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+//       {feature.title}
+//     </h3>
+//     <p className="text-gray-400 poppins-extralight">{feature.description}</p>
+//   </motion.div>
+// );
+
+// const ServiceCard = ({ service }) => (
+//   <motion.div
+//     className="bg-gradient-to-br from-green-50 to-green-300 p-6 rounded-3xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
+//     initial={{ opacity: 0, y: 50 }}
+//     animate={{ opacity: 1, y: 0 }}
+//     transition={{ duration: 0.5 }}
+//   >
+//     <h3 className="text-2xl poppins-semibold text-gray-700 drop-shadow-lg mb-2">
+//       {service.name}
+//     </h3>
+//     <p className="text-gray-600 poppins-extralight">{service.description}</p>
+//   </motion.div>
+// );
+
+// const Banner = () => {
+//   return (
+//     <div className="bg-gray-800">
+//       <Section title="Our Services">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:p-8">
+//           {services.map((service, index) => (
+//             <ServiceCard key={index} service={service} />
+//           ))}
+//         </div>
+//       </Section>
+
+//       <Section title="Why Selective Systems?">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:p-8">
+//           {features.map((feature, index) => (
+//             <FeatureCard key={index} feature={feature} />
+//           ))}
+//         </div>
+//       </Section>
+//     </div>
+//   );
+// };
+
+// export default Banner;
+
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
+import { FadeLeft, FadeUp } from "../utility/animation";
 
+// Features and services data
 const features = [
   {
     title: "Quality Assurance",
@@ -384,14 +510,16 @@ const services = [
   },
 ];
 
+// Section component for wrapping and animating sections
 const Section = ({ title, children }) => (
-  <section className="py-16 px-4">
+  <section className="py-16 px-4 overflow-hidden">
     <div className="container mx-auto">
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-center text-primary  drop-shadow-lg mb-12"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        className="text-3xl md:text-4xl font-bold text-center text-primary drop-shadow-lg mb-12"
+        initial={{ opacity: 0, y: -50 }} // Initial animation state
+        whileInView={{ opacity: 1, y: 0 }} // Trigger animation when in view
+        viewport={{ once: false }} // Animation triggers every time the section comes into view
+        transition={{ duration: 0.6, ease: "easeInOut" }} // Transition for smooth effect
       >
         {title}
       </motion.h2>
@@ -400,12 +528,15 @@ const Section = ({ title, children }) => (
   </section>
 );
 
-const FeatureCard = ({ feature }) => (
+// Updated FeatureCard with FadeUp Animation and `whileInView`
+const FeatureCard = ({ feature, delay }) => (
   <motion.div
-    className="bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
+    className="bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-xl"
+    variants={FadeUp(delay)} // Apply FadeUp animation from your custom file
+    initial="hidden" // Animation start state
+    whileInView="visible" // Trigger animation when the element comes into view
+    viewport={{ once: false }} // Ensure animation triggers every time it enters the view
+    transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
     <h3 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
       {feature.title}
@@ -414,12 +545,15 @@ const FeatureCard = ({ feature }) => (
   </motion.div>
 );
 
-const ServiceCard = ({ service }) => (
+// Updated ServiceCard with FadeLeft Animation and `whileInView`
+const ServiceCard = ({ service, delay }) => (
   <motion.div
-    className="bg-gradient-to-br from-green-50 to-green-300 p-6 rounded-3xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
+    className="bg-gradient-to-br from-green-50 to-green-300 p-6 rounded-3xl shadow-lg hover:shadow-xl"
+    variants={FadeLeft(delay)} // Apply FadeLeft animation from your custom file
+    initial="hidden" // Animation start state
+    whileInView="visible" // Trigger animation when the element comes into view
+    viewport={{ once: false }} // Ensure animation triggers every time it enters the view
+    transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
     <h3 className="text-2xl poppins-semibold text-gray-700 drop-shadow-lg mb-2">
       {service.name}
@@ -431,18 +565,20 @@ const ServiceCard = ({ service }) => (
 const Banner = () => {
   return (
     <div className="bg-gray-800">
+      {/* Services Section */}
       <Section title="Our Services">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:p-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+            <ServiceCard key={index} service={service} delay={index * 0.2} />
           ))}
         </div>
       </Section>
 
+      {/* Features Section */}
       <Section title="Why Selective Systems?">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:p-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} feature={feature} />
+            <FeatureCard key={index} feature={feature} delay={index * 0.2} />
           ))}
         </div>
       </Section>

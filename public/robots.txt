@@ -1,0 +1,6 @@
+# Allow all web crawlers (search engine bots) to access the site
+User-agent: *
+Disallow:
+
+# Optional: Specify the location of your sitemap
+Sitemap: https://selectivesystems.in/sitemap.xml

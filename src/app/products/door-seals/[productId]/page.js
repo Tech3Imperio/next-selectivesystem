@@ -4,29 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, usePathname } from "next/navigation";
 import { useState } from "react";
-import windows1 from "../../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
-import windows2 from "../../../assets/AluminiumProduct/AluminiumWindows/windows2.webp";
-import windows3 from "../../../assets/AluminiumProduct/AluminiumWindows/windows3.webp";
-import windows4 from "../../../assets/AluminiumProduct/AluminiumWindows/windows4.webp";
-// import windows5 from "../../../assets/AluminiumProduct/AluminiumWindows/windows5.webp";
-import windows6 from "../../../assets/AluminiumProduct/AluminiumWindows/windows6.webp";
+import Doorseals1 from "../../../assets/DoorSeals/Doorseals1.png";
+import Doorseal2 from "../../../assets/DoorSeals/Doorseal2.png";
+import Doorseal3 from "../../../assets/DoorSeals/Doorseal3.png";
+import Doorseal4 from "../../../assets/DoorSeals/Doorseal4.png";
+// import Doorseal5 from "../../assets/DoorSeals/Doorseal5.png";
+import Doorseal6 from "../../../assets/DoorSeals/Doorseal6.png";
 import { IoChevronUp, IoChevronDown } from "react-icons/io5";
 //Gallery
 import singleFixedWindowFrame from "../../../assets/Gallery/aluminiumWndows/SingleFixedwindow.png";
 import AccessorisFixedWindows from "../../../assets/Gallery/aluminiumWndows/aluminium-fixed-window.jpg";
-import awningwindows from "../../../assets/Gallery/aluminiumWndows/AwningWindows/awning-window.png";
-import awningwindowsBlack from "../../../assets/Gallery/aluminiumWndows/AwningWindows/awning-windowBlack.png";
-import slidingWindowsBlack from "../../../assets/Gallery/aluminiumWndows/blackSliding/Sliding-Window.jpg";
-import slidingWindowsCross from "../../../assets/Gallery/aluminiumWndows/blackSliding/aluminium-Sliding.jpeg";
+import monutingBracketdoor from "../../../assets/Gallery/DoorSeals/mounting-brackets/mountingBrackdDoor.jpg";
+import metalAccessoris from "../../../assets/Gallery/DoorSeals/mounting-brackets/metalltueren.jpg";
+import screw from "../../../assets/Gallery/DoorSeals/mounting-brackets/screw.jpg";
+import threshold from "../../../assets/Gallery/DoorSeals/threshold/sealingpad.jpg";
+import exampleImg from "../../../assets/Gallery/DoorSeals/threshold/rubber.jpg";
+import blackrubber from "../../../assets/Gallery/DoorSeals/threshold/Blackrubber.jpg";
 import casementAluminumWindows from "../../../assets/Gallery/aluminiumWndows/casementWindows/aluminium-casement-window.jpeg";
 import GlassCornerAluminumWindows from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/Glass-to-Glass-Corner-Window.jpg";
 import glassCorner from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/wallGlassCorner.jpg";
 
-const AluminiumProductsPanel = [
+const DoorSealProductsPanel = [
   {
-    id: "fixed-aluminium",
-    images: [windows1, singleFixedWindowFrame, AccessorisFixedWindows],
-    ProductName: "Modern Aluminium Fixed Window",
+    id: 1,
+    images: [Doorseals1, singleFixedWindowFrame, AccessorisFixedWindows],
+    ProductName: "Flat Insert Profile",
     description:
       "Aluminium fixed windows are renowned for their sleek, modern design and long-lasting durability. These energy-efficient windows provide excellent thermal insulation, making them ideal for both modern residential and commercial use. Built to withstand harsh weather conditions, they offer superior resistance to corrosion, ensuring low maintenance and enhanced performance for years.",
     features: [
@@ -95,106 +97,126 @@ const AluminiumProductsPanel = [
     ],
   },
   {
-    id: "awningaluminium",
-    images: [windows2, awningwindows, awningwindowsBlack],
-    ProductName: "Modern Aluminium Awning Windows",
+    id: 2,
+    images: [Doorseal2, monutingBracketdoor, metalAccessoris, screw],
+    ProductName: "Mounting brackets",
     description:
-      "Modern Aluminium Awning Windows are perfect for spaces that require ventilation while protecting interiors from rain. Their top-hinged design allows for easy airflow even during bad weather, making them ideal for kitchens, bathrooms, and high-rise buildings. These windows are also highly durable, energy-efficient, and offer enhanced security, making them a popular choice for both residential and commercial applications.",
+      "At Selective Systems, we provide high-quality solutions for wooden door installations. Our Planet Assembly Set TW/US is the ideal choice for ensuring a secure, efficient, and professional installation. This comprehensive kit is designed to deliver both durability and performance for residential and commercial use.",
     features: [
-      "Energy-Efficient: Keeps interiors cool in summer and warm in winter.",
-      "Durable & Weather-Resistant: Withstands extreme weather.",
-      "Low Maintenance: Easy to clean and requires minimal upkeep.",
+      "48 dB soundproofing and smoke protection",
+      "Automatic adjustment for sloped or uneven floors",
+      "Up to 20 mm adjustable seal height",
       "Stylish Design: Sleek and modern, enhancing property aesthetics.",
-      "Customizable: Available in various sizes and finishes to suit your need.",
+      "Durable aluminum profile designed for long-term use",
     ],
     dimensions: [
       {
-        name: "Frame Depth",
-        value:
-          "101.6 mm., 120 mm (2 tracks sliding), 178 mm (3 tracks sliding)",
+        name: "Groove size",
+        value: "	8,3 mm wide and 30.5 to 40 mm deep",
       },
-      { name: "Maximum Height of Window", value: "3,000 mm" },
-      { name: "Height of Sill", value: "50 mm" },
-      { name: "Glass Thickness", value: "Up to 31.5 mm" },
+      {
+        name: "Seal profile",
+        value:
+          "high-quality silicone or high-quality self-extinguishing silicone",
+      },
+      {
+        name: "Frame protector plate",
+        value: "stainless steel, for knocking in, 20 x 20 mm",
+      },
+      { name: "Max. drop height", value: "20 mm" },
+      { name: "Profile material", value: "aluminium " },
     ],
     longDescription: {
       title:
-        "Selective Systems proudly presents our Aluminium Awning Windows, the perfect blend of functionality, style, and durability for modern homes, offices, and commercial spaces. Designed with precision, these windows allow for superior ventilation while offering protection from the elements, making them ideal for areas that need both fresh air and weather resistance. Whether in Mumbai, Dubai, or Tajikistan, our aluminium awning windows are built to withstand harsh conditions and elevate the aesthetics of any building.",
+        "Our Automatic Drop-Down Seal from Selective Systems is designed for doors requiring superior soundproofing, smoke protection, and energy efficiency. Crafted from premium aluminum, this high-performance seal automatically adapts to uneven floor surfaces and provides a seal height of up to 20 mm. The silicone lip ensures a tight seal, effectively keeping out drafts, smoke, and noise, ensuring a comfortable and secure indoor environment. The robust aluminum profile (8 x 30 mm) ensures durability and long-lasting performance, making it perfect for both residential and commercial spaces.",
       features: [
         {
-          name: "Sleek & Modern Design",
+          name: "Premium Aluminum Construction",
           description:
-            "With their top-hinged design, aluminium awning windows offer a contemporary look that complements any architectural style. Their clean, minimal frame and outward opening mechanism provide a sleek aesthetic, making them a popular choice for both residential and commercial buildings that require a modern touch.",
+            "Made from high-quality aluminum, our Automatic Drop-Down Seal offers superior strength and corrosion resistance. This premium aluminum profile (8 x 30 mm) ensures durability and long-term performance, making it ideal for homes, offices, and commercial spaces that require a reliable door sealing solution.",
         },
         {
-          name: "Weather Resistance & Durability",
+          name: "Superior Soundproofing & Smoke Protection",
           description:
-            "Crafted from high-quality aluminium, these windows are resistant to corrosion, rust, and extreme weather conditions. Whether it’s heavy rain in Mumbai or the intense sun of Dubai, our aluminium awning windows are designed to endure the elements, ensuring long-lasting performance and protection.",
+            "Our Automatic Drop-Down Seal is designed to provide 48 dB soundproofing and smoke protection, offering a peaceful and safe indoor environment. The advanced sealing technology ensures that drafts, smoke, and unwanted noise are effectively blocked, making it perfect for sound-sensitive areas and smoke-free spaces.",
         },
         {
-          name: "Superior Ventilation & Airflow",
+          name: "Automatic Floor Adjustment",
           description:
-            "The top-hinged design of the aluminium awning window allows for excellent ventilation even during rainy weather. Open them at a slight angle to let in fresh air while keeping rain and debris out. Ideal for kitchens, bathrooms, and high-rise buildings, these windows provide constant airflow without compromising on protection.",
+            "The innovative design of the Automatic Drop-Down Seal allows for automatic floor adjustment, compensating for sloping or uneven floors. With an adjustable seal height of up to 20 mm, it ensures a perfect fit and maintains a tight seal, even in challenging environments.",
         },
         {
-          name: "Energy Efficiency",
+          name: "Energy-Efficient & Eco-Friendly",
           description:
-            "Engineered with energy efficiency in mind, our aluminium awning windows offer excellent insulation, helping to maintain comfortable indoor temperatures throughout the year. They keep interiors cooler in the summer and warmer in the winter, contributing to energy savings and reducing reliance on heating and cooling systems.",
+            "Designed with energy efficiency in mind, our door seals contribute to reducing energy consumption by keeping indoor temperatures stable. This seal helps prevent drafts and air leakage, allowing you to maintain a comfortable environment and reduce heating and cooling costs. The energy-efficient design also supports sustainability, making it an eco-friendly solution for both residential and commercial buildings.",
         },
         {
-          name: "Low Maintenance",
+          name: "Durable and Low Maintenance",
           description:
-            "Aluminium is naturally resistant to weathering and corrosion, meaning our awning windows require minimal upkeep. A quick cleaning with mild soap and water is all that’s needed to maintain their sleek appearance. These low-maintenance windows are perfect for urban areas like Mumbai, Dubai, and Tajikistan, where dust and pollution can accumulate.",
+            "Our premium aluminum door seals require minimal maintenance. The high-quality materials are resistant to wear and weathering, ensuring long-lasting performance without the need for frequent repairs or replacements. A simple cleaning routine will keep the seal functioning optimally for years.",
         },
         {
-          name: "Customizable Options",
+          name: "Customizable Fit for All Doors",
           description:
-            "Our aluminium awning windows come in a variety of sizes, finishes, and glass options, allowing for full customization to suit your specific needs. Whether you prefer double-glazed glass for improved insulation or a certain frame finish to match your design aesthetic, we provide tailored solutions to meet your requirements.",
+            "This automatic drop-down seal is available in customizable sizes and configurations to suit a wide range of door types, including wooden, metal, and glass doors. Tailor the seal’s dimensions to meet your specific requirements, ensuring the perfect fit and enhanced protection for your space.",
         },
         {
-          name: "Protection from the Elements",
+          name: "Versatile Application for Residential & Commercial Use",
           description:
-            "These windows are designed to protect your interiors from rain, dust, and wind, even when fully open. The hinged design ensures that water does not enter, making them perfect for areas that experience frequent rainfall or strong winds. Whether in a coastal environment or a monsoon-prone region, aluminium awning windows provide a reliable, weather-resistant solution.",
+            "Whether you're sealing doors in a residential property, commercial building, or industrial facility, our Automatic Drop-Down Seal offers versatile performance. Perfect for offices, apartments, hotels, and other high-traffic areas, it enhances comfort and protection in any setting.",
+        },
+        {
+          name: "Sleek and Discreet Design",
+          description:
+            "With a sleek and modern design, our Automatic Drop-Down Seal blends seamlessly with your door frame, offering an unobtrusive look while providing exceptional performance. Its minimalistic style makes it suitable for both contemporary and traditional door designs.",
         },
       ],
     },
+
     specifications: [
-      { name: "Material", value: "High-grade aluminium" },
-      { name: "Noise Insulation", value: "JIS: 25 dB" },
-      { name: "Water Tightness", value: "ASTM E330: 300 Pa" },
+      { name: "Profile size ", value: "	8 x 30 mm" },
+      {
+        name: "Sound absorption value",
+        value: "up to 48 dB at ground air 7 mm",
+      },
+      {
+        name: "Drop height adjustment",
+        value: "on release pin with 3 mm Allen key",
+      },
       { name: "Wind Pressure Resistance", value: "ASTM E330: 2000 Pa" },
-      { name: "Air Tightness", value: "ASTM E283: 10.7m3 / h·m2 " },
     ],
     installation:
-      "The installation of Selective Systems' Aluminium Awning Windows is designed to provide exceptional performance, durability, and seamless integration with your property. For the best results, we recommend professional installation by our experienced team. We ensure a precise fit, providing optimal weather sealing and thermal insulation. Whether you're in Mumbai, Dubai, Tajikistan, or beyond, our installation services are tailored to meet the specific needs of your home or office. Proper installation enhances the energy efficiency, security, and functionality of your aluminium awning windows, allowing you to enjoy fresh air and protection from the elements for years to come. Trust Selective Systems for flawless installation that enhances both the aesthetics and performance of your property. Contact us today for expert window installation services and secure the long-term value of your investment.",
+      "Enhance the stability and durability of your doors with Selective Systems' Mounting Brackets. Designed for all types of doors, these premium mounting brackets ensure easy installation and a secure fit. Made with high-quality stainless steel, they provide superior strength and support for both residential and commercial doors. Whether you’re in Mumbai, Delhi, Bangalore, or beyond, our brackets offer long-lasting performance, ensuring your doors stay firmly in place. Perfect for wooden, aluminum, and other door types, these mounting brackets help optimize door function and security. Upgrade your doors today with Selective Systems' Mounting Brackets for a reliable, professional finish.",
     maintenance: [
-      "At Selective Systems, we believe that maintaining our premium aluminium awning windows is simple and hassle-free. Designed for modern homes, offices, and commercial spaces, these energy-efficient windows are built to withstand harsh weather conditions and the test of time. With minimal upkeep required, they are the perfect choice for properties in cities like Mumbai, Delhi, Bangalore, Chennai, Hyderabad, and other regions of India.",
-      "Routine maintenance involves just a few easy steps: clean the frames and glass with mild soap and water to maintain their sleek, stylish appearance. To ensure your aluminium awning windows continue performing at their best, it's important to periodically check the window seals for wear and tear and remove any debris from the tracks. This simple maintenance helps retain their weather-resistant and insulation properties, ensuring your interiors stay cool in summer and warm in winter.",
-      "Thanks to their durable construction and low-maintenance design, our windows provide long-lasting performance, saving you time and effort while enhancing your property's aesthetic appeal. Whether you're in Mumbai, Delhi, Chennai, Bangalore, or any other city, Selective Systems' aluminium awning windows offer superior durability and functionality, along with customizable solutions tailored to your needs.",
-      "By following these easy maintenance tips, you can enjoy the beauty, energy efficiency, and reliable performance of your Selective Systems windows for many years to come, ensuring they continue to perform well in all weather conditions.",
+      "To ensure the long-lasting performance of Selective Systems' Mounting Brackets, periodic maintenance is key. These stainless steel brackets are designed for durability, requiring minimal upkeep",
+      "Wipe the brackets with a damp cloth to remove dust, dirt, or debris. A mild detergent can be used for stubborn stains.",
+      "Periodically inspect the brackets and screws for any signs of loosening. Tighten them as needed to maintain secure door support.",
+      "While stainless steel is resistant to corrosion, check for any signs of wear, particularly in areas exposed to extreme weather. If any rust or damage is found, clean and reapply protective coatings if necessary.",
+      "If the brackets have any moving components, a light lubricant can be applied to ensure smooth operation.",
     ],
   },
   {
-    id: "sliding-windows",
-    images: [windows3, slidingWindowsBlack, slidingWindowsCross],
-    ProductName: "Aluminium Sliding Windows",
+    id: 3,
+    images: [Doorseal3, threshold, exampleImg, blackrubber],
+    ProductName: "Click Threshold",
     description:
       "Aluminium Sliding Windows offer a sleek, modern solution for homes and offices, combining durability, energy efficiency, and ease of use. With slim frames and large glass panels, they maximize natural light and provide unobstructed views, enhancing the overall aesthetic of your space. Ideal for urban environments, these windows are weather-resistant, low-maintenance, and perfect for energy-conscious homeowners looking for high-performance window solutions.",
     features: [
-      "Energy-Efficient: Keeps interiors cool in summer and warm in winter.",
-      "Durable & Weather-Resistant: Withstands extreme weather.",
-      "Low Maintenance: Easy to clean and requires minimal upkeep.",
-      "Stylish Design: Sleek and modern, enhancing property aesthetics.",
-      "Customizable: Available in various sizes and finishes to suit your need.",
+      "Thermally separated flat threshold",
+      "Ideal for levelling",
+      "Simple click system",
+      "For renovations and new construction",
+      "Invisible screw connection",
+      "In combination with Planet X3, guaranteed driving rain proof",
     ],
     dimensions: [
       {
-        name: "Frame Depth",
-        value: "72 mm",
+        name: "Surface",
+        value: "silver anodised EV1",
       },
-      { name: "Maximum Height of Window", value: "1600 mm" },
-      { name: "Height of Sill", value: "35 mm" },
-      { name: "Glass Thickness", value: "5, 6, 8 mm" },
+      { name: "Height", value: "7.5 mm (ramp)" },
+      { name: "Thermal separation	", value: "yes" },
+      { name: "Fastening", value: "Screws or glue" },
     ],
     longDescription: {
       title:
@@ -238,11 +260,10 @@ const AluminiumProductsPanel = [
       ],
     },
     specifications: [
-      { name: "Material", value: "High-grade aluminium" },
-      { name: "Noise Insulation", value: "JIS: 25 dB" },
-      { name: "Water Tightness", value: "ASTM E330: 300 Pa" },
-      { name: "Wind Pressure Resistance", value: "ASTM E330: 2000 Pa" },
-      { name: "Air Tightness", value: "ASTM E283: 10.7m3 / h·m2 " },
+      { name: "Can be shortened", value: "yes" },
+      { name: "Profile size", value: "130 mm wide" },
+      { name: "Profile material", value: "Aluminium, plastic" },
+      { name: "Length", value: "<6000mm" },
     ],
     installation:
       "The installation of Selective Systems' Aluminium Sliding Windows is designed to ensure optimal performance, durability, and seamless integration with your property. To achieve the best results, we recommend professional installation by our skilled team. We ensure a precise fit with optimal weather sealing and thermal insulation. Whether you're located in Pune, Kochi, Hyderabad, or Abu Dhabi, our expert installation services are customized to meet the unique needs of your home or office. Proper installation significantly enhances energy efficiency, security, and functionality, ensuring you enjoy the benefits of fresh air and protection from the elements for years. Trust Selective Systems for flawless installation that elevates both the aesthetics and performance of your space. Contact us today for expert window installation services and secure the long-term value of your investment.",
@@ -254,8 +275,8 @@ const AluminiumProductsPanel = [
     ],
   },
   {
-    id: "casement-wnidow",
-    images: [windows4, casementAluminumWindows],
+    id: 4,
+    images: [Doorseal4, casementAluminumWindows],
     ProductName: "Casement Aluminium Windows",
     description:
       "Casement Aluminium Windows offer a perfect blend of elegance, functionality, and durability for modern homes and offices. Designed with a side-hinged opening mechanism, they provide excellent ventilation and unobstructed views while ensuring optimal security. Ideal for both residential and commercial spaces, these windows are energy-efficient, weather-resistant, and require minimal maintenance, making them a reliable choice for any building.",
@@ -334,35 +355,9 @@ const AluminiumProductsPanel = [
       "By following these straightforward maintenance tips, you can enjoy the ongoing beauty, energy efficiency, and reliable performance of your Selective Systems windows for many years, ensuring they continue to perform optimally in all weather conditions.",
     ],
   },
-  // {
-  //   id: 5,
-  //   images: [windows5],
-  //   ProductName: "Modern Aluminium Fixed Window",
-  //   description:
-  //     "Sleek and contemporary aluminium window perfect for modern homes.",
-  //   features: [
-  //     "Energy-efficient",
-  //     "Noise-reducing",
-  //     "Low maintenance",
-  //     "Customizable colors",
-  //   ],
-  //   dimensions: "Various sizes available",
-  //   longDescription:
-  //     "Our Modern Aluminium Fixed Window combines style with functionality. Designed to complement contemporary architecture, these windows offer unobstructed views and excellent insulation properties.",
-  //   specifications: [
-  //     { name: "Material", value: "High-grade aluminium" },
-  //     { name: "Glass Type", value: "Double-glazed, Low-E" },
-  //     { name: "Frame Finish", value: "Powder-coated" },
-  //     { name: "U-Value", value: "1.4 W/m²K" },
-  //   ],
-  //   installation:
-  //     "Professional installation recommended. Our team of experts ensures a perfect fit and optimal performance.",
-  //   maintenance:
-  //     "Minimal maintenance required. Regular cleaning with mild soap and water keeps the windows looking new.",
-  // },
   {
-    id: "glass-corwindow",
-    images: [windows6, GlassCornerAluminumWindows, glassCorner],
+    id: 6,
+    images: [Doorseal6, GlassCornerAluminumWindows, glassCorner],
     ProductName: "Aluminium Glass To Glass Corner Windows",
     description:
       "Aluminium glass-to-glass corner windows offer a sleek, modern aesthetic, perfect for enhancing natural light and panoramic views. These energy-efficient, durable windows are designed with precision for seamless integration into contemporary architecture. Ideal for residential and commercial spaces, they provide superior thermal insulation and a stylish, minimalist look.",
@@ -444,34 +439,34 @@ const AluminiumProductsPanel = [
 
 const accordionData = [
   {
-    title: "Why Choose Aluminium Windows for Your Home or Office",
+    title: "Why Choose Door Seals for Your Home or Office",
     content:
-      "Aluminium windows are a top choice for modern homes and commercial spaces due to their exceptional durability, energy efficiency, and sleek aesthetic. Known for their strength and lightweight design, aluminium windows can withstand harsh weather conditions, making them perfect for regions like Mumbai, Dubai, and Tajikistan. Their low maintenance and high corrosion resistance make them ideal for both residential and commercial buildings, ensuring long-lasting performance and superior insulation.",
+      "Door seals are essential for improving the insulation, energy efficiency, and security of your home or office. They help prevent drafts, moisture, dust, and noise from entering your space, ensuring a more comfortable and energy-efficient environment. Whether you're in Mumbai, Dubai, or Tajikistan, high-quality door seals can enhance the performance and longevity of your doors, providing protection and comfort year-round.",
   },
   {
-    title: "Benefits of Aluminium Windows for Coastal Areas",
+    title: "Benefits of Door Seals for Energy Efficiency",
     content:
-      "Aluminium windows are particularly ideal for coastal areas where properties face harsh environmental conditions. Their corrosion-resistant properties ensure that they withstand the salty air and humidity, making them perfect for homes and offices in coastal cities like Mumbai, Chennai, and Dubai. Aluminium windows also offer excellent thermal efficiency and security, making them a reliable choice for buildings exposed to the elements.",
+      "Installing door seals significantly improves your home's energy efficiency. They prevent heat from escaping in the winter and block hot air from entering in the summer, reducing the need for excessive heating and cooling. This results in lower energy bills and a more comfortable indoor environment. Door seals are an excellent choice for energy-conscious homeowners and businesses in cities like Mumbai, Delhi, and Dubai, where temperature fluctuations are common.",
   },
   {
-    title: "Aluminium Windows for Energy Efficiency and Comfort",
+    title: "Door Seals for Noise Reduction and Soundproofing",
     content:
-      "Aluminium windows provide superior energy efficiency, helping to maintain comfortable indoor temperatures throughout the year. By offering excellent insulation, aluminium windows keep homes and offices cooler in summer and warmer in winter, reducing the need for excessive heating or cooling. This makes them an ideal choice for energy-conscious homeowners and businesses in cities like Bangalore, Dubai, and Tajikistan, where temperature fluctuations are common.",
+      "Door seals are highly effective in reducing noise and providing soundproofing for homes and offices. They block unwanted sound from entering or escaping through gaps around the door, ensuring peace and privacy. Whether you're in a noisy urban area like Mumbai or working in a busy office environment, door seals provide a simple and effective solution to reduce noise pollution and improve acoustics.",
   },
   {
-    title: "Aluminium Windows for Modern Architecture and Design",
+    title: "Weatherproofing and Protection with Door Seals",
     content:
-      "Aluminium windows offer a sleek, modern design that complements contemporary architecture. Their slim frames and large glass areas allow for maximum natural light and unobstructed views, making them a popular choice for modern homes, commercial offices, and high-rise buildings in cities like Delhi, Mumbai, and Dubai. Available in a variety of customizable finishes and glass options, aluminium windows enhance the overall aesthetic of any building while providing exceptional functionality.",
+      "Door seals provide excellent protection against various weather conditions. They prevent drafts, rain, dust, and moisture from entering your home or office, keeping your interiors dry and comfortable. In regions with extreme weather, such as Mumbai's monsoon season or Dubai's heat, door seals ensure that your property remains secure and well-protected from the elements.",
   },
   {
-    title: "Aluminium Windows for High-Security Applications",
+    title: "Durability and Long-Lasting Performance of Door Seals",
     content:
-      "Aluminium windows are an excellent choice for high-security applications. Their robust construction and advanced locking systems make them highly secure, ideal for homes, offices, and commercial spaces in urban areas like Mumbai, Delhi, and Dubai. Aluminium windows offer peace of mind while maintaining a sleek and modern appearance. They are also resistant to tampering, ensuring that your property is protected at all times.",
+      "Our door seals are made from high-quality materials like rubber, silicone, and aluminum to ensure long-lasting performance. These durable seals maintain their functionality over time, even under harsh conditions. Whether you're in a coastal city like Chennai or in urban environments like Mumbai and Delhi, door seals will continue to provide excellent performance and protection against drafts, moisture, and noise.",
   },
   {
-    title: "Where to Use Aluminium Windows in Your Home",
+    title: "Where to Use Door Seals in Your Home or Office",
     content:
-      "Aluminium windows can be used throughout your home, from living rooms and bedrooms to kitchens and bathrooms. Their versatility makes them suitable for various applications, such as fixed windows for panoramic views, sliding windows for easy access to fresh air, or casement windows for increased ventilation. In cities like Mumbai, Delhi, Dubai, and Tajikistan, aluminium windows provide durability, style, and energy efficiency, making them an excellent choice for both residential and commercial buildings.",
+      "Door seals are versatile and can be used in various applications throughout your home or office. They're ideal for main entrance doors, patio doors, office doors, and internal doors. Whether you're sealing gaps in residential or commercial properties, door seals help maintain comfort, improve energy efficiency, and enhance security. In cities like Mumbai, Delhi, Dubai, and Tajikistan, they are a must-have for ensuring long-lasting protection and performance in any building.",
   },
 ];
 
@@ -499,10 +494,14 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
 };
 
 export default function ProductPage({ params }) {
+  console.log("path: ", params);
   const [openAccordion, setOpenAccordion] = useState(0);
   const pathname = usePathname();
-  const fetchedId = pathname.slice(-15);
-  const product = AluminiumProductsPanel.find((item) => item.id === fetchedId);
+  const fetchedId = pathname.slice(-1);
+  console.log("fid:", fetchedId);
+  const product = DoorSealProductsPanel.find(
+    (item) => item.id === parseInt(fetchedId)
+  );
 
   if (!product) {
     notFound();
@@ -528,24 +527,12 @@ export default function ProductPage({ params }) {
       </div>
       <div className="max-w-7xl mx-auto px-4 py-8 ">
         <Link
-          href="/products/aluminium-windows"
+          href="/products/door-seals"
           className="text-blue-600 hover:underline mb-4 inline-block"
         >
           &larr; Back to All Windows
         </Link>
-        <p className="text-gray-700 poppins-extralight text-justify">
-          Selective System, based in Mumbai, India, is a leading manufacturer of
-          high-quality aluminium windows, offering energy-efficient, durable,
-          and stylish solutions for residential and commercial spaces. Our range
-          includes fixed, sliding, awning, and glass windows, all crafted with
-          advanced technology for lasting performance and aesthetic appeal.
-          Tested for all weather conditions, our windows are perfect for homes,
-          offices, and global markets like the UAE and Tajikistan. With
-          customizable designs, Selective System ensures superior energy
-          efficiency, security, and insulation for every project. Choose us for
-          premium aluminium windows that meet all your architectural and
-          functional needs.
-        </p>
+        <p className="text-gray-700 poppins-extralight text-justify"></p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="flex flex-col gap-4 md:flex-row">

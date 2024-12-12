@@ -3,7 +3,7 @@ import { Footer } from "./componets/Footer/Footer";
 import Navbar from "./componets/Navbar/Navbar";
 
 export const metadata = {
-  title: "Selective-Systems",
+  title: "Selective Systems: Aluminium Windows",
   description:
     "Elevate your space with Selective Systems. We provide Aluminium Windows, Door Seals, Railings, and more, ensuring safety, style, and durability for your projects.",
   keywords: [

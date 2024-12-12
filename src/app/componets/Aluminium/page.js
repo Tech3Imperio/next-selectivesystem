@@ -10,13 +10,29 @@ import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.we
 import windows6 from "../../assets/AluminiumProduct/AluminiumWindows/windows6.webp";
 
 const AluminiumProductsPanel = [
-  { id: 1, image: windows1, ProductName: "Modern Aluminum Fixed Windows" },
-  { id: 2, image: windows2, ProductName: "Aluminum Awning Windows" },
-  { id: 3, image: windows3, ProductName: "Aluminum Sliding Windows" },
-  { id: 4, image: windows4, ProductName: "Casement Aluminum Window" },
+  {
+    id: "fixed-aluminium",
+    image: windows1,
+    ProductName: "Modern Aluminum Fixed Windows",
+  },
+  {
+    id: "awningaluminium",
+    image: windows2,
+    ProductName: "Aluminum Awning Windows",
+  },
+  {
+    id: "sliding-windows",
+    image: windows3,
+    ProductName: "Aluminum Sliding Windows",
+  },
+  {
+    id: "casement-wnidow",
+    image: windows4,
+    ProductName: "Casement Aluminum Window",
+  },
   // { id: 5, image: windows5, ProductName: "Aluminium Sliding Window" },
   {
-    id: 6,
+    id: "glass-corwindow",
     image: windows6,
     ProductName: "Aluminium Glass To Glass Corner Windows",
   },
@@ -24,13 +40,13 @@ const AluminiumProductsPanel = [
 
 export default function AluminiumWindows() {
   return (
-    <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center">
+    <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center pt-14">
       <div className="m-4">
-        <h1 className="text-4xl poppins-semibold text-primary drop-shadow-lg mb-8 text-center">
+        <h1 className=" text-xl lg:text-4xl poppins-semibold text-primary drop-shadow-lg mb-8 text-center">
           Premium Aluminum Windows: Combining Durability, Style, and Modern
           Design
         </h1>
-        <p className="poppins-extralight text-base text-gray-700">
+        <p className="poppins-extralight text-base text-justify text-gray-700">
           Discover <strong>premium aluminum windows</strong> that combine
           <b>durability</b>, sleek style, and modern design. Ideal for both
           <b>residential</b> and <b>commercial</b> properties, our windows offer
