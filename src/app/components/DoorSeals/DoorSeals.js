@@ -4,17 +4,68 @@ import React, { useEffect, useRef, useState } from "react";
 import DoorSealProduct from "./page";
 
 const DoorSeals = () => {
+  // const videoRef = useRef(null);
+
+  // // Initially set to false, will update based on screen size
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  // const handleResize = () => {
+  //   setIsMobile(window.innerWidth <= 1024); // Set mobile flag based on screen width <= 1024px
+  // };
+
+  // useEffect(() => {
+  //   // Attach the resize listener
+  //   window.addEventListener("resize", handleResize);
+
+  //   // Initial check
+  //   handleResize();
+
+  //   // Cleanup event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const video = videoRef.current;
+
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           video.play().catch((error) => {
+  //             console.error("Video play failed:", error);
+  //           });
+  //         } else {
+  //           video.pause();
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 }
+  //   );
+
+  //   observer.observe(video);
+
+  //   return () => {
+  //     if (video) {
+  //       observer.unobserve(video);
+  //     }
+  //   };
+  // }, []);
   const videoRef = useRef(null);
 
   // Initially set to false, will update based on screen size
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false); // State to check if the component is mounted on the client-side
 
+  // Update the isMobile state based on window width (runs after component mounts)
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 1024); // Set mobile flag based on screen width <= 1024px
   };
 
+  // Only run on client-side
   useEffect(() => {
-    // Attach the resize listener
+    setIsClient(true); // Set to true when the component mounts
     window.addEventListener("resize", handleResize);
 
     // Initial check
@@ -27,31 +78,38 @@ const DoorSeals = () => {
   }, []);
 
   useEffect(() => {
-    const video = videoRef.current;
+    // Check if the component is mounted and videoRef is available
+    if (isClient && videoRef.current) {
+      const video = videoRef.current;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play().catch((error) => {
+                console.error("Video play failed:", error);
+              });
+            } else {
+              video.pause();
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().catch((error) => {
-              console.error("Video play failed:", error);
-            });
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+      observer.observe(video);
 
-    observer.observe(video);
+      return () => {
+        if (video) {
+          observer.unobserve(video);
+        }
+      };
+    }
+  }, [isClient]);
 
-    return () => {
-      if (video) {
-        observer.unobserve(video);
-      }
-    };
-  }, []);
+  if (!isClient) {
+    return null; // Do not render anything on the server side
+  }
+
   return (
     <main className="relative">
       <div className="bg-gray-100 flex items-center justify-center h-screen">
