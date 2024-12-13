@@ -12,92 +12,99 @@ import Doorseal4 from "../../../assets/DoorSeals/Doorseal4.png";
 import Doorseal6 from "../../../assets/DoorSeals/Doorseal6.png";
 import { IoChevronUp, IoChevronDown } from "react-icons/io5";
 //Gallery
-import singleFixedWindowFrame from "../../../assets/Gallery/aluminiumWndows/SingleFixedwindow.png";
-import AccessorisFixedWindows from "../../../assets/Gallery/aluminiumWndows/aluminium-fixed-window.jpg";
+import floorthresholdupper from "../../../assets/Gallery/DoorSeals/Floor-threshold/floorthresholdupperside.jpg";
+import floorside from "../../../assets/Gallery/DoorSeals/Floor-threshold/floor.png";
 import monutingBracketdoor from "../../../assets/Gallery/DoorSeals/mounting-brackets/mountingBrackdDoor.jpg";
 import metalAccessoris from "../../../assets/Gallery/DoorSeals/mounting-brackets/metalltueren.jpg";
 import screw from "../../../assets/Gallery/DoorSeals/mounting-brackets/screw.jpg";
 import threshold from "../../../assets/Gallery/DoorSeals/threshold/sealingpad.jpg";
 import exampleImg from "../../../assets/Gallery/DoorSeals/threshold/rubber.jpg";
 import blackrubber from "../../../assets/Gallery/DoorSeals/threshold/Blackrubber.jpg";
-import casementAluminumWindows from "../../../assets/Gallery/aluminiumWndows/casementWindows/aluminium-casement-window.jpeg";
-import GlassCornerAluminumWindows from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/Glass-to-Glass-Corner-Window.jpg";
-import glassCorner from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/wallGlassCorner.jpg";
+import doordropseal from "../../../assets/Gallery/DoorSeals/doordropseals/doordrop.jpg";
+import doorsealinside from "../../../assets/Gallery/DoorSeals/doordropseals/sealdoorinside.jpg";
+import screwaccess from "../../../assets/Gallery/DoorSeals/doordropseals/screwaccess.jpg";
+import floorprofile from "../../../assets/Gallery/DoorSeals/floorProfile/floorprofile.jpg";
+import floorprofileAccessoris from "../../../assets/Gallery/DoorSeals/floorProfile/floorprofileAccessoris.jpg";
+import floorproduct from "../../../assets/Gallery/DoorSeals/floorProfile/floorproduct.jpg";
+import NarrowGlass from "../../../assets/Gallery/DoorSeals/NarrowSeals/NarrowGlass.jpg";
+import NarrowCover from "../../../assets/Gallery/DoorSeals/NarrowSeals/NarrowGlassCover.jpg";
+import NarrowScrew from "../../../assets/Gallery/DoorSeals/NarrowSeals/screwnarrow.jpg";
 
 const DoorSealProductsPanel = [
   {
-    id: 1,
-    images: [Doorseals1, singleFixedWindowFrame, AccessorisFixedWindows],
-    ProductName: "Flat Insert Profile",
+    id: "threshold-floor",
+    images: [Doorseals1, floorthresholdupper, floorside],
+    ProductName: "Floor separation threshold",
     description:
-      "Aluminium fixed windows are renowned for their sleek, modern design and long-lasting durability. These energy-efficient windows provide excellent thermal insulation, making them ideal for both modern residential and commercial use. Built to withstand harsh weather conditions, they offer superior resistance to corrosion, ensuring low maintenance and enhanced performance for years.",
+      "Our floor separation threshold provides excellent sound isolation with an acoustic rating of 30 dB. Constructed from sturdy aluminum, it is available in both 40 mm and 60 mm widths. The threshold also offers an adjustable height range from 0 to 14 mm, ensuring a precise and easy installation for optimal performance.",
     features: [
-      "Energy-Efficient: Keeps interiors cool in summer and warm in winter.",
-      "Durable & Weather-Resistant: Withstands extreme weather.",
-      "Low Maintenance: Easy to clean and requires minimal upkeep.",
-      "Stylish Design: Sleek and modern, enhancing property aesthetics.",
-      "Customizable: Available in various sizes and finishes to suit your need.",
+      "From 30 dB acoustic insulation",
+      "For best sound mittigation values and interrupted impact sound",
+      "Base profile prepared with mortar protection",
+      "Base profile prepared with acoustic insulation strips on the left and right",
+      "Visually appealing solution",
     ],
     dimensions: [
-      { name: "Frame Depth", value: "72 mm" },
-      { name: "Maximum Height of Window", value: "2400 mm" },
-      { name: "Height of Sill", value: "35 mm" },
-      { name: "Glass Thickness", value: "Up to 13.5 mm" },
+      { name: "Height", value: "	3 mm (threshold height)" },
+      { name: "Floor recess", value: "53 – 67 mm (adjustable)" },
+      {
+        name: "Fastening",
+        value:
+          "Base profile: prepared holes in the base profile / flat insert: with supplied holding cams",
+      },
+      { name: "Profile size", value: "40 mm or 60 mm wide" },
     ],
     longDescription: {
       title:
-        "Selective Systems proudly presents our Fixed Aluminium Windows an excellent solution for modern homes, offices, and commercial spaces. These windows are designed to provide a sleek, stylish look while offering exceptional performance and long-lasting durability. Whether you are in Mumbai, Dubai, or Tajikistan, our fixed aluminium windows combine aesthetics with functionality, offering unobstructed views and superior weather resistance.",
+        "Selective Systems introduces our high-performance Floor Separation Threshold, designed to deliver superior sound isolation and seamless integration for both residential and commercial spaces. Engineered for maximum acoustic efficiency, this threshold ensures optimal sound separation and enhances the overall comfort of any interior environment.",
       features: [
         {
-          name: "Elegant Design",
+          name: "Superior Acoustic Performance",
           description:
-            "The minimalist fixed aluminium window frame offers a contemporary, clean look, making it the ideal choice for any modern architecture. Whether for a residential home or a commercial office, these windows provide a sleek, refined aesthetic that complements any building's exterior.",
+            "Our floor separation threshold offers an impressive acoustic insulation rating of 30 dB, significantly reducing noise transmission between rooms. This feature makes it ideal for applications where privacy and quiet are essential, such as offices, apartments, and hotels.",
         },
         {
-          name: "Durability and Weather Resistance",
+          name: "Durable Aluminium Construction",
           description:
-            "Made with high-quality aluminium, these windows are built to last. The corrosion-resistant properties of aluminium ensure that the windows withstand the harshest weather conditions, whether it’s the humid climate of Mumbai or the extreme temperatures of Dubai.",
+            "Made from high-quality aluminium, the floor separation threshold is built for long-lasting durability. Its corrosion-resistant properties ensure it withstands wear and tear while maintaining a sleek, modern look in any environment.",
         },
         {
-          name: "Energy Efficiency",
+          name: "Flexible Height Adjustment",
           description:
-            "Our fixed aluminium windows are engineered to offer excellent insulation, helping to regulate indoor temperatures year-round. They help maintain a cooler interior in the summer and a warmer environment during the winter, resulting in significant energy savings. Additionally, they contribute to noise reduction, creating a peaceful indoor environment.",
+            "This threshold comes with an easy-to-use height adjustment mechanism, allowing you to fine-tune the installation from 0 to 14 mm. This flexibility ensures a perfect fit, accommodating varying floor heights for a seamless transition between rooms.",
         },
         {
-          name: "Low Maintenance",
+          name: "Stylish and Minimalist Design",
           description:
-            "Aluminium is naturally resistant to corrosion and weathering, meaning these windows require minimal maintenance. A regular cleaning with mild soap and water will keep them looking fresh, making them ideal for homes and offices in cities like Dubai, Tajikistan, and Mumbai, where dust and grime can accumulate quickly.",
+            "With its clean, minimalist design, the floor separation threshold adds an elegant finishing touch to any space. Whether you're designing a modern home or a professional office, it provides a subtle yet effective solution to floor separation needs.",
         },
         {
-          name: "Customizable Options",
+          name: "Easy Installation",
           description:
-            "Our fixed aluminium windows come in a wide range of sizes, finishes, and glass options to meet your specific needs. Whether you require double-glazed glass for enhanced thermal performance or a specific frame finish to match your building’s style, we offer customizable solutions.",
+            "The threshold is designed for hassle-free installation. With simple adjustment and secure fitting, it can be quickly set up without the need for specialized tools, making it ideal for both renovation projects and new builds.",
         },
         {
-          name: "Unobstructed Views",
+          name: "Versatile Application",
           description:
-            "With their fixed design, these windows offer a clear and expansive view, perfect for showcasing the beauty of your surroundings. Ideal for spaces like living rooms, offices, and commercial buildings, they allow ample natural light to flood your interiors, creating a brighter, more inviting space.",
+            "Available in two width options (40 mm and 60 mm), this floor separation threshold is suitable for a wide range of applications, from residential to commercial spaces. It provides an elegant solution for dividing rooms, enhancing privacy, and ensuring effective sound separation.",
         },
       ],
     },
     specifications: [
-      { name: "Material", value: "High-grade aluminium" },
-      { name: "Noise Insulation", value: "JIS: 25 dB" },
-      { name: "Water Tightness", value: "ASTM E330: 300 Pa" },
-      { name: "Wind Pressure Resistance", value: "ASTM E330: 2000 Pa" },
-      { name: "Air Tightness", value: "ASTM E283: 10.7m3 / h·m2" },
+      { name: "Surface", value: "silver anodised EV1" },
+      { name: "Profile material", value: "aluminium" },
+      { name: "Profile size", value: "40 mm or 60 mm wide" },
     ],
     installation:
-      "Installation of Selective Systems' Aluminium Fixed Windows is designed for premium performance and long-lasting durability. We recommend professional installation to ensure the highest standards for your modern home or office. Our experienced team guarantees a precise fit, providing weather-resistant sealing and optimal thermal insulation. Whether you're located in Mumbai, Dubai, or Tajikistan, we offer expert window installation services tailored to your specific needs. Installing aluminium fixed windows properly enhances their energy efficiency and durability. Trust Selective Systems for a seamless installation that will elevate the aesthetic and performance of your property. Contact us today for professional window installation services that ensure your investment lasts.",
+      "nstalling Selective Systems' Floor Separation Threshold ensures superior sound isolation and durability for your space. We recommend professional installation for optimal performance. Our expert team provides a precise fit, ensuring seamless integration and effective sound separation. Whether you’re in Mumbai, Delhi, or Bengaluru, we offer customized installation services to meet your needs. Proper installation guarantees the threshold’s acoustic efficiency and longevity. Trust Selective Systems for a hassle-free installation that enhances both functionality and aesthetics in your property",
     maintenance: [
-      "At Selective Systems, we believe that maintaining our premium aluminium fixed windows is both simple and hassle-free. Designed for modern homes, offices, and commercial spaces, these energy-efficient windows are crafted to withstand the test of time and extreme weather conditions. With minimal upkeep required, they are the perfect choice for properties in cities like Mumbai, Dubai, Tajikistan, and beyond.",
-      "Routine maintenance involves only a few simple steps: clean the frames and glass with mild soap and water to maintain their sleek, stylish appearance. To ensure your aluminium windows continue performing at their best, it's important to periodically inspect the window seals for wear and tear and remove any debris from the tracks. This ensures your windows retain their weather-resistant and insulation properties, keeping your interiors cool in summer and warm in winter.",
-      "Thanks to their durable construction and low-maintenance design, our windows offer long-lasting performance, saving you time and effort while enhancing the aesthetic appeal of your property. Whether you're in Mumbai, Dubai, Tajikistan, or any other region, Selective Systems' aluminium fixed windows provide superior durability and functionality, all while offering customizable solutions to meet your needs.",
-      "By following these easy maintenance tips, you can enjoy the continued beauty, energy efficiency, and reliable performance of your Selective Systems windows for years to come.",
+      "Selective Systems' Floor Separation Threshold requires minimal maintenance, making it the perfect choice for properties in cities like Mumbai, Delhi, and Bengaluru. To maintain its sleek appearance and performance, simply clean the aluminium frame with mild soap and water. ",
+      "Regularly check the adjustment mechanism to ensure it functions smoothly. Periodic cleaning of the installation area helps preserve the threshold’s soundproofing and durability.",
+      "With its low-maintenance design, this threshold delivers long-lasting performance, saving time and effort. Selective Systems provides a solution that combines durability, ease of care, and exceptional sound isolation for your home or office.",
     ],
   },
   {
-    id: 2,
+    id: "bracketMounting",
     images: [Doorseal2, monutingBracketdoor, metalAccessoris, screw],
     ProductName: "Mounting brackets",
     description:
@@ -196,7 +203,7 @@ const DoorSealProductsPanel = [
     ],
   },
   {
-    id: 3,
+    id: "Sliding-Windows",
     images: [Doorseal3, threshold, exampleImg, blackrubber],
     ProductName: "Click Threshold",
     description:
@@ -275,11 +282,11 @@ const DoorSealProductsPanel = [
     ],
   },
   {
-    id: 4,
-    images: [Doorseal4, casementAluminumWindows],
-    ProductName: "Casement Aluminium Windows",
+    id: "Door-drop-seals",
+    images: [Doorseal4, doordropseal, doorsealinside, screwaccess],
+    ProductName: "Door drop seals",
     description:
-      "Casement Aluminium Windows offer a perfect blend of elegance, functionality, and durability for modern homes and offices. Designed with a side-hinged opening mechanism, they provide excellent ventilation and unobstructed views while ensuring optimal security. Ideal for both residential and commercial spaces, these windows are energy-efficient, weather-resistant, and require minimal maintenance, making them a reliable choice for any building.",
+      "The Selective Systems Automatic Door Drop-Down Seal provides excellent acoustic insulation with a 27 dB sound reduction. Designed for rebated doors, it automatically adjusts for sloping floors, with a sealing height up to 20 mm. Made with high-quality silicone and durable aluminium profiles, it ensures effective noise control and long-lasting performance.",
     features: [
       "Energy-Efficient: Keeps interiors cool in summer and warm in winter.",
       "Durable & Weather-Resistant: Withstands extreme weather.",
@@ -289,78 +296,180 @@ const DoorSealProductsPanel = [
     ],
     dimensions: [
       {
-        name: "Frame Depth",
-        value: "72 mm 104 mm (3 Slide)",
+        name: "Groove size",
+        value: "25,3 mm wide and 43.5 mm deep / 8,3 mm wide and 30,5 mm deep",
       },
-      { name: "Maximum Height of Door- Standard Type", value: "2000 mm" },
-      { name: "Maximum Height of Door- Large Type", value: "3045 mm" },
-      { name: "Height of Sill", value: "35 mm, 50 mm (for all sliding)" },
-      { name: "Glass Groove", value: "11 mm" },
-      { name: "Glass Thickness", value: "5 , 6 , 8 mm" },
+      {
+        name: "Seal profile",
+        value:
+          "high-quality silicone or high-quality self-extinguishing silicone",
+      },
+      {
+        name: "Sound absorption value",
+        value: "up to 27 dB at ground air 7 mm",
+      },
+      {
+        name: "Frame protector plate",
+        value: "stainless steel, for knocking in, 20 x 20 mm",
+      },
+      { name: "Can be shortened", value: "	max. 125 mm" },
+      { name: "Release", value: "on one side, hinge side" },
     ],
     longDescription: {
       title:
-        "Selective Systems proudly presents our Casement Aluminium Windows, a perfect combination of style, durability, and practicality for modern homes, offices, and commercial spaces. These windows are designed to provide excellent ventilation and security while adding a sophisticated touch to any building. Whether in Pune, Hyderabad, or Singapore, our casement windows are built to withstand diverse weather conditions, offering long-lasting performance and a refined aesthetic.",
+        "Selective Systems proudly presents our Automatic Door Drop-Down Seal, a high-performance solution designed to enhance acoustic insulation for rebated doors. Perfect for both commercial and residential spaces, this product offers superior soundproofing and reliable sealing, ensuring a peaceful environment. Whether you're in Mumbai, Delhi, or Dubai, our door seals are engineered to perform under varying conditions, offering excellent durability and functionality.",
       features: [
         {
-          name: "Elegant & Timeless Design",
+          name: "Enhanced Acoustic Insulation",
           description:
-            "Our casement aluminium windows feature a side-hinged design that blends seamlessly with any architectural style. The wide glass panels and sleek frames allow abundant natural light into your space, offering an unobstructed view and a clean, modern look, making them ideal for both residential and commercial properties.",
+            "Our Automatic Door Drop-Down Seal provides an impressive 27 dB sound reduction, making it ideal for spaces requiring high-level soundproofing. Whether in office environments, studios, or residential properties, this seal helps to maintain privacy and reduce noise transmission.",
         },
         {
-          name: "Weather Resistance & Durability",
+          name: "Automatic Compensation for Sloping Floors",
           description:
-            "Crafted from high-quality aluminium, our casement windows are highly resistant to corrosion, rust, and extreme weather conditions. Whether facing the tropical monsoons in Kochi, the dry heat of Rajasthan, or the humid climate of Singapore, these windows are built to endure, ensuring long-term reliability and superior protection.",
+            "Designed with an automatic release mechanism on the hinge side, the seal adjusts to sloping floors, ensuring a secure fit and efficient sealing even on uneven surfaces. This feature guarantees consistent performance and reliability in various flooring conditions.",
         },
         {
-          name: "Superior Ventilation & Airflow",
+          name: "Durable Construction with High-Quality Silicone Lip",
           description:
-            "The side-hinged mechanism of our casement aluminium windows provides optimal airflow, allowing you to control ventilation while protecting your interiors from the elements. Ideal for spaces like living rooms, kitchens, and offices, these windows enhance air circulation and ensure a comfortable, fresh environment.",
+            "The lip is made from high-quality silicone, providing long-lasting durability and a secure seal. This premium material enhances the performance of the seal, ensuring it remains functional and effective for years to come, even in harsh conditions.",
         },
         {
-          name: "Energy Efficiency",
+          name: "Sealing Height & Performance",
           description:
-            "Our casement aluminium windows are engineered with superior insulation properties, helping to maintain comfortable indoor temperatures all year round. Whether you're in the heat of Ahmedabad, the cooler weather of Shimla, or the mild temperatures of Singapore, these windows contribute to energy savings by reducing the reliance on air conditioning and heating.",
+            "The seal offers an adjustable height of up to 20 mm, providing a perfect fit for a wide range of door types. The parallel lowering mechanism ensures a smooth operation, while the MinE-F channel and bottom sealing enhance the overall soundproofing effectiveness.",
         },
         {
-          name: "Low Maintenance",
+          name: "Customizable Profiles & Easy Installation",
           description:
-            "Aluminium is naturally resistant to corrosion and weathering, ensuring that our casement windows require minimal maintenance. A simple cleaning with mild soap and water is enough to keep them looking like new. These low-maintenance windows are perfect for urban environments like Chennai, Bengaluru, and international locations such as Sydney or Dubai where dust and pollution are common concerns.",
+            "The seal comes with side mounting and is available in aluminum profiles of 8 x 30 mm or 25 x 43 mm, offering flexibility for different door configurations. The installation process is simple and quick, ensuring a hassle-free experience for both professionals and DIY enthusiasts.",
         },
         {
-          name: "Customizable Options",
+          name: "Weather & Fire-Resistant Options",
           description:
-            "Our casement aluminium windows are available in various sizes, finishes, and glass options to match your unique requirements. Whether you need double-glazed glass for enhanced insulation, tinted glass for privacy, or a specific frame finish to complement your décor, we offer fully customizable solutions to suit your design vision.",
-        },
-        {
-          name: "Security & Durability",
-          description:
-            "With a secure locking mechanism, our casement aluminium windows provide enhanced safety for your property. Durable and built to last, these windows not only offer superior protection against the elements but also ensure the security and longevity of your investment.",
+            "Available in both standard and fire-retardant versions, our drop-down seal is designed to withstand various environmental conditions. The fire-retardant model offers additional safety, making it suitable for buildings where fire safety is a priority.",
         },
       ],
     },
     specifications: [
-      { name: "Material", value: "High-grade aluminium" },
-      { name: "Noise Insulation", value: "JIS: 25 dB" },
-      { name: "Water Tightness", value: "ASTM E330: 300 Pa" },
-      { name: "Wind Pressure Resistance", value: "ASTM E330: 2000 Pa" },
-      { name: "Air Tightness", value: "ASTM E283: 10.7m3 / h·m2 " },
+      {
+        name: "Drop height adjustment",
+        value: "on release pin with 3 mm Allen key",
+      },
+      { name: "Max. drop height", value: "20 mm" },
+      { name: "Profile size", value: "8 x 30 mm / 25 x 43 mm" },
+      { name: "Profile material", value: "Aluminium (both)" },
+      {
+        name: "Special features",
+        value:
+          "Air flow 30 m³/h at ventilation length 1050 mm and pressure difference of 3.9 Pa",
+      },
     ],
     installation:
-      "The installation of Selective Systems' Casement Aluminium Windows is designed to ensure optimal performance, durability, and seamless integration with your property. For the best results, we recommend professional installation by our skilled team. We ensure a precise fit with optimal weather sealing and thermal insulation. Whether you're located in Andheri, Bhandup, Karnataka, UtterPradesh and India beyond, our expert installation services are customized to meet the unique needs of your home or office. Proper installation significantly enhances energy efficiency, security, and functionality, ensuring you enjoy the benefits of natural ventilation and protection from the elements for years. Trust Selective Systems for flawless installation that elevates both the aesthetics and performance of your space. Contact us today for expert window installation services and secure the long-term value of your investment.",
+      "The installation of Selective Systems' Automatic Door Drop-Down Seal ensures optimal performance and sound insulation. We recommend professional installation for a precise fit, especially for areas like Andheri, Malad, Borivali, Thane, and Navi Mumbai. Our experts guarantee proper sealing, enhancing the acoustic performance of your doors. Trust Selective Systems for flawless installation that ensures long-term durability and efficiency.",
     maintenance: [
-      "At Selective Systems, we believe maintaining our premium casement aluminium windows is both simple and hassle-free. Built to withstand harsh weather conditions and provide energy efficiency, these windows are the perfect choice for modern homes, offices, and commercial spaces in areas like Andheri, Goregaon, Borivali, and beyond.",
-      "Routine maintenance for your Casement Aluminium Windows involves just a few easy steps: clean the frames and glass with mild soap and water to maintain their elegant appearance. To ensure your casement windows continue to perform at their best, it's important to regularly check the window seals for wear and tear and clear any debris from the hinges and frames. This simple maintenance helps preserve their weather resistance and insulation properties, ensuring that your interiors stay cool in the summer and warm in the winter.",
-      "Thanks to their robust construction and low-maintenance design, our casement aluminium windows provide long-lasting performance, saving you time and effort while enhancing your property’s aesthetic appeal. Whether you're in Thane, Bangalore, Kochi, or any other location, Selective Systems' aluminium casement windows offer superior durability, energy efficiency, and customizable options tailored to your needs.",
-      "By following these straightforward maintenance tips, you can enjoy the ongoing beauty, energy efficiency, and reliable performance of your Selective Systems windows for many years, ensuring they continue to perform optimally in all weather conditions.",
+      "Maintaining the Automatic Door Drop-Down Seal is simple and hassle-free. Clean the aluminium profiles and silicone lip with mild soap and water to maintain its sleek appearance. Regularly check the mechanism for smooth operation and remove any debris to ensure continued performance.",
+      "Thanks to its durable construction, this seal provides long-lasting performance with minimal upkeep. Whether in Mumbai, Delhi, Uttar Pradesh, or Punjab, Selective Systems offers products designed to withstand harsh environments.",
+      "By following these simple maintenance tips, you can ensure your door seal continues to provide superior sound insulation and durability for years to come.",
     ],
   },
   {
-    id: 6,
-    images: [Doorseal6, GlassCornerAluminumWindows, glassCorner],
-    ProductName: "Aluminium Glass To Glass Corner Windows",
+    id: "Drop-down-seals",
+    images: [floorprofile, floorprofileAccessoris, floorproduct],
+    ProductName: "Drop-down seals",
     description:
-      "Aluminium glass-to-glass corner windows offer a sleek, modern aesthetic, perfect for enhancing natural light and panoramic views. These energy-efficient, durable windows are designed with precision for seamless integration into contemporary architecture. Ideal for residential and commercial spaces, they provide superior thermal insulation and a stylish, minimalist look.",
+      "Selective Systems presents the Automatic Door Drop-Down Seal, offering 44 dB sound and smoke protection for sliding doors. Featuring parallel lowering, a silicone lip, and adjustable seal heights (7–10 mm, 10–13 mm, 13–16 mm), it ensures effective sealing. With a durable aluminium profile and lateral attachment, this seal provides optimal performance and reliability.",
+    features: [
+      "Drop-down seals for sliding doors",
+      "No lock or holding device needed due to zero force release",
+      "Compact, space-saving solution with integrated floor guide groove",
+      "Automatic compensation of sloped floors",
+      "With optimum sealing, acoustic insulation value up to 44 dB (with 7 mm ground clearance)",
+      "High-quality silicone lip, lateral protrusion adjustable",
+    ],
+    dimensions: [
+      {
+        name: "Groove size",
+        value: "22,3 mm wide and 30.5 to 35 mm deep",
+      },
+      { name: "Seal profile", value: "high-quality silicone" },
+      {
+        name: "Sound absorption value",
+        value: "up to 44 dB at ground air 7 mm",
+      },
+      {
+        name: "Fastening",
+        value: "with stainless steel mounting bracket on the side",
+      },
+    ],
+    longDescription: {
+      title:
+        "Selective Systems proudly presents our Automatic Door Drop-Down Seal, a high-performance solution for soundproofing and smoke shielding. Ideal for both residential and commercial spaces, this drop-down seal enhances the functionality of sliding doors while providing superior noise reduction. Designed for durability and easy integration, it’s the perfect choice for those seeking a seamless combination of performance and aesthetics.",
+      features: [
+        {
+          name: "Sound & Smoke Protection",
+          description:
+            "Our Automatic Door Drop-Down Seal offers 44 dB sound reduction and effective smoke shielding. This makes it the perfect choice for offices, conference rooms, or any space requiring a high level of noise control and fire safety.",
+        },
+        {
+          name: "Parallel Lowering Mechanism",
+          description:
+            "The seal is equipped with a parallel lowering mechanism that ensures a smooth, consistent seal, even on sloped floors. It automatically adjusts to the floor, ensuring optimal performance regardless of floor conditions.",
+        },
+        {
+          name: "High-Quality Silicone Lip",
+          description:
+            "The durable silicone lip provides an airtight seal, improving acoustic insulation and preventing smoke leakage. Its high-quality design ensures longevity and consistent performance, even in high-traffic areas.",
+        },
+        {
+          name: "Adjustable Sealing Heights",
+          description:
+            "With adjustable sealing heights of 7–10 mm, 10–13 mm, and 13–16 mm, the drop-down seal is versatile and can be tailored to suit various door types. This flexibility ensures that it can be used in different architectural environments and door specifications.",
+        },
+        {
+          name: "Durable Aluminium Profile",
+          description:
+            "The robust aluminium profile (22 x 30 mm) ensures the durability of the door seal, while its lateral attachment provides a secure fit. Designed for easy installation, the aluminium profile also contributes to the overall aesthetics of your space.",
+        },
+        {
+          name: "Low Maintenance & Long-Lasting",
+          description:
+            "Thanks to its high-quality materials, the Automatic Door Drop-Down Seal requires minimal maintenance. Regular cleaning ensures long-term performance, making it ideal for commercial properties or residential buildings in high-humidity or dusty environments.",
+        },
+        {
+          name: "Enhanced Security & Performance",
+          description:
+            "Equipped with advanced features such as automatic release and parallel lowering, our drop-down seal enhances both the security and performance of your doors. Its design is ideal for spaces where both soundproofing and smoke protection are critical.",
+        },
+      ],
+    },
+    specifications: [
+      { name: "Can be shortened", value: "125 mm (+ max. 45 mm release side)" },
+      {
+        name: "Release",
+        value:
+          "through floor guide (3 pcs. for ground air 7 –10 / 10 – 13 / 13 – 16 mm)",
+      },
+      { name: "Max. drop height", value: "7 – 16 mm" },
+      { name: "Profile size", value: "22 x 30 mm" },
+      { name: "Profile material", value: "aluminium" },
+    ],
+    installation:
+      "The installation of Selective Systems' Automatic Door Drop-Down Seal is designed to deliver optimal performance, ensuring soundproofing and smoke protection for your doors. For best results, we recommend professional installation by our skilled team, ensuring a precise fit with perfect sealing and functionality. Whether you're in Andheri, Dadar, Vikhroli, Mulund, or other central locations in Mumbai, or in Pune, Surat, Ahmedabad, our team provides expert services tailored to meet your needs. A proper installation guarantees enhanced durability and long-term value for your investment. Contact Selective Systems today to ensure flawless installation near you.",
+
+    maintenance: [
+      "At Selective Systems, maintaining the Automatic Door Drop-Down Seal is simple and ensures its long-lasting performance. Ideal for properties in areas like Borivali, Ghatkopar, Kurla, and Navi Mumbai, this seal is built to last while offering effective sound and smoke insulation.",
+      "Routine maintenance involves cleaning the silicone lip and aluminium profiles with mild soap and water to preserve their functionality. Regularly inspect the drop-down mechanism for smooth operation, and clear any debris to keep the seal performing at its best. These easy steps help maintain optimal sealing and protection from noise and smoke.",
+      "Thanks to its sturdy construction and minimal maintenance requirements, our Automatic Door Drop-Down Seal offers long-lasting performance. Whether you are in Thane, Bhandup, Mulund, or any other central Mumbai area, this product ensures top-notch acoustic insulation and sealing for your space.",
+      "By following these simple maintenance guidelines, you can keep the Automatic Door Drop-Down Seal in peak condition, ensuring it continues to provide reliable protection and performance across locations like Nashik, Surat, and Mumbai's central region.",
+    ],
+  },
+  {
+    id: "Automatic-doors",
+    images: [Doorseal6, NarrowGlass, NarrowCover, NarrowScrew],
+    ProductName: "Automatic door drop-down seal",
+    description:
+      "Selective Systems' Automatic Door Drop-Down Seal provides 48 dB acoustic insulation and fire/smoke protection for doors. Designed with automatic compensation for sloping floors and a silicone lip for effective sealing, it ensures optimal performance. Available in silver anodized or matte anodized stainless steel profiles, it fits hinged doors with a seal height of up to 16mm.",
     features: [
       "Energy-Efficient: Keeps interiors cool in summer and warm in winter.",
       "Durable & Weather-Resistant: Withstands extreme weather.",
@@ -370,13 +479,19 @@ const DoorSealProductsPanel = [
     ],
     dimensions: [
       {
-        name: "Frame Depth",
+        name: "Seal profile",
         value:
-          "101.6 mm., 120 mm (2 tracks sliding), 178 mm (3 tracks sliding)",
+          "high-quality silicone or high-quality self-extinguishing silicone",
       },
-      { name: "Maximum Height of Door", value: "3,500 mm" },
-      { name: "Height of Sill", value: "50 mm" },
-      { name: "Glass Thickness", value: "Up to 31.5 mm" },
+      {
+        name: "Sound absorption value",
+        value: "up to 48 dB at ground air 7 mm",
+      },
+      {
+        name: "Frame protector plate",
+        value: "stainless steel, for knocking in, 20 x 20 mm",
+      },
+      { name: "Profile size", value: "11.5 x 38 mm" },
     ],
     longDescription: {
       title:
@@ -420,19 +535,22 @@ const DoorSealProductsPanel = [
       ],
     },
     specifications: [
-      { name: "Material", value: "High-grade aluminium" },
-      { name: "Noise Insulation", value: "JIS: 25 dB" },
-      { name: "Water Tightness", value: "ASTM E330: 300 Pa" },
-      { name: "Wind Pressure Resistance", value: "ASTM E330: 2000 Pa" },
-      { name: "Air Tightness", value: "ASTM E283: 10.7m3 / h·m2 " },
+      { name: "Can be shortened", value: "max. 125 mm" },
+      {
+        name: "Drop height adjustment",
+        value: "on release pin with 3 mm Allen key",
+      },
+      { name: "Max. drop height", value: "16 mm" },
+      { name: "Fastening", value: "for gluing" },
+      { name: "Profile material", value: "aluminium" },
     ],
     installation:
-      "The installation of Selective Systems' Aluminium Glass-to-Glass Corner Windows is tailored to provide seamless integration, durability, and unmatched aesthetics for your property. To ensure optimal performance, we recommend professional installation by our experienced team. We guarantee a precise fit with superior weather sealing and insulation, enhancing the energy efficiency and functionality of your space. Whether you’re in Navi Mumbai, Vile Parle, Kalyan, or near you, our expert services are customized to meet the unique requirements of your property. Proper installation not only elevates the appearance of your space but also ensures long-term value and reliability. Experience effortless elegance and top-notch performance with Selective Systems' glass-to-glass corner window installation services. Contact us today to upgrade your property with flawless installation near you.",
+      "The installation of Selective Systems' Automatic Door Drop-Down Seal ensures optimal sealing and soundproofing for your doors. Our expert team guarantees a precise fit with seamless integration, providing exceptional fire and smoke protection. Whether you're in Lower Parel, Bandra, Goregaon, Mulund, or other locations in Mumbai, or in states like Uttar Pradesh, Tamil Nadu, Rajasthan, Madhya Pradesh, or Maharashtra, our professional installation service is tailored to meet the specific needs of your property. Trust Selective Systems for a flawless installation that enhances both functionality and durability.",
     maintenance: [
-      "Maintaining Selective Systems' Aluminium Glass-to-Glass Corner Windows is easy and ensures their premium quality lasts for years. Designed to withstand diverse weather conditions while providing energy efficiency, these windows are ideal for properties in neighborhoods like Worli, Prabhadevi, Dadar, or near you.",
-      "Routine maintenance includes cleaning the glass and frames with mild soap and water to keep their sleek appearance. Regularly check the window seals for any signs of wear and clean debris from the corners and edges to maintain proper sealing and insulation. These simple steps ensure your windows continue to perform optimally, providing unobstructed views and excellent protection from the elements.",
-      "Thanks to their durable construction and low-maintenance design, our Aluminium Glass-to-Glass Corner Windows offer lasting performance with minimal effort. Whether you’re in Chembur, Powai, Juhu, or anywhere near your area, these windows are the perfect choice for modern aesthetics and superior durability.",
-      "By following these maintenance tips, you can preserve the beauty and efficiency of your windows for years to come. Selective Systems' glass-to-glass corner windows deliver long-lasting performance and reliability near you, ensuring your property remains stylish and comfortable across all seasons.",
+      "Maintaining the Automatic Door Drop-Down Seal from Selective Systems is simple and ensures long-lasting performance. ",
+      "Routine maintenance includes cleaning the silicone lip and checking for any wear or debris in the seal. ",
+      "For properties in cities like Andheri, Bhandup, Thane, Worli, or areas in Uttar Pradesh, Karnataka, Maharashtra, Chhattisgarh, and Rajasthan, these seals provide low-maintenance durability.",
+      "Regular cleaning helps preserve the sealing properties, ensuring effective sound and smoke protection for your doors. By following basic maintenance, you can ensure reliable performance for years.",
     ],
   },
 ];
@@ -497,11 +615,9 @@ export default function ProductPage({ params }) {
   console.log("path: ", params);
   const [openAccordion, setOpenAccordion] = useState(0);
   const pathname = usePathname();
-  const fetchedId = pathname.slice(-1);
+  const fetchedId = pathname.slice(-15);
   console.log("fid:", fetchedId);
-  const product = DoorSealProductsPanel.find(
-    (item) => item.id === parseInt(fetchedId)
-  );
+  const product = DoorSealProductsPanel.find((item) => item.id === fetchedId);
 
   if (!product) {
     notFound();

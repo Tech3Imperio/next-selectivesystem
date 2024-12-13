@@ -1,4 +1,4 @@
-import DoorSeals from "@/app/componets/DoorSeals/DoorSeals";
+import DoorSeals from "@/app/components/DoorSeals/DoorSeals";
 
 export const metadata = {
   title:
@@ -22,18 +22,18 @@ export const metadata = {
     "Waterproof door seals",
     "Custom door seals",
     "Door seal installation",
-    "Door seals Mumbai",
-    "Door seals Charni Road",
-    "Door seals Vikhroli",
-    "Door seals Dombivli",
-    "Door seals Mhape",
-    "Door seals Pune",
-    "Door seals Bangalore",
-    "Door seals Bhopal",
-    "Door seals Uttar Pradesh",
-    "Door seals US",
-    "Door seals Tajikistan",
-    "Door seals China",
+    "Aluminium Windows door in Mumbai",
+    "Aluminium Door in Charni Road",
+    "Aluminium Door in Vikhroli",
+    "Aluminium windows in Dombivli",
+    "Aluminium Door in Mhape",
+    "Aluminium Windows in Pune",
+    "Aluminium Door in Bangalore",
+    "Aluminium Door in Bhopal",
+    "Aluminium Windows door in Uttar Pradesh",
+    "Aluminium Door in US",
+    "Aluminium Windows door in Tajikistan",
+    "Aluminium Windows door in China",
   ],
   url: "https://selectivesystems.in/products/door-seals",
 };

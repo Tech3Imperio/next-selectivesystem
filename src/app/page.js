@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import HeroImageSlider from "./componets/HeroImageSlider/HeroImageSlider";
+import HeroImageSlider from "./components/HeroImageSlider/HeroImageSlider";
 import { motion } from "framer-motion";
 import img1 from "./assets/AluminiumProduct/img1.jpg";
 import bathroomPartition1 from "./assets/BathroomPartition/bathroomPartition1.jpeg";

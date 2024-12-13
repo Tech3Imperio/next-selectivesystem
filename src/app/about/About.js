@@ -21,17 +21,17 @@ const About = () => {
     {
       title: "Glass Railings",
       description:
-        "Our premium glass railings offer unobstructed views and modern elegance. Engineered for maximum safety, they're perfect for balconies, staircases, and outdoor spaces, combining durability with sophisticated design.",
+        "Selective Systems’ premium glass railings offer unobstructed views and contemporary elegance for your home or office. Perfect for balconies, staircases, and outdoor spaces, our modern glass railings combine durability, safety, and sophisticated design. Made with high-quality aluminium frames, these aluminium balcony glass railings enhance the aesthetic appeal of any property while ensuring long-lasting performance and strength. Ideal for those seeking stylish and secure glass railing systems, our products elevate your space with seamless, modern solutions that stand the test of time. Whether you're in Mumbai, Pune, or Bangalore, Selective Systems offers the best modern glass railing solutions.",
     },
     {
       title: "Aluminum Windows",
       description:
-        "Experience energy efficiency and style with our aluminum windows. Customizable in various colors and designs, they provide excellent insulation, low maintenance, and enhanced security for both residential and commercial buildings.",
+        "Selective Systems offers the best aluminium windows designed for modern homes, offices, and commercial spaces. Our aluminium window accessories are crafted for durability, style, and functionality, ensuring optimal performance in any environment. Whether you're in Mumbai, Pune, Bangalore, or Chennai, our products deliver exceptional energy efficiency, sleek design, and long-lasting strength. From aluminium window locks to sliding window hardware, each accessory enhances the usability and security of your windows. With customizable options, our aluminium windows and accessories are the ideal choice for properties looking to combine style, performance, and reliability. Enhance your living space with the best aluminium windows near me.",
     },
     {
-      title: "Invisible Grilles",
+      title: "Invisible Grill",
       description:
-        "Enjoy safety without compromising aesthetics. Our invisible grilles offer robust security while maintaining an open, uncluttered view. Ideal for high-rise apartments and offices, they're virtually undetectable yet highly effective.",
+        "Experience unparalleled security with Selective Systems' invisible grills, offering a perfect balance of safety and sleek design. These invisible grills are the ideal solution for high-rise apartments, balconies, and offices, providing strong protection while maintaining an open, unobstructed view. Crafted from high-quality materials, they blend seamlessly with your space, making them virtually undetectable yet incredibly effective. Enjoy peace of mind knowing that your property is safe, while enhancing the aesthetics with modern invisible grilles that don’t compromise on style. Trust Selective Systems for durable and discreet security solutions for your home or office. Enhance your property’s security with the best invisible grills in Mumbai.",
     },
   ];
 

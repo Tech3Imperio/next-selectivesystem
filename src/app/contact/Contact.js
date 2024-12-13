@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import email from "../assets/Contact/email.png";
 import location from "../assets/Contact/location.png";
 import contact from "../assets/Contact/contact.png";
-import { FadeDown, FadeUp } from "../componets/utility/animation";
+import { FadeDown, FadeUp } from "../components/utility/animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -66,10 +66,10 @@ const Contact = () => {
         <div className="container mx-auto">
           <div className="flex justify-center mb-12">
             <div className="text-center">
-              <h6 className="text-primary mb-10 poppins-regular flex justify-center items-center text-4xl">
+              {/* <h6 className="text-primary mb-10 poppins-regular flex justify-center items-center text-4xl">
                 Selective Systems
-              </h6>
-              <h1 className="text-2xl text-secondary poppins-regular">
+              </h6> */}
+              <h1 className="text-3xl text-primary poppins-semibold drop-shadow-lg">
                 CONTACT US
               </h1>
             </div>

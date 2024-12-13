@@ -1,4 +1,4 @@
-import AluminiumWindows from "../../componets/Aluminium/AluminiumWindows";
+import AluminiumWindows from "../../components/Aluminium/AluminiumWindows";
 
 export const metadata = {
   title:
