@@ -8,6 +8,7 @@ import img4 from "../../assets/AluminiumProduct/img4.jpg";
 import aluminumPhone from "../../assets/AluminiumProduct/AluminiumPhoneImages/aluminumPhone.jpg";
 import AluminumPhoneDoor from "../../assets/AluminiumProduct/AluminiumPhoneImages/AluminumPhoneDoor.jpg";
 import AluminumPhoneWindow from "../../assets/AluminiumProduct/AluminiumPhoneImages/AluminumPhoneWindow.jpg";
+import { BsFillTelephoneFill } from "react-icons/bs";
 // import AluminumData from "../../Data/Aluminium/AluminiumData";
 import Image from "next/image";
 import Link from "next/link";
@@ -129,25 +130,24 @@ const AluminiumWindows = () => {
                 >
                   {item.description}
                 </motion.div>
-                <motion.div
-                  className="button grid grid-cols-1 mt-5"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Link href="/contact">
-                    <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      GET IN TOUCH
-                    </motion.button>
-                  </Link>
-                </motion.div>
+                <div className="button grid grid-cols-1 mt-5">
+                  <div className="flex gap-4">
+                    {/* GET IN TOUCH Button */}
+                    <Link href="/contact">
+                      <button className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base">
+                        GET IN TOUCH
+                      </button>
+                    </Link>
+
+                    {/* CALL NOW Button */}
+                    <Link href="tel:+919372593981">
+                      <button className="border-none text-sm bg-primary text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-700 hover:bg-[#e4e4e4] md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base flex justify-center items-center gap-2">
+                        <BsFillTelephoneFill size={16} />
+                        CALL NOW
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -184,59 +184,6 @@ const AluminiumWindows = () => {
         </div>
       </div>
       <Aluminium />
-
-      {/* table data */}
-      {/* <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
-        {AluminumData.map((item, index) => (
-          <div
-            key={index}
-            className="relative group h-[23.4rem] w-[20rem] ml-5 mt-14 mb-8 bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-700 ease-in-out md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-pt-[5rem] lg:w-[17rem] xl:h[18rem] xl:w-[20rem]"
-          >
-            <div className="flex items-center justify-center h-[116%] mr-2 w-[116%] overflow-hidden md:-mb-20 xl:-mb-40">
-              <Image
-                src={item.img}
-                title={item.title}
-                alt={item.alt}
-                loading="lazy"
-                className="transition-transform duration-700 ease-in-out group-hover:scale-90 object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out">
-              <div className="text-center">
-                <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-                <table className="mt-4 text-left w-full">
-                  <tbody>
-                    <tr>
-                      <td className="font-semibold pr-2">Color:</td>
-                      <td>{item.color}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Appearance:</td>
-                      <td>{item.appearance}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Glass Thickness:</td>
-                      <td>{item.glassThickness}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Frame Material:</td>
-                      <td>{item.frameMaterial}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Surface Finishing:</td>
-                      <td>{item.surfaceFinishing}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="absolute bottom-2 w-full px-4 transition-opacity duration-300 ease-in-out group-hover:opacity-0">
-              <p className="text-lg font-medium">{item.title}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
     </main>
   );
 };

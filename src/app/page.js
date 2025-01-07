@@ -9,6 +9,7 @@ import Invisiblebacony from "./assets/InvisibleGrill/Invisiblebacony.webp";
 import Longoffice from "./assets/Officepartition/Longoffice.png";
 import Link from "next/link";
 import Image from "next/image";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 const Home = () => {
   const [sliderItems] = useState([
@@ -139,25 +140,24 @@ const Home = () => {
                 >
                   {item.description}
                 </motion.div>
-                <motion.div
-                  className="button grid grid-cols-1 mt-5"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Link href="/contact">
-                    <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      GET IN TOUCH
-                    </motion.button>
-                  </Link>
-                </motion.div>
+                <div className="button grid grid-cols-1 mt-5">
+                  <div className="flex gap-4">
+                    {/* GET IN TOUCH Button */}
+                    <Link href="/contact">
+                      <button className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base">
+                        GET IN TOUCH
+                      </button>
+                    </Link>
+
+                    {/* CALL NOW Button */}
+                    <Link href="tel:+919372593981">
+                      <button className="border-none text-sm bg-primary text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-700 hover:bg-[#e4e4e4] md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base flex justify-center items-center gap-2">
+                        <BsFillTelephoneFill size={16} />
+                        CALL NOW
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}

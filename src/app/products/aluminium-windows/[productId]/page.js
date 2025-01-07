@@ -21,6 +21,7 @@ import slidingWindowsCross from "../../../assets/Gallery/aluminiumWndows/blackSl
 import casementAluminumWindows from "../../../assets/Gallery/aluminiumWndows/casementWindows/aluminium-casement-window.jpeg";
 import GlassCornerAluminumWindows from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/Glass-to-Glass-Corner-Window.jpg";
 import glassCorner from "../../../assets/Gallery/aluminiumWndows/GlassCornerWindows/wallGlassCorner.jpg";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 const AluminiumProductsPanel = [
   {
@@ -383,6 +384,7 @@ const AluminiumProductsPanel = [
       { name: "Height of Sill", value: "50 mm" },
       { name: "Glass Thickness", value: "Up to 31.5 mm" },
     ],
+
     longDescription: {
       title:
         "Selective Systems proudly presents our Aluminium Glass-to-Glass Corner Windows, a striking blend of contemporary design, durability, and practicality. Perfect for modern homes, offices, and commercial spaces, these windows redefine aesthetics and functionality. Engineered to create seamless corner views and maximize natural light, our glass-to-glass corner windows are built for longevity and to elevate your architectural vision.",
@@ -636,6 +638,12 @@ export default function ProductPage({ params }) {
                 </tbody>
               </table>
             </div>
+            <Link href="tel:+919372593981">
+              <button className="border-none text-sm bg-primary text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-700 hover:bg-[#e4e4e4] md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base flex justify-center items-center gap-2">
+                <BsFillTelephoneFill size={16} />
+                CALL NOW
+              </button>
+            </Link>
           </div>
         </div>
 

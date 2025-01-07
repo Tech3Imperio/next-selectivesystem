@@ -611,8 +611,8 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
   );
 };
 
-export default function ProductPage({ params }) {
-  console.log("path: ", params);
+export default function ProductPage() {
+  // console.log("path: ", params);
   const [openAccordion, setOpenAccordion] = useState(0);
   const pathname = usePathname();
   const fetchedId = pathname.slice(-15);
