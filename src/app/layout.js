@@ -28,6 +28,19 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
         />
+        {/* Google Analytics gtag.js */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-680TR1BEZN"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-680TR1BEZN');
+          `}
+        </script>
 
         {/* Additional metadata (if necessary) */}
         <meta name="description" content={metadata.description} />
