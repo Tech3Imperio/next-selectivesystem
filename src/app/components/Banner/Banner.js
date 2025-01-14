@@ -457,6 +457,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeUp } from "../utility/animation";
+import OurProducts from "../OurProducts/OurProducts";
 
 // Features and services data
 const features = [
@@ -514,15 +515,15 @@ const services = [
 const Section = ({ title, children }) => (
   <section className="py-16 px-4 overflow-hidden">
     <div className="container mx-auto">
-      <motion.h2
-        className="text-3xl md:text-4xl font-bold text-center text-primary drop-shadow-lg mb-12"
+      <motion.p
+        className="text-3xl md:text-[2.5rem] font-bold text-center text-blue-900 drop-shadow-lg mb-12"
         initial={{ opacity: 0, y: -50 }} // Initial animation state
         whileInView={{ opacity: 1, y: 0 }} // Trigger animation when in view
         viewport={{ once: false }} // Animation triggers every time the section comes into view
         transition={{ duration: 0.6, ease: "easeInOut" }} // Transition for smooth effect
       >
         {title}
-      </motion.h2>
+      </motion.p>
       {children}
     </div>
   </section>
@@ -531,40 +532,40 @@ const Section = ({ title, children }) => (
 // Updated FeatureCard with FadeUp Animation and `whileInView`
 const FeatureCard = ({ feature, delay }) => (
   <motion.div
-    className="bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-xl"
+    className="bg-blue-950 p-8 rounded-3xl shadow-lg hover:shadow-xl"
     variants={FadeUp(delay)} // Apply FadeUp animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <h3 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+    <span className="text-2xl poppins-semibold  text-yellow-400 drop-shadow-lg mb-4">
       {feature.title}
-    </h3>
-    <p className="text-gray-400 poppins-extralight">{feature.description}</p>
+    </span>
+    <p className="text-gray-200 poppins-extralight">{feature.description}</p>
   </motion.div>
 );
 
 // Updated ServiceCard with FadeLeft Animation and `whileInView`
 const ServiceCard = ({ service, delay }) => (
   <motion.div
-    className="bg-gradient-to-br from-green-50 to-green-300 p-6 rounded-3xl shadow-lg hover:shadow-xl"
+    className="bg-gradient-to-br from-yellow-50 to-yellow-400 p-6 rounded-3xl shadow-xl hover:shadow-2xl"
     variants={FadeLeft(delay)} // Apply FadeLeft animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <h3 className="text-2xl poppins-semibold text-gray-700 drop-shadow-lg mb-2">
+    <h3 className="text-2xl poppins-semibold text-blue-950 drop-shadow-lg mb-2">
       {service.name}
     </h3>
-    <p className="text-gray-600 poppins-extralight">{service.description}</p>
+    <p className=" poppins-extralight">{service.description}</p>
   </motion.div>
 );
 
 const Banner = () => {
   return (
-    <div className="bg-gray-800">
+    <div className="">
       {/* Services Section */}
       <Section title="Our Services">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:p-8">
@@ -573,7 +574,7 @@ const Banner = () => {
           ))}
         </div>
       </Section>
-
+      <OurProducts />
       {/* Features Section */}
       <Section title="Why Selective Systems?">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:p-8">

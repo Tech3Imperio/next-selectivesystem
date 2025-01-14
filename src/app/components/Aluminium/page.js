@@ -40,21 +40,21 @@ const AluminiumProductsPanel = [
 
 export default function AluminiumWindows() {
   return (
-    <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center pt-14">
+    <div className="max-w-[85rem] mx-auto container flex flex-col justify-center items-center pt-14">
       <div className="m-4">
-        <h1 className=" text-xl lg:text-4xl poppins-semibold text-primary drop-shadow-lg mb-8 text-center">
-          Premium Aluminum Windows: Combining Durability, Style, and Modern
+        <h1 className=" text-2xl lg:text-4xl font-medium text-blue-900  mb-8 text-center">
+          Premium Aluminum Windows Combining Durability, Style, and Modern
           Design
         </h1>
-        <p className="poppins-extralight text-base text-justify text-gray-700">
-          Discover <strong>premium aluminum windows</strong> that combine
-          <b>durability</b>, sleek style, and modern design. Ideal for both
+        <p className="text-base text-center max-w-6xl mx-auto text-gray-800">
+          Discover <strong>premium aluminum windows</strong> that combine{" "}
+          <b>durability</b>, sleek style, and modern design. Ideal for both{" "}
           <b>residential</b> and <b>commercial</b> properties, our windows offer
           exceptional energy efficiency, low maintenance, and long-lasting
           performance. Enhance your space with windows that provide both
           functionality and elegance. Contact us today for{" "}
-          <strong>custom aluminum window</strong>
-          solutions and professional installation.
+          <strong>custom aluminum window</strong> solutions and professional
+          installation.
         </p>
       </div>
 
@@ -72,7 +72,7 @@ export default function AluminiumWindows() {
                   src={item.image}
                   alt={item.ProductName}
                   loading="lazy"
-                  className="h-[100%] w-[100%] object-cover"
+                  className="h-[100%] w-[100%] object-cover rounded-2xl"
                 />
               </div>
             </div>

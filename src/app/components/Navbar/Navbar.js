@@ -258,7 +258,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { MdArrowForwardIos } from "react-icons/md";
 import {
   dropdownAnimationOpen,
@@ -293,8 +293,8 @@ export default function Navbar() {
           href: "/products/door-seals",
         },
         {
-          name: "Railings",
-          href: "/products/railings",
+          name: "Glass Railings",
+          href: "/products/glass-railings",
         },
         { name: "Invisible Grill", href: "/products/invisiblegrill" },
         { name: "Office Partitions", href: "/products/office-partitions" },
@@ -356,19 +356,19 @@ export default function Navbar() {
     <nav
       className={`absolute xl:fixed ${
         isMobileView
-          ? "bg-gray-900 bg-opacity-50 backdrop-blur"
+          ? "bg-gray-100 bg-opacity-50 backdrop-blur"
           : " bg-gray-900 bg-opacity-50 backdrop-blur"
-      } text-white w-[100vw] z-50 rounded-b-3xl`}
+      } text-white w-[100vw] z-50 `}
     >
       {isMobileView ? (
         <>
-          <div className="flex justify-between items-center md:px-28 w-full bg-gray-950 opacity-85 z-50">
+          <div className="flex justify-between  items-center md:px-28 w-full bg-gray-950 opacity-85 z-50 ">
             <Link href="/" className="px-2 py-1">
               <Image
                 priority
                 src={Logo}
                 alt="Logo"
-                className="h-[4rem] w-[7rem] cursor-pointer hover:scale-105"
+                className="h-[5.5rem] w-[10rem] pl-4 pt-2 cursor-pointer transform transition-transform hover:scale-[1.15] duration-700"
               />
             </Link>
             <button
@@ -376,9 +376,9 @@ export default function Navbar() {
               className="p-4 rounded-full text-white text-2xl"
             >
               {isOpen ? (
-                <IoClose className="h-9 w-9" />
+                <IoClose className="h-14 w-12 pt-2 pr-2" />
               ) : (
-                <GiHamburgerMenu className="h-9 w-9" />
+                <HiMenuAlt3 className="h-14 w-12 pt-2 pr-2" />
               )}
             </button>
           </div>
@@ -386,7 +386,7 @@ export default function Navbar() {
           {isOpen ? (
             <motion.div
               {...sidebarAnimationOpen()}
-              className="relative top-16 left-0 h-auto w-full bg-gray-950 opacity-85 text-white lg:h-full z-50"
+              className="relative top-1 left-0 h-auto w-full opacity-85 text-white lg:h-full z-50"
             >
               <div className="px-4 flex flex-col">
                 <div className="flex flex-col ">
@@ -423,7 +423,7 @@ export default function Navbar() {
                   {isProductsDropdownOpen && (
                     <motion.div
                       {...dropdownAnimationOpen()}
-                      className="relative bg-gray-950 opacity-85 flex flex-col items-center h-auto gap-4 px-5 w-full cursor-pointer"
+                      className="relative opacity-85 flex flex-col items-center h-auto gap-4 px-5 w-full cursor-pointer"
                     >
                       <ul className="flex flex-col justify-around h-auto w-full">
                         <Link
@@ -442,10 +442,10 @@ export default function Navbar() {
                         </Link>
                         <Link
                           onClick={toggleSidebar}
-                          href="/products/railings"
+                          href="/products/glass-railings"
                           className="p-2 text-[1.25rem] whitespace-nowrap flex items-center justify-center"
                         >
-                          Railings
+                          Glass Railings
                         </Link>
                         <Link
                           onClick={toggleSidebar}
@@ -552,7 +552,7 @@ export default function Navbar() {
                           <div key={subItem.name} className="relative group">
                             <Link
                               href={subItem.href}
-                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] rounded-md flex items-center din-medium"
+                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-blue-950 hover:text-yellow-400 rounded-md flex items-center din-medium"
                             >
                               {subItem.name}
                             </Link>
@@ -564,7 +564,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link href="/contact">
-                <button className="border-none text-sm transition duration-700 bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]">
+                <button className="border-none text-sm bg-yellow-400 text-blue-950 font-semibold w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-white hover:scale-110 transition duration-700 hover:text-blue-900">
                   GET IN TOUCH
                 </button>
               </Link>

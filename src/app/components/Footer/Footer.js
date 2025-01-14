@@ -90,16 +90,16 @@ export const Footer = () => {
           </h5>
           <div className="flex justify-start gap-4 text-xl">
             <Link target="_blank" href="/">
-              <Facebook className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-blue-500 transition duration-500" />
+              <Facebook className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Twitter className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-black transition duration-500" />
+              <Twitter className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Instagram className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-pink-600 transition duration-500" />
+              <Instagram className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Linkedin className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-blue-600 transition duration-500" />
+              <Linkedin className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
             </Link>
           </div>
         </div>
@@ -120,7 +120,7 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className=" bg-[#25D366] text-white poppins-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
+            className=" bg-blue-950 text-white poppins-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
             id="button"
           >
             Subscribe

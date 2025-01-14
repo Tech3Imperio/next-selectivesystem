@@ -583,14 +583,14 @@ export default function ProductPage({ params }) {
           </div>
 
           <div className="flex flex-col pt-6 gap-6 mt-10">
-            <h2 className="text-3xl text-center md:p-0 md:text-start text-green-400 drop-shadow-lg poppins-semibold ">
+            <h2 className="text-3xl text-center md:p-0 md:text-start text-blue-900 drop-shadow-lg poppins-semibold ">
               {product.ProductName}
             </h2>
             <p className="text-gray-700 text-justify px-2">
               {product.description}
             </p>
             <div>
-              <h3 className="text-xl text-green-400 drop-shadow-lg poppins-semibold mb-2">
+              <h3 className="text-xl text-blue-900 drop-shadow-lg poppins-semibold mb-2">
                 Features:
               </h3>
               <ul className="list-disc list-inside">
@@ -605,7 +605,7 @@ export default function ProductPage({ params }) {
               </ul>
             </div>
             <div className="text-gray-700">
-              <span className="text-xl text-green-400 drop-shadow-lg poppins-semibold">
+              <span className="text-xl text-blue-900 drop-shadow-lg poppins-semibold">
                 Dimensions:
               </span>
               <table className="min-w-full border-collapse border border-gray-300 table-auto mt-2">
@@ -638,8 +638,9 @@ export default function ProductPage({ params }) {
                 </tbody>
               </table>
             </div>
+
             <Link href="tel:+919372593981">
-              <button className="border-none text-sm bg-primary text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-700 hover:bg-[#e4e4e4] md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base flex justify-center items-center gap-2">
+              <button className="border text-sm bg-yellow-400 text-blue-900 hover:border-blue-900 px-5 py-3 font-medium rounded-[2rem] cursor-pointer transition-all duration-700 hover:bg-white  flex justify-center items-center gap-2">
                 <BsFillTelephoneFill size={16} />
                 CALL NOW
               </button>
@@ -649,7 +650,7 @@ export default function ProductPage({ params }) {
 
         <div className="space-y-12">
           <section>
-            <h2 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
               Product Description
             </h2>
             <p className="text-gray-700 mb-6 text-justify px-2">
@@ -674,7 +675,7 @@ export default function ProductPage({ params }) {
 
           <div>
             {" "}
-            <h2 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
               Applications
             </h2>
             <div className="rounded-lg overflow-hidden">
@@ -693,7 +694,7 @@ export default function ProductPage({ params }) {
           </div>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
               Specifications
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -709,7 +710,7 @@ export default function ProductPage({ params }) {
           </section>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
               Installation
             </h2>
             <p className="text-gray-700 text-base poppins-extralight text-justify">
@@ -718,7 +719,7 @@ export default function ProductPage({ params }) {
           </section>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-green-400 drop-shadow-lg mb-4">
+            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
               Maintenance
             </h2>
             <p className="text-gray-700 text-base poppins-extralight text-justify">
