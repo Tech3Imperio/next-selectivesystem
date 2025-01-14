@@ -21,7 +21,7 @@ module.exports = {
       "/products/door-seals/Door-drop-seals",
       "/products/door-seals/Drop-down-seals",
       "/products/door-seals/Automatic-doors",
-      "/products/railings",
+      "/products/glass-railings",
       "/products/invisiblegrill",
       "/products/office-partitions",
       "/products/bathroom-partitions",

@@ -22,10 +22,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta
-          name="google-site-verification"
-          content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
-        />
         {/* Google Analytics gtag.js */}
         <script
           async
@@ -33,21 +29,19 @@ export default function RootLayout({ children }) {
         ></script>
         <script>
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-680TR1BEZN');
-          `}
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-680TR1BEZN');
+            `}
         </script>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
+        />
 
-        {/* Additional metadata (if necessary) */}
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords.join(", ")} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <link rel="icon" href={metadata.icon} />
+        {/* You can add other meta tags here */}
       </head>
       <body className=" antialiased overflow-x-hidden w-screen">
         <Navbar />
