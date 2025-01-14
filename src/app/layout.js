@@ -5,8 +5,7 @@ import Whatsapp from "./components/Whatsapp/Whatsapp";
 import Head from "next/head";
 
 export const metadata = {
-  title:
-    "Selective Systems: Premium Aluminium Windows | modern glass railing | stylish design glass pratition",
+  title: "Selective Systems: Aluminium Windows | Glass Railing",
   description:
     "Elevate your space with Selective Systems. We provide Aluminium Windows, Door Seals, Railings, and more, ensuring safety, style, and durability for your projects.",
   keywords: [
