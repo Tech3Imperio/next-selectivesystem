@@ -2,7 +2,6 @@ import "./globals.css";
 import { Footer } from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
-import Head from "next/head";
 
 export const metadata = {
   title: "Selective Systems: Aluminium Windows | Glass Railing",
@@ -22,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta
           name="google-site-verification"
           content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
@@ -49,7 +48,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <link rel="icon" href={metadata.icon} />
-      </Head>
+      </head>
       <body className=" antialiased overflow-x-hidden w-screen">
         <Navbar />
         {children}
