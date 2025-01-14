@@ -2,6 +2,7 @@ import "./globals.css";
 import { Footer } from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
+import Head from "next/head";
 
 export const metadata = {
   title:
@@ -22,6 +23,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
+        />
+        {/* Additional metadata (if necessary) */}
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <link rel="icon" href={metadata.icon} />
+      </Head>
       <body className=" antialiased overflow-x-hidden w-screen">
         <Navbar />
         {children}

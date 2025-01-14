@@ -150,7 +150,7 @@ export default function AluminumWindows() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-2xl text-black font-semibold lg:text-3xl"
+                className="text-2xl text-black font-semibold lg:text-3xl "
               >
                 Modern Glass Windows
               </motion.h3>
