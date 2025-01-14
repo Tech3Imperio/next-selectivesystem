@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
         />
+
         {/* Additional metadata (if necessary) */}
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
