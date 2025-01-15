@@ -516,7 +516,7 @@ const Section = ({ title, children }) => (
   <section className="py-16 px-4 overflow-hidden">
     <div className="container mx-auto">
       <motion.p
-        className="text-3xl md:text-[2.5rem] font-bold text-center text-blue-900 drop-shadow-lg mb-12"
+        className="text-3xl md:text-[2.5rem] din-bold text-center text-black  mb-12"
         initial={{ opacity: 0, y: -50 }} // Initial animation state
         whileInView={{ opacity: 1, y: 0 }} // Trigger animation when in view
         viewport={{ once: false }} // Animation triggers every time the section comes into view
@@ -532,34 +532,34 @@ const Section = ({ title, children }) => (
 // Updated FeatureCard with FadeUp Animation and `whileInView`
 const FeatureCard = ({ feature, delay }) => (
   <motion.div
-    className="bg-blue-950 p-8 rounded-3xl shadow-lg hover:shadow-xl"
+    className="bg-gradient-to-br from-gray-100 to-gray-400 p-8  rounded-3xl shadow-lg hover:shadow-xl"
     variants={FadeUp(delay)} // Apply FadeUp animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <span className="text-2xl poppins-semibold  text-yellow-400 drop-shadow-lg mb-4">
+    <span className="text-2xl din-bold  text-black  mb-4 py-2">
       {feature.title}
     </span>
-    <p className="text-gray-200 poppins-extralight">{feature.description}</p>
+    <p className="text-black roboto-light">{feature.description}</p>
   </motion.div>
 );
 
 // Updated ServiceCard with FadeLeft Animation and `whileInView`
 const ServiceCard = ({ service, delay }) => (
   <motion.div
-    className="bg-gradient-to-br from-yellow-50 to-yellow-400 p-6 rounded-3xl shadow-xl hover:shadow-2xl"
+    className="bg-gradient-to-br from-gray-50 to-gray-400 p-6 rounded-3xl shadow-xl hover:shadow-2xl"
     variants={FadeLeft(delay)} // Apply FadeLeft animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <h3 className="text-2xl poppins-semibold text-blue-950 drop-shadow-lg mb-2">
+    <h3 className="text-2xl poppins-semibold  din-bold drop-shadow-lg mb-2">
       {service.name}
     </h3>
-    <p className=" poppins-extralight">{service.description}</p>
+    <p className=" roboto-light">{service.description}</p>
   </motion.div>
 );
 

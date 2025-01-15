@@ -42,11 +42,11 @@ export default function AluminiumWindows() {
   return (
     <div className="max-w-[85rem] mx-auto container flex flex-col justify-center items-center pt-14">
       <div className="m-4">
-        <h1 className=" text-2xl lg:text-4xl font-medium text-blue-900  mb-8 text-center">
+        <h1 className=" text-2xl lg:text-5xl din-bold text-black  mb-8 text-center">
           Premium Aluminum Windows Combining Durability, Style, and Modern
           Design
         </h1>
-        <p className="text-base text-center max-w-6xl mx-auto text-gray-800">
+        <p className="text-base text-center max-w-6xl roboto-light mx-auto text-gray-800">
           Discover <strong>premium aluminum windows</strong> that combine{" "}
           <b>durability</b>, sleek style, and modern design. Ideal for both{" "}
           <b>residential</b> and <b>commercial</b> properties, our windows offer
@@ -67,7 +67,7 @@ export default function AluminiumWindows() {
           >
             <div className="rounded-lg flex flex-col overflow-hidden transition-transform duration-300 group-hover:scale-105">
               {/* Center the image in the container */}
-              <div className="flex justify-center items-center p-4">
+              <div className="flex justify-center items-center p-8 lg:p-4">
                 <Image
                   src={item.image}
                   alt={item.ProductName}
@@ -76,7 +76,7 @@ export default function AluminiumWindows() {
                 />
               </div>
             </div>
-            <p className="text-center text-xl poppins-semibold text-gray-800">
+            <p className="text-center text-xl roboto-light text-gray-800">
               {item.ProductName}
             </p>
           </Link>

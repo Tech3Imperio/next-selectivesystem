@@ -44,12 +44,12 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#e4e4e4] text-black-300 flex flex-col md:flex-row justify-evenly py-20 w-screen">
+    <footer className="bg-gradient-to-br from-gray-50 to-gray-500 text-black-300 flex flex-col md:flex-row justify-evenly py-20 w-screen">
       <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
         <Link href="/">
           <Image
             src={blackLogo}
-            className="w-48 mb-2"
+            className="w-48 mb-2 "
             alt="Logo"
             loading="lazy"
           />
@@ -58,7 +58,7 @@ export const Footer = () => {
           <Link
             href="/"
             target="_blank"
-            className="text-black-300 hover:underline poppins-extralight"
+            className="text-black-300 hover:underline roboto-light"
           >
             Charni Road, Mumbai - 400004
           </Link>
@@ -66,40 +66,39 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
         <div className="mb-2">
-          <h5 className="poppins-regular text-xl">
+          <h5 className="din-bold text-xl">
             <b>Contact Us</b>
           </h5>
           <div className="mt-2">
-            <p className=" poppins-regular">
-              <span className="poppins-extralight">Phone Number :</span> +91
-              9372593981
+            <p className=" roboto-light">
+              <span className="din-regular">Phone No: </span> +91 9372593981
             </p>
-            <p className="poppins-regular">
-              <span className="poppins-extralight">Email : </span>
+            <p className="roboto-light">
+              <span className="din-regular">Email: </span>
               info@selectivesystems.in
             </p>
-            <p className=" poppins-regular">
-              <span className="poppins-extralight">Website :</span>
+            <p className=" roboto-light">
+              <span className="din-regular">Website: </span>
               www.selectivesystems.in
             </p>
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start text-xl">
-          <h5 className="poppins-regular">
+          <h5 className=" din-bold py-1">
             <b>Follow Us</b>
           </h5>
           <div className="flex justify-start gap-4 text-xl">
             <Link target="_blank" href="/">
-              <Facebook className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
+              <Facebook className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Twitter className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
+              <Twitter className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Instagram className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
+              <Instagram className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
             </Link>
             <Link target="_blank" href="/">
-              <Linkedin className="w-10 h-10 bg-blue-950 text-white p-2 rounded-full hover:text-yellow-400 transition duration-500" />
+              <Linkedin className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
             </Link>
           </div>
         </div>
@@ -112,7 +111,7 @@ export const Footer = () => {
           <input
             type="email"
             name="emails"
-            className=" px-3 py-2 w-64 font-semibold outline-none rounded-[3rem]"
+            className=" px-3 py-2 w-64 din-bold outline-none rounded-[5px]"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -120,20 +119,20 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className=" bg-blue-950 text-white poppins-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
+            className=" bg-black text-white roboto-semibold rounded-[5px] px-4 py-2 w-[7rem] hover:bg-white  hover:text-black hover:border-black hover:scale-110 transition duration-700"
             id="button"
           >
             Subscribe
           </button>
           <div
-            className="text-black  border-black border rounded-[3rem] px-4 py-2 bg-secondary"
+            className="text-black  border-black border rounded-[5px] px-4 py-2 bg-white"
             id="submited"
             style={{ display: "none" }}
           >
             Subscribed
           </div>
         </form>
-        <div className="text-center md:text-left mt-4 opacity-50 poppins-extralight">
+        <div className="text-center md:text-left mt-4 roboto-light">
           <p>&copy; 2024 Selective-Systems</p>
         </div>
       </div>

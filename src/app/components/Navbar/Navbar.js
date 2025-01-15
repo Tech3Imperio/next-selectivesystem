@@ -1,258 +1,3 @@
-// "use client";
-// import React, { useState, useEffect } from "react";
-// import Link from "next/link";
-// import whiteLogo from "../../assets/Logo/whiteLogo.png";
-// import Image from "next/image";
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [isProductsOpen, setIsProductsOpen] = useState(false);
-
-//   const handleLinkClick = () => {
-//     setIsOpen(false);
-//     setIsProductsOpen(false);
-//   };
-
-//   const handleProductsClick = () => {
-//     setIsProductsOpen(!isProductsOpen);
-//   };
-
-//   const toggleNavbar = () => {
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-//     <nav className="fixed top-0 left-0 w-screen harmony-regular z-20 transition duration-300 rounded-b-3xl bg-gray-900 bg-opacity-50 backdrop-blur">
-//       <div className="max-w-[90rem] mx-auto flex justify-between items-center h-full">
-//         <div className="text-white font-bold text-lg hover:scale-110  transition-all">
-//           <Link href="/">
-//             <Image
-//               className={`h-24 w-[13rem]${isOpen ? "h-20 w-44 " : ""}`}
-//               src={whiteLogo}
-//               alt="logo"
-//             />
-//           </Link>
-//         </div>
-//         <div className="flex items-center h-full">
-//           <div className="lg:hidden">
-//             <button
-//               onClick={toggleNavbar}
-//               className="text-white focus:outline-none"
-//               aria-label={isOpen ? "Close menu" : "Open menu"}
-//             >
-//               {isOpen ? (
-//                 <svg
-//                   className="w-10 h-10"
-//                   fill="none"
-//                   stroke="currentColor"
-//                   viewBox="0 0 24 24"
-//                   xmlns="http://www.w3.org/2000/svg"
-//                 >
-//                   <path
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth="2"
-//                     d="M6 18L18 6M6 6l12 12"
-//                   ></path>
-//                 </svg>
-//               ) : (
-//                 <svg
-//                   className="w-10 h-10"
-//                   fill="none"
-//                   stroke="currentColor"
-//                   viewBox="0 0 24 24"
-//                   xmlns="http://www.w3.org/2000/svg"
-//                 >
-//                   <path
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth="2"
-//                     d="M4 6h16M4 12h16m-7 6h7"
-//                   ></path>
-//                 </svg>
-//               )}
-//             </button>
-//           </div>
-//           <div className="hidden lg:flex items-center gap-6 h-full">
-//             <Link
-//               href="/"
-//               className="text-white h-full"
-//               onClick={handleLinkClick}
-//             >
-//               Home
-//             </Link>
-//             <Link
-//               href="/about"
-//               className="text-white"
-//               onClick={handleLinkClick}
-//             >
-//               About Us
-//             </Link>
-//             <div className="relative group">
-//               <button
-//                 className="text-white h-full"
-//                 aria-expanded={isProductsOpen}
-//               >
-//                 Products
-//               </button>
-//               <div className="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
-//                 <Link
-//                   href="/products/aluminium-windows"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb]  hover:rounded-2xl"
-//                 >
-//                   Aluminium Windows
-//                 </Link>
-//                 <Link
-//                   href="/products/door-seals"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Door Seals
-//                 </Link>
-//                 <Link
-//                   href="/products/railings"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Railings
-//                 </Link>
-//                 <Link
-//                   href="/products/queue-manager"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Queue Manager
-//                 </Link>
-//                 <Link
-//                   href="/products/invisiblegrill"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Invisible Grill
-//                 </Link>
-//                 <Link
-//                   href="/products/office-partitions"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Office Partitions
-//                 </Link>
-//                 <Link
-//                   href="/products/bathroom-partitions"
-//                   className="block px-4 py-2 harmony-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-//                 >
-//                   Bathroom Partitions
-//                 </Link>
-//               </div>
-//             </div>
-//             <Link
-//               href="/contact"
-//               className="text-white"
-//               onClick={handleLinkClick}
-//             >
-//               Contact Us
-//             </Link>
-//             <Link href="/contact">
-//               <button className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]">
-//                 GET IN TOUCH
-//               </button>
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-//       {isOpen && (
-//         <div className="lg:hidden bg-gray-900 bg-opacity-50 backdrop-blur h-full px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-transform duration-300 transform">
-//           <Link
-//             href="/"
-//             onClick={handleLinkClick}
-//             className="block px-4 py-4 text-white"
-//           >
-//             Home
-//           </Link>
-//           <Link
-//             href="/about"
-//             onClick={handleLinkClick}
-//             className="block px-4 py-4 text-white"
-//           >
-//             About Us
-//           </Link>
-//           <div className="relative">
-//             <button
-//               onClick={handleProductsClick}
-//               className="block px-4 py-4 text-white w-full text-left"
-//               aria-expanded={isProductsOpen}
-//             >
-//               Products
-//             </button>
-//             {isProductsOpen && (
-//               <div className="pl-4">
-//                 <Link
-//                   href="/products/aluminium-windows"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Aluminium Windows
-//                 </Link>
-//                 <Link
-//                   href="/products/door-seals"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Door Seals
-//                 </Link>
-//                 <Link
-//                   href="/products/railings"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Railings
-//                 </Link>
-//                 <Link
-//                   href="/products/queuemanager"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Queue Manager
-//                 </Link>
-//                 <Link
-//                   href="/products/invisiblegrill"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Invisible Grill
-//                 </Link>
-//                 <Link
-//                   href="/products/office-partitions"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Office Partitions
-//                 </Link>
-//                 <Link
-//                   href="/products/bathroom-partitions"
-//                   onClick={handleLinkClick}
-//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-//                 >
-//                   Bathroom Partitions
-//                 </Link>
-//               </div>
-//             )}
-//           </div>
-//           <Link
-//             href="/contact"
-//             onClick={handleLinkClick}
-//             className="block px-4 py-4 text-white"
-//           >
-//             Contact Us
-//           </Link>
-//           <div className="px-2 py-2">
-//             <button className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[7rem] p-2 h-[2.3rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]">
-//               GET IN TOUCH
-//             </button>
-//           </div>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -356,13 +101,13 @@ export default function Navbar() {
     <nav
       className={`absolute xl:fixed ${
         isMobileView
-          ? "bg-gray-100 bg-opacity-50 backdrop-blur"
-          : " bg-gray-900 bg-opacity-50 backdrop-blur"
+          ? "bg-black bg-opacity-50 backdrop-blur"
+          : " bg-black bg-opacity-50 backdrop-blur"
       } text-white w-[100vw] z-50 `}
     >
       {isMobileView ? (
         <>
-          <div className="flex justify-between  items-center md:px-28 w-full bg-gray-950 opacity-85 z-50 ">
+          <div className="flex justify-between  items-center md:px-28 w-full bg-black opacity-85 z-50 ">
             <Link href="/" className="px-2 py-1">
               <Image
                 priority
@@ -532,7 +277,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-base hover:text-white flex items-center poppins-regular gap-1"
+                    className="px-3 py-2 rounded-md text-base hover:text-white flex items-center roboto-bold gap-1"
                   >
                     {item.name}
                     {item.name === "Products" && (
@@ -546,13 +291,13 @@ export default function Navbar() {
                     )}
                   </Link>
                   {item.subItems && hoveredItem === item.name && (
-                    <div className="absolute top-[80px] left-0 w-52 rounded-md shadow-lg bg-[#e4e4e4] text-gray-700 z-10">
-                      <div className=" din-medium" role="menu">
+                    <div className="absolute top-[80px] left-0 w-52 rounded-md shadow-lg bg-white text-gray-700 z-10">
+                      <div className=" roboto-regular" role="menu">
                         {item.subItems.map((subItem) => (
                           <div key={subItem.name} className="relative group">
                             <Link
                               href={subItem.href}
-                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-blue-950 hover:text-yellow-400 rounded-md flex items-center din-medium"
+                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-gradient-to-br from-gray-50 to-gray-500 hover:text-black rounded-md flex items-center roboto-regular"
                             >
                               {subItem.name}
                             </Link>
@@ -564,7 +309,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link href="/contact">
-                <button className="border-none text-sm bg-yellow-400 text-blue-950 font-semibold w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-white hover:scale-110 transition duration-700 hover:text-blue-900">
+                <button className="border-none text-sm bg-white text-black roboto-bold w-[4rem] h-[2rem] cursor-pointer lg:h-[3.5rem] lg:w-[8rem] lg:px-2 rounded-[5px] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm  hover:scale-110 transition duration-700 hover:text-black">
                   GET IN TOUCH
                 </button>
               </Link>

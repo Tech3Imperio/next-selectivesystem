@@ -493,7 +493,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
       </button>
       {isOpen && (
         <div className="py-4 px-6 bg-gray-50 shadow-md">
-          <p className="text-gray-700 poppins-extralight">{content}</p>
+          <p className="text-gray-700 roboto-light">{content}</p>
         </div>
       )}
     </div>
@@ -535,7 +535,7 @@ export default function ProductPage({ params }) {
         >
           &larr; Back to All Windows
         </Link>
-        <p className="text-gray-700 poppins-extralight text-justify">
+        <p className="text-gray-700  roboto-light text-justify">
           Selective System, based in Mumbai, India, is a leading manufacturer of
           high-quality aluminium windows, offering energy-efficient, durable,
           and stylish solutions for residential and commercial spaces. Our range
@@ -558,7 +558,7 @@ export default function ProductPage({ params }) {
                   onClick={() => setSelectedImage(image)}
                   className={`relative h-20 w-20 border-2 rounded-md overflow-hidden ${
                     selectedImage === image
-                      ? "border-blue-500"
+                      ? "border-gray-800"
                       : "border-gray-200"
                   }`}
                 >
@@ -583,38 +583,34 @@ export default function ProductPage({ params }) {
           </div>
 
           <div className="flex flex-col pt-6 gap-6 mt-10">
-            <h2 className="text-3xl text-center md:p-0 md:text-start text-blue-900 drop-shadow-lg poppins-semibold ">
+            <h2 className="text-3xl text-center md:p-0 md:text-start din-bold">
               {product.ProductName}
             </h2>
-            <p className="text-gray-700 text-justify px-2">
+            <p className="text-gray-700 text-justify px-2 roboto-light">
               {product.description}
             </p>
             <div>
-              <h3 className="text-xl text-blue-900 drop-shadow-lg poppins-semibold mb-2">
-                Features:
-              </h3>
+              <h3 className="text-xl din-bold mb-2">Features:</h3>
               <ul className="list-disc list-inside">
                 {product.features.map((feature, index) => (
                   <li
                     key={index}
-                    className="text-gray-700 text-base poppins-extralight"
+                    className="text-gray-700 text-base roboto-light"
                   >
                     {feature}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="text-gray-700">
-              <span className="text-xl text-blue-900 drop-shadow-lg poppins-semibold">
-                Dimensions:
-              </span>
+            <div className="text-black">
+              <span className="text-xl din-bold">Dimensions:</span>
               <table className="min-w-full border-collapse border border-gray-300 table-auto mt-2">
                 <thead>
                   <tr className="bg-gray-200">
-                    <th className="py-2 px-4 text-left font-bold text-gray-700 border border-gray-300">
+                    <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
                       Name
                     </th>
-                    <th className="py-2 px-4 text-left font-bold text-gray-700 border border-gray-300">
+                    <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
                       Value
                     </th>
                   </tr>
@@ -640,7 +636,7 @@ export default function ProductPage({ params }) {
             </div>
 
             <Link href="tel:+919372593981">
-              <button className="border text-sm bg-yellow-400 text-blue-900 hover:border-blue-900 px-5 py-3 font-medium rounded-[2rem] cursor-pointer transition-all duration-700 hover:bg-white  flex justify-center items-center gap-2">
+              <button className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2 hover:scale-110">
                 <BsFillTelephoneFill size={16} />
                 CALL NOW
               </button>
@@ -650,18 +646,16 @@ export default function ProductPage({ params }) {
 
         <div className="space-y-12">
           <section>
-            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
-              Product Description
-            </h2>
-            <p className="text-gray-700 mb-6 text-justify px-2">
+            <h2 className="text-2xl din-bold mb-4">Product Description</h2>
+            <p className="text-black roboto-light mb-6 text-justify px-2">
               {product.longDescription.title}
             </p>
 
             <main className="product-description py-4 px-4">
-              <ul className="list-disc pl-6 space-y-6 text-gray-700">
+              <ul className="list-disc pl-6 space-y-6 text-black">
                 {product.longDescription.features.map((feature, index) => (
                   <li key={index}>
-                    <h3 className="poppins-semibold text-lg text-gray-700">
+                    <h3 className="din-bold text-lg text-black">
                       {feature.name}
                     </h3>
                     <p className="text-gray-700 mt-2 poppins-extralight text-justify">
@@ -675,9 +669,7 @@ export default function ProductPage({ params }) {
 
           <div>
             {" "}
-            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
-              Applications
-            </h2>
+            <h2 className="text-2xl din-bold mb-4">Applications</h2>
             <div className="rounded-lg overflow-hidden">
               {accordionData.map((item, index) => (
                 <AccordionItem
@@ -694,9 +686,7 @@ export default function ProductPage({ params }) {
           </div>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
-              Specifications
-            </h2>
+            <h2 className="text-2xl din-bold mb-4">Specifications</h2>
             <div className="grid grid-cols-2 gap-4">
               {product.specifications.map((spec, index) => (
                 <div key={index} className="bg-secondary p-4 rounded-lg">
@@ -710,19 +700,15 @@ export default function ProductPage({ params }) {
           </section>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
-              Installation
-            </h2>
-            <p className="text-gray-700 text-base poppins-extralight text-justify">
+            <h2 className="text-2xl din-bold mb-4">Installation</h2>
+            <p className="text-gray-700 text-base roboto-light text-justify">
               {product.installation}
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl poppins-semibold text-blue-900 drop-shadow-lg mb-4">
-              Maintenance
-            </h2>
-            <p className="text-gray-700 text-base poppins-extralight text-justify">
+            <h2 className="text-2xl din-bold mb-4">Maintenance</h2>
+            <p className="text-gray-700 text-base roboto-light text-justify">
               {product.maintenance}
             </p>
           </section>

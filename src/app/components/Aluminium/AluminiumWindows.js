@@ -197,6 +197,28 @@ import { useState, useEffect } from "react";
 import AluminiumWindows from "./page";
 import heroImg from "../../assets/AluminiumProduct/heroImg.webp";
 import Link from "next/link";
+import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
+import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
+import { BsFillTelephoneFill } from "react-icons/bs";
+
+// Custom hook to detect screen size
+const useScreenSize = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Less than 768px is considered mobile
+    };
+
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+};
 
 export default function HeroSection() {
   const cursorX = useMotionValue(-100);
@@ -206,6 +228,9 @@ export default function HeroSection() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   const [mounted, setMounted] = useState(false);
+
+  // Detect screen size using custom hook
+  const isMobile = useScreenSize();
 
   useEffect(() => {
     setMounted(true);
@@ -223,20 +248,34 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden bg-blue-950 px-8 ">
-        {" "}
-        {/* Updated to Indian Blue */}
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background Image based on screen size */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <Image
+            src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="transition-opacity duration-300"
+            priority
+          />
+        </div>
+
+        {/* Overlay to make text more visible */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+
         <motion.div
-          className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-yellow-200 mix-blend-difference"
+          className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
           style={{
             left: cursorXSpring,
             top: cursorYSpring,
           }}
         />
-        <div className="container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 md:flex-row ">
+
+        <div className="container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 xl:flex-row z-10 relative">
           <div className="mb-8 flex-1 md:mb-0 md:pr-8">
             <motion.h1
-              className=" pt-24 text-5xl lg:text-7xl font-bold text-white"
+              className=" pt-24 text-5xl lg:text-7xl din-bold text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -244,7 +283,7 @@ export default function HeroSection() {
               Aluminum
             </motion.h1>
             <motion.h2
-              className="mb-6 text-4xl lg:text-5xl text-white"
+              className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -252,7 +291,7 @@ export default function HeroSection() {
               Windows
             </motion.h2>
             <motion.h3
-              className="mb-8 text-sm lg:text-lg font-normal text-white text-justify"
+              className="mb-8 text-sm lg:text-lg roboto-light text-white text-justify"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
@@ -266,7 +305,7 @@ export default function HeroSection() {
             <div className="flex space-x-4">
               <Link href="/contact">
                 <motion.button
-                  className="rounded-full bg-yellow-400 px-4 py-3 text-blue-900 font-medium transition duration-700 border border-blue-900 hover:bg-white hover:text-blue-900"
+                  className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -275,10 +314,11 @@ export default function HeroSection() {
               </Link>
               <Link href="tel:+919372593981">
                 <motion.button
-                  className="rounded-full px-7 py-3 bg-white text-blue-900 font-medium transition duration-700 border border-blue-900 hover:bg-yellow-400 hover:text-blue-900"
+                  className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
+                  <BsFillTelephoneFill size={14} />
                   Call Now
                 </motion.button>
               </Link>
@@ -286,7 +326,7 @@ export default function HeroSection() {
           </div>
           <div className="relative flex-1 mb-4 lg:pt-14">
             <motion.div
-              className="relative h-[250px] w-[350px] md:h-[550px] md:w-[800px]"
+              className="relative h-[250px] w-[350px] md:h-[500px] md:w-[700px] lg:h-[550px] lg:w-[800px]"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}

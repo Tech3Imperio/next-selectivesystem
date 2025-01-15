@@ -2,19 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=harmony:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=harmony:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=din:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.din-thin {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
+.din-extralight {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.din-light {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.din-regular {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.din-medium {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.din-semibold {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.din-bold {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.din-extrabold {
+  font-family: "Din Regular", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.roboto-semibold {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
 @font-face {
-  font-family: "harmony";
-  src: url("./fonts/HarmonyOS_Sans.ttf") format("truetype");
+  font-family: "DIN Regular";
+  src: url("./fonts/din-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-} */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+@font-face {
+  font-family: "GeistMonoVF";
+  src: url("./fonts/GeistMonoVF.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-.poppins-thin {
+/* .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -27,7 +103,7 @@
 }
 
 .poppins-light {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; 
   font-weight: 300;
   font-style: normal;
 }
@@ -133,4 +209,4 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-}
+} */

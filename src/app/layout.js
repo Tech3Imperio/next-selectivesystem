@@ -2,7 +2,7 @@ import "./globals.css";
 import { Footer } from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
-
+import localFont from "next/font/local";
 export const metadata = {
   title: "Selective Systems: Aluminium Windows | Glass Railing",
   description:
@@ -17,7 +17,16 @@ export const metadata = {
   },
   url: "https://selectivesystems.in/",
 };
-
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -42,6 +51,17 @@ export default function RootLayout({ children }) {
         />
 
         {/* You can add other meta tags here */}
+        {/* Preconnect to Google Fonts and Load Font */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className=" antialiased overflow-x-hidden w-screen">
         <Navbar />
