@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         {/* Google Search Console Verification */}
         <meta
           name="google-site-verification"
-          content="CVInmi0GH9yxSgLNLEuMuVF-nm_oyRHGBhTvEun6Rww"
+          content="_hSMrZdm-g-xYfnhnNqkbAI-BaUsqxIKSUAI0S0oVCU"
         />
 
         {/* You can add other meta tags here */}
