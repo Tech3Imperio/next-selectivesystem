@@ -45,10 +45,10 @@ export default function DoorSealProduct() {
   return (
     <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center pt-14">
       <div className="m-4">
-        <h1 className=" text-xl lg:text-4xl poppins-semibold text-primary drop-shadow-lg mb-8 text-center">
+        <h1 className=" text-xl lg:text-4xl din-bold mb-8 text-center">
           Premium Aluminum Door Seals & Mounting Brackets for Wooden Doors.
         </h1>
-        <p className="poppins-extralight text-base text-justify text-gray-700">
+        <p className=" roboto-light text-base text-justify ">
           Upgrade your wooden doors with our high-quality{" "}
           <strong>aluminum door seals</strong> and{" "}
           <strong>mounting brackets for wooden doors</strong>. Designed for{" "}
@@ -77,7 +77,7 @@ export default function DoorSealProduct() {
                 />
               </div>
             </div>
-            <p className="text-center text-xl poppins-semibold text-gray-800">
+            <p className="text-center text-xl roboto-light">
               {item.ProductName}
             </p>
           </Link>

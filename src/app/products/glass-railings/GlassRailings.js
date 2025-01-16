@@ -8,6 +8,7 @@ import railing4 from "../../assets/Railing/HeroImage/railing4.jpg";
 import RailingData from "../../Data/Railing/RailingData";
 import Link from "next/link";
 import Image from "next/image";
+import GlassHeroSection from "@/app/components/GlassRailing/GlassRailingLayout";
 
 const GlassRailings = () => {
   const [sliderItems] = useState([
@@ -67,7 +68,7 @@ const GlassRailings = () => {
 
   return (
     <main className="relative">
-      <div
+      {/* <div
         ref={aluminiumRef}
         className="slider h-screen w-screen overflow-hidden relative"
       >
@@ -174,7 +175,8 @@ const GlassRailings = () => {
             {">"}
           </button>
         </div>
-      </div>
+      </div> */}
+      <GlassHeroSection />
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28  md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
         {RailingData.map((item, index) => (

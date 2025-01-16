@@ -7,6 +7,7 @@ import rightsideimage from "../assets/About/AboutpageImage/rightsideimage.png";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 const About = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const About = () => {
   return (
     <main className="relative">
       {/* Rest of your content */}
-      <div className="py-16 md:py-24 lg:py-32 overflow-hidden">
+      <div className="py-16 md:py-24 lg:py-32 overflow-hidden px-4">
         <motion.div
           className="container mx-auto px-4"
           initial="hidden"
@@ -54,7 +55,7 @@ const About = () => {
           }}
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-5xl poppins-semibold text-center  drop-shadow-lg mb-16 pt-4 text-primary"
+            className="text-4xl md:text-5xl lg:text-5xl din-bold text-center mb-16 pt-4"
             variants={fadeIn}
           >
             About Selective Systems
@@ -75,7 +76,7 @@ const About = () => {
             </motion.div>
 
             <motion.div className="lg:w-1/2 space-y-8" variants={fadeIn}>
-              <p className="text-base poppins-extralight text-justify pr-2 text-gray-600 leading-relaxed">
+              <p className="text-base roboto-light text-justify pr-2 leading-relaxed">
                 Selective Systems is a leading manufacturer and supplier of
                 premium high-durable glass railings, balcony windows, and
                 invisible grilles. Our products are designed for maximum safety,
@@ -84,7 +85,7 @@ const About = () => {
                 ensure long-lasting performance and a modern aesthetic that
                 complements any architectural design.
               </p>
-              <p className="text-base poppins-extralight text-justify pr-2 text-gray-600 leading-relaxed">
+              <p className="text-base roboto-light text-justify pr-2  leading-relaxed">
                 Selective Systems is a premier provider based in Mumbai,
                 specializing in high-quality glass railings, aluminum windows,
                 queue managers, bathroom partitions, door seals, and office
@@ -117,9 +118,9 @@ const About = () => {
           </div>
 
           <motion.div className="xl:mt-24 space-y-16" variants={fadeIn}>
-            <h2 className="text-4xl md:text-4xl poppins-semibold drop-shadow-lg text-center text-primary mb-12">
+            <p className="text-4xl md:text-5xl din-bold text-center mb-12">
               Our Expertise
-            </h2>
+            </p>
             <div className="grid md:grid-cols-3 gap-12 xl:px-14">
               {Alldata.map((item, index) => (
                 <motion.div
@@ -128,10 +129,8 @@ const About = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <h3 className="text-2xl poppins-semibold mb-4 text-gray-800">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-justify poppins-extralight">
+                  <h2 className="text-2xl din-bold mb-4 ">{item.title}</h2>
+                  <p className=" text-justify  roboto-light">
                     {item.description}
                   </p>
                 </motion.div>
@@ -156,27 +155,34 @@ const About = () => {
           </motion.div>
         </div>
         <div className="container mx-auto flex flex-col items-center text-center z-10 ">
-          <div className=" mb-8">
-            <h6 className="text-sm w-[13rem] text-secondary poppins-regular md:text-sm md:w-auto lg:text-base lg:w-full xl:text-xl xl:w-auto">
+          <div className=" mb-8 flex flex-col justify-center items-center">
+            {/* <p className="text-sm w-[13rem] text-white din-bold md:text-sm md:w-auto lg:text-base lg:w-full xl:text-xl xl:w-auto py-4">
               If you have any inquiries, please feel free to reach out.
-            </h6>
-            <h1 className="text-base py-2 text-primary poppins-regular md:text-2xl lg:text-2xl xl:text-4xl">
-              9372593981
-            </h1>
-          </div>
-          <div className="flex gap-5 md:gap-10 lg:gap-12 xl:gap-14 poppins-regular">
-            <a
-              href="tel: 9372593981"
-              className="border-white  border p-2 rounded-[2rem] hover:scale-110  transition-colors text-primary duration-700 hover:bg-[#14ff72cb] hover:text-white "
-            >
-              MAKE A CALL
-            </a>
-            <Link
-              href="/contact"
-              className="border border-white p-2 rounded-[2rem] text-primary hover:scale-110 transition-colors duration-700 hover:bg-[#14ff72cb] hover:text-white"
-            >
-              CONTACT US
-            </Link>
+            </p> */}
+            <p className=" text-2xl din-bold text-white py-4">
+              If you have any inquiries, please feel free to reach out.{" "}
+            </p>
+            <div className="flex space-x-4">
+              <Link href="/contact">
+                <motion.button
+                  className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get in Touch
+                </motion.button>
+              </Link>
+              <Link href="tel:+919372593981">
+                <motion.button
+                  className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <BsFillTelephoneFill size={14} />
+                  Call Now
+                </motion.button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="absolute top-0 right-0 bottom-0 w-1/3 flex items-center justify-center overflow-hidden">

@@ -126,7 +126,7 @@ export default function AluminumWindows() {
 
   return (
     <>
-      <section className="w-full min-h-[95%] p-4 flex justify-center items-center md:mt-14 pl-24">
+      <section className="w-full min-h-[95%] p-4 flex justify-center items-center md:mt-14 lg:pl-24">
         <motion.div
           className="container bg-white rounded-[3rem] grid grid-cols-1 md:grid-cols-2 relative overflow-hidden md:w-[46rem] md:h-auto md:rounded-[5rem] lg:w-[60rem] lg:rounded-[5rem] xl:w-[91rem] xl:rounded-[2rem] px-1 "
           variants={containerVariants}
@@ -136,12 +136,12 @@ export default function AluminumWindows() {
         >
           {/* product info */}
           <div className="flex flex-col justify-center py-14 mb-4 md:py-8 relative z-10">
-            <div className="text-center md:text-left space-y-4 ">
+            <div className="text-center md:text-left space-y-2 md:space-y-4 ">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl din-bold leading-relaxed lg:text-6xl px-14"
+                className="text-5xl din-bold leading-relaxed lg:text-6xl px-14"
               >
                 Aluminum
               </motion.h2>
@@ -150,7 +150,7 @@ export default function AluminumWindows() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-2xl text-black roboto-light lg:text-3xl px-14 "
+                className="text-3xl text-black roboto-light lg:text-3xl px-5 md:px-14 "
               >
                 Modern Glass Windows
               </motion.h3>
@@ -159,7 +159,7 @@ export default function AluminumWindows() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className=" text-justify roboto-light text-sm md:text-base lg:text-lg px-14 "
+                className=" text-justify roboto-light text-base md:text-base lg:text-lg px-4 md:px-14 "
               >
                 Upgrade your home or office with modern glass windows featuring
                 durable aluminum frames. Our glass door windows are designed for
@@ -175,7 +175,7 @@ export default function AluminumWindows() {
                     animate="expanded"
                     exit="collapsed"
                     transition={{ duration: 0.5 }}
-                    className="text-black text-justify roboto-light text-sm md:text-base lg:text-lg px-14"
+                    className="text-black text-justify roboto-light text-base md:text-base lg:text-lg px-4 md:px-14"
                   >
                     <p>
                       The sleek aluminum frames offer a contemporary look,
@@ -203,7 +203,7 @@ export default function AluminumWindows() {
               <div className="flex flex-rows gap-2 md:gap-0 items-center sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 py-4 px-14">
                 <Link href="/contact">
                   <motion.button
-                    className="rounded-[5px] bg-white mt-3 md:mt-0 w-[8rem] py-3 text-sm md:text-base md:px-4 md:py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black"
+                    className="rounded-[5px] bg-white mt-[16px] md:mt-0 w-[8rem] py-3 text-sm md:text-base md:px-4 md:py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -212,7 +212,7 @@ export default function AluminumWindows() {
                 </Link>
                 <Link href="tel:+919372593981">
                   <motion.button
-                    className="rounded-[5px] w-[8rem] py-3 px-3 text-sm md:text-sm md:px-4 md:py-[13.5px] text-black bg-gradient-to-br from-gray-200 to-gray-400  roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black flex items-center gap-2"
+                    className="rounded-[5px] w-[8.3rem] py-3 px-3 text-sm md:text-sm md:px-4 md:py-[13.5px] text-black bg-gradient-to-br from-gray-200 to-gray-400  roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

@@ -194,8 +194,8 @@
 import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
-import AluminiumWindows from "./page";
-import heroImg from "../../assets/AluminiumProduct/heroImg.webp";
+// import GlassRailingSection from "./page";
+import heroImg from "../../assets/Railing/HeroImage/railing2.jpg";
 import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
@@ -220,7 +220,7 @@ const useScreenSize = () => {
   return isMobile;
 };
 
-export default function HeroSection() {
+export default function GlassHeroSection() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   const springConfig = { damping: 25, stiffness: 700 };
@@ -274,34 +274,34 @@ export default function HeroSection() {
 
         <div className="container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-14 xl:flex-row z-10 relative">
           <div className="mb-8 flex-1 md:mb-0 md:pr-8">
-            <motion.h1
+            <motion.p
               className=" pt-24 text-5xl lg:text-7xl din-bold text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               Aluminum
-            </motion.h1>
-            <motion.h2
+            </motion.p>
+            <motion.span
               className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Windows
-            </motion.h2>
-            <motion.h3
+              Glass Railing
+            </motion.span>
+            <motion.h1
               className="mb-8 text-sm lg:text-lg roboto-light text-white text-justify"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              Upgrade your property with premium aluminium windows, offering
-              unmatched durability, energy efficiency, and modern design. Our
-              aluminium windows provide superior insulation, weather resistance,
-              and aesthetic appeal for both residential and commercial
-              applications.
-            </motion.h3>
+              Transform your home with our elegant glass railings, designed to
+              enhance the beauty and security of your living spaces. Whether
+              you’re updating your balcony, staircase, or outdoor areas, our
+              glass railings offer the perfect combination of style, durability,
+              and safety.
+            </motion.h1>
             <div className="flex space-x-4">
               <Link href="/contact">
                 <motion.button
@@ -357,7 +357,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <AluminiumWindows />
+      {/* <GlassRailingSection /> */}
     </>
   );
 }

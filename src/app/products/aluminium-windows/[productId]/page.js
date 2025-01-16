@@ -25,7 +25,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 
 const AluminiumProductsPanel = [
   {
-    id: "fixed-aluminium",
+    id: "fixed-aluminium-window-01",
     images: [windows1, singleFixedWindowFrame, AccessorisFixedWindows],
     ProductName: "Modern Aluminium Fixed Window",
     description:
@@ -96,7 +96,7 @@ const AluminiumProductsPanel = [
     ],
   },
   {
-    id: "awningaluminium",
+    id: "awning-aluminium-window01",
     images: [windows2, awningwindows, awningwindowsBlack],
     ProductName: "Modern Aluminium Awning Windows",
     description:
@@ -176,7 +176,7 @@ const AluminiumProductsPanel = [
     ],
   },
   {
-    id: "sliding-windows",
+    id: "sliding-aluminium-window1",
     images: [windows3, slidingWindowsBlack, slidingWindowsCross],
     ProductName: "Aluminium Sliding Windows",
     description:
@@ -255,7 +255,7 @@ const AluminiumProductsPanel = [
     ],
   },
   {
-    id: "casement-wnidow",
+    id: "casement-aluminium-window",
     images: [windows4, casementAluminumWindows],
     ProductName: "Casement Aluminium Windows",
     description:
@@ -362,7 +362,7 @@ const AluminiumProductsPanel = [
   //     "Minimal maintenance required. Regular cleaning with mild soap and water keeps the windows looking new.",
   // },
   {
-    id: "glass-corwindow",
+    id: "glass-corner-alum-windows",
     images: [windows6, GlassCornerAluminumWindows, glassCorner],
     ProductName: "Aluminium Glass To Glass Corner Windows",
     description:
@@ -503,7 +503,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
 export default function ProductPage({ params }) {
   const [openAccordion, setOpenAccordion] = useState(0);
   const pathname = usePathname();
-  const fetchedId = pathname.slice(-15);
+  const fetchedId = pathname.slice(-25);
   const product = AluminiumProductsPanel.find((item) => item.id === fetchedId);
 
   if (!product) {
