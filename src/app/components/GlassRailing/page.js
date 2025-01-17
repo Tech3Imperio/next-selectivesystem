@@ -94,7 +94,6 @@
 // }
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import framelessImg from "../../assets/Railing/RailingProducts/ModernBalcony.webp";
 import TopMuntedImg from "../../assets/Railing/RailingProducts/TopMountedImg.webp";
