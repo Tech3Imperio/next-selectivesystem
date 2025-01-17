@@ -86,6 +86,7 @@
 // }
 
 import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
 import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.webp";
