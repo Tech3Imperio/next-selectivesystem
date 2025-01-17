@@ -137,23 +137,23 @@ export default function AluminumWindows() {
           {/* product info */}
           <div className="flex flex-col justify-center py-14 mb-4 md:py-8 relative z-10">
             <div className="text-center md:text-left space-y-2 md:space-y-4 ">
-              <motion.h2
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-5xl din-bold leading-relaxed lg:text-6xl px-14"
               >
                 Aluminum
-              </motion.h2>
+              </motion.div>
 
-              <motion.h3
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl text-black roboto-light lg:text-3xl px-5 md:px-14 "
               >
                 Modern Glass Windows
-              </motion.h3>
+              </motion.div>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

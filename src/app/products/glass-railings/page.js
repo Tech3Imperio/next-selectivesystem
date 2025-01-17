@@ -3,11 +3,12 @@ import React from "react";
 import GlassRailings from "./GlassRailings";
 
 export const metadata = {
-  title: "Glass Railing | Balcony Glass Railing | Selective Systems",
+  title:
+    "Glass Railing | Frameless & Framed Glass Railings | Selective Systems",
   description:
-    "Transform your space with aluminium glass railings. Experience clear views, modern design, and safety. Tailor your railings to fit your unique style.",
+    "Enhance your property with stylish glass railings by Selective Systems. Offering both framed and frameless glass railings for balconies, staircases, and more. Enjoy modern design, superior safety, and clear views. Tailor your glass railing systems to match your style and functionality needs.",
   keywords: [
-    "Aluminium Windows, Door seals, Glass Railings, Invisible Grill, Office Partitions, Bathroom Partitions, Queue Manager, Customizable Options, Mumbai, Charni Road, Andheri, Bandra, Borivali, Pune, Maharashtra, India, Dubai, Russia, China, Japan",
+    "Glass Railings, Frameless Glass Railing, Framed Glass Railing, Balcony Glass Railing, Staircase Glass Railing, Tempered Glass, Laminated Glass, Modern Glass Railing, Glass Railing Systems, Aluminium Glass Railings, Indoor Glass Railings, Outdoor Glass Railings, Customizable Glass Railings, Glass Balustrades, Glass Fencing, Safety Glass Railing, Transparent Glass Railings, Mumbai, Maharashtra, India, Dubai, Russia, China, Japan",
   ],
   icon: "./favicon.ico",
   content: "https://selectivesystems.in/products/glass-railings",

@@ -9,11 +9,12 @@ const contactSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    collection: "contactdbs",
+    collection: "contactdbs", // Your MongoDB collection name
   }
 );
 
+// Use "Contact" as the model name instead of "contactdbs"
 const Contact =
-  mongoose.models.Contact || mongoose.model("contactdbs", contactSchema);
+  mongoose.models.Contact || mongoose.model("Contact", contactSchema); // Ensure the model name is consistent
 
 export default Contact;

@@ -194,7 +194,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
-// import GlassRailingSection from "./page";
+import GlassRailingSection from "./page";
 import heroImg from "../../assets/Railing/HeroImage/railing2.jpg";
 import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
@@ -272,7 +272,7 @@ export default function GlassHeroSection() {
           }}
         />
 
-        <div className="container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-14 xl:flex-row z-10 relative">
+        <div className="container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-12 xl:flex-row z-10 relative">
           <div className="mb-8 flex-1 md:mb-0 md:pr-8">
             <motion.p
               className=" pt-24 text-5xl lg:text-7xl din-bold text-white"
@@ -282,25 +282,28 @@ export default function GlassHeroSection() {
             >
               Aluminum
             </motion.p>
-            <motion.span
-              className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
+            <motion.p
+              className="py-2 text-4xl lg:text-5xl roboto-light text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               Glass Railing
-            </motion.span>
+            </motion.p>
             <motion.h1
               className="mb-8 text-sm lg:text-lg roboto-light text-white text-justify"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              Transform your home with our elegant glass railings, designed to
-              enhance the beauty and security of your living spaces. Whether
-              you’re updating your balcony, staircase, or outdoor areas, our
-              glass railings offer the perfect combination of style, durability,
-              and safety.
+              Transform Your Home with Elegant{" "}
+              <strong>Frameless Glass Railings</strong> and Premium Aluminium
+              Glass Railing Bases, Perfect for{" "}
+              <strong>Balconies, Staircases,</strong> and Outdoor Spaces. Enjoy
+              Unmatched Durability, Style, and Safety with Customizable Matte or
+              Glossy Finishes. Enhance Your Interiors and Exteriors with{" "}
+              <strong>Modern Glass Railing</strong> Solutions for Maximum
+              Protection and Aesthetic Appeal.
             </motion.h1>
             <div className="flex space-x-4">
               <Link href="/contact">
@@ -357,7 +360,7 @@ export default function GlassHeroSection() {
           </div>
         </div>
       </div>
-      {/* <GlassRailingSection /> */}
+      <GlassRailingSection />
     </>
   );
 }

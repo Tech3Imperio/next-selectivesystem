@@ -325,24 +325,24 @@ export default function RotatingHero() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <motion.h1
+                <motion.div
                   className="pt-24 text-5xl lg:text-7xl din-bold text-white"
                   layout
                 >
                   {currentProduct.title}
-                </motion.h1>
-                <motion.h2
+                </motion.div>
+                <motion.p
                   className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
                   layout
                 >
                   {currentProduct.subtitle}
-                </motion.h2>
-                <motion.h3
+                </motion.p>
+                <motion.h1
                   className="mb-8 text-sm lg:text-lg roboto-light text-white text-justify"
                   layout
                 >
                   {currentProduct.description}
-                </motion.h3>
+                </motion.h1>
               </motion.div>
             </AnimatePresence>
 

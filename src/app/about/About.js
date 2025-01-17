@@ -54,12 +54,12 @@ const About = () => {
             },
           }}
         >
-          <motion.h1
-            className="text-4xl md:text-5xl lg:text-5xl din-bold text-center mb-16 pt-4"
+          <motion.p
+            className="text-4xl md:text-5xl lg:text-5xl din-bold text-center py-4 pt-14 md:py-14"
             variants={fadeIn}
           >
             About Selective Systems
-          </motion.h1>
+          </motion.p>
 
           <div className="flex flex-col lg:flex-row gap-16">
             <motion.div className="lg:w-1/2" variants={fadeIn}>
