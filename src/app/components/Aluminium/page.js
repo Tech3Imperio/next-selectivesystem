@@ -84,10 +84,10 @@
 //     </div>
 //   );
 // }
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
 import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.webp";
 import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.webp";
