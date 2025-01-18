@@ -21,27 +21,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://selectivesystems.in/products/aluminium-windows/fixed-aluminium</loc>
+    <loc>https://selectivesystems.in/products/aluminium-windows/fixed-aluminium-window-01</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
     <url>
-        <loc>https://selectivesystems.in/products/aluminium-windows/awningaluminium</loc>
+        <loc>https://selectivesystems.in/products/aluminium-windows/awning-aluminium-window01</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://selectivesystems.in/products/aluminium-windows/sliding-windows</loc>
+        <loc>https://selectivesystems.in/products/aluminium-windows/sliding-aluminium-window1</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://selectivesystems.in/products/aluminium-windows/casement-wnidow</loc>
+        <loc>https://selectivesystems.in/products/aluminium-windows/casement-aluminium-window</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://selectivesystems.in/products/aluminium-windows/glass-corwindow</loc>
+        <loc>https://selectivesystems.in/products/aluminium-windows/glass-corner-alum-windows</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -82,6 +82,21 @@
     </url>
     <url>
         <loc>https://selectivesystems.in/products/glass-railings</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selectivesystems.in/products/frameless-glass-railing</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selectivesystems.in/products/top-mounted-glass-raili</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://selectivesystems.in/products/frameds-glass-railingss</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

@@ -3,6 +3,7 @@ import { Footer } from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
 import localFont from "next/font/local";
+import Favicon from "./favicon.ico";
 export const metadata = {
   title: "Selective Systems: Aluminium Windows | Glass Railing",
   description:
@@ -10,7 +11,7 @@ export const metadata = {
   keywords: [
     "Aluminium Windows, Door seals, Railings, Invisible Grill, Office Partitions, Bathroom Partitions, Queue Manager, Customizable Options, glass railing, modern alumium windows design ,Mumbai, Charni Road, Andheri, Bandra, Borivali, Pune, Maharashtra, India, Dubai, Russia, China, Japan",
   ],
-  icon: "./favicon.ico",
+  icon: { Favicon },
   content: "https://selectivesystems.in/",
   openGraph: {
     type: "website",
