@@ -234,16 +234,16 @@ export default function AluminiumWindows() {
       {/* New Section: Why Choose Aluminum Windows */}
       <div className="w-full bg-gray-100 py-16 mt-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
+          <p className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
             Why Choose Aluminum Windows?
-          </h2>
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl"
               >
-                <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                <p className="text-xl font-semibold mb-3">{benefit.title}</p>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -254,9 +254,9 @@ export default function AluminiumWindows() {
       {/* New Section: FAQ */}
       <div className="w-full py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
+          <p className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
             Frequently Asked Questions
-          </h2>
+          </p>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">

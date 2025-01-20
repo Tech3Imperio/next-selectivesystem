@@ -1,10 +1,9 @@
 import AluminiumWindows from "../../components/Aluminium/AluminiumWindows";
-
+import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
 export const metadata = {
-  title:
-    "Selective System: Leading Aluminium Windows | Modern Aluminium Windows and Doors",
+  title: "Selective System: Sliding Aluminium Windows & Doors for Homes",
   description:
-    "Selective System, based in Mumbai, offers industry-leading aluminium windows and doors. With cutting-edge technology, our products are energy-efficient, stylish, and globally recognized, serving markets like the UAE, Tajikistan, and more.",
+    "Selective System offers premium aluminium windows and doors in Mumbai. Energy-efficient, stylish, and globally recognized for quality and durability.",
   keywords: [
     "Aluminium windows",
     "Aluminium window frames",
@@ -16,16 +15,10 @@ export const metadata = {
     "Aluminium windows suppliers",
     "Modern aluminium windows",
     "Aluminium window replacement",
-    "Affordable aluminium windows",
     "Custom aluminium windows",
-    "Aluminium window contractors",
-    "Aluminium windows UAE",
-    "Aluminium windows Dubai",
-    "Aluminium windows Tajikistan",
-    "Mumbai aluminium windows",
-    "Global aluminium window suppliers",
   ],
   url: "https://selectivesystems.in/products/aluminium-windows",
+  image: windows1,
 };
 const page = () => {
   return <AluminiumWindows />;
