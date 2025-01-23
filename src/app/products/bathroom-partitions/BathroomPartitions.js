@@ -8,38 +8,39 @@ import bathroomPartition4 from "../../assets/BathroomPartition/bathroomPartition
 import BathroomData from "../../Data/Bathroom/Bathroom";
 import Link from "next/link";
 import Image from "next/image";
+import BathroomPartition from "@/app/components/BathroomPartition/BathroomPartition";
 
 const BathroomPartitions = () => {
-  const [sliderItems] = useState([
-    {
-      imgSrc: bathroomPartition1,
-      title: "Bathroom Partitions",
-      type: "DOORS",
-      description:
-        "Upgrade your restroom with high-quality bathroom partition doors that combine durability, privacy, and style, ensuring reliable performance and a sleek appearance for both commercial and public spaces.",
-    },
-    {
-      imgSrc: bathroomPartition2,
-      title: "Bathroom Partitions",
-      type: "Glass",
-      description:
-        "Enhance your restroom's aesthetics and functionality with premium bathroom partition windows, offering privacy while allowing natural light to brighten the space",
-    },
-    {
-      imgSrc: bathroomPartition3,
-      title: "Bathroom Partitions",
-      type: "SLIDER",
-      description:
-        "Optimize your restroom space with sleek bathroom partition slider doors, designed to save space while providing privacy and a modern aesthetic.",
-    },
-    {
-      imgSrc: bathroomPartition4,
-      title: "Bathroom",
-      type: "PARTITION",
-      description:
-        "Elevate your restroom design with bathroom partitions featuring a durable aluminum frame and high water-resistant glass, combining strength with modern elegance for long-lasting performance.",
-    },
-  ]);
+  // const [sliderItems] = useState([
+  //   {
+  //     imgSrc: bathroomPartition1,
+  //     title: "Bathroom Partitions",
+  //     type: "DOORS",
+  //     description:
+  //       "Upgrade your restroom with high-quality bathroom partition doors that combine durability, privacy, and style, ensuring reliable performance and a sleek appearance for both commercial and public spaces.",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition2,
+  //     title: "Bathroom Partitions",
+  //     type: "Glass",
+  //     description:
+  //       "Enhance your restroom's aesthetics and functionality with premium bathroom partition windows, offering privacy while allowing natural light to brighten the space",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition3,
+  //     title: "Bathroom Partitions",
+  //     type: "SLIDER",
+  //     description:
+  //       "Optimize your restroom space with sleek bathroom partition slider doors, designed to save space while providing privacy and a modern aesthetic.",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition4,
+  //     title: "Bathroom",
+  //     type: "PARTITION",
+  //     description:
+  //       "Elevate your restroom design with bathroom partitions featuring a durable aluminum frame and high water-resistant glass, combining strength with modern elegance for long-lasting performance.",
+  //   },
+  // ]);
 
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
@@ -67,7 +68,7 @@ const BathroomPartitions = () => {
 
   return (
     <main className="relative">
-      <div
+      {/* <div
         ref={aluminiumRef}
         className="slider h-screen w-screen overflow-hidden relative"
       >
@@ -174,8 +175,8 @@ const BathroomPartitions = () => {
             {">"}
           </button>
         </div>
-      </div>
-
+      </div> */}
+      <BathroomPartition />
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 harmony-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
         {BathroomData.map((item, index) => (

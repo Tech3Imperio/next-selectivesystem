@@ -2,29 +2,29 @@ import BathroomPartitions from "./BathroomPartitions";
 
 export const metadata = {
   title:
-    "Selective System: High-Quality Bathroom Partitions | Stylish & Durable Solutions for Privacy",
+    "Premium Bathroom Glass Partitions | Stylish & Durable Partition Systems",
   description:
-    "Explore premium bathroom partitions designed for privacy, durability, and style. Perfect for homes, commercial spaces, and public restrooms. Get custom bathroom partition solutions today!",
+    "Discover high-quality bathroom glass partitions for homes, commercial spaces, and public restrooms. Our elegant and functional partition systems offer privacy, durability, and modern design. Get custom bathroom partition solutions today!",
   keywords: [
-    "Bathroom partitions",
-    "Bathroom partition solutions",
-    "Durable bathroom partitions",
-    "Stylish bathroom partitions",
-    "Commercial bathroom partitions",
-    "Toilet partitions",
-    "Privacy bathroom partitions",
-    "Custom bathroom partitions",
-    "Best bathroom partitions",
-    "Bathroom partition panels",
-    "Affordable bathroom partitions",
-    "Modern bathroom partitions",
-    "Bathroom partitions for homes",
-    "Public restroom partitions",
-    "Bathroom partition installation",
-    "High-quality bathroom partitions",
+    "bathroom partition glass",
+    "bathroom partition",
+    "glass bathroom partition",
+    "modern bathroom partitions",
+    "privacy bathroom partitions",
+    "custom bathroom partition",
+    "shower partition",
+    "restroom partitions",
+    "bathroom partition with glass",
+    "bathroom interior design",
+    "restroom partition panels",
+    "high-quality bathroom partitions",
+    "toilets partitions",
+    "modern bathroom partitions",
+    "stylish bathroom partitions",
   ],
   url: "https://selectivesystems.in/products/bathroom-partitions",
 };
+
 export default function page() {
   return <BathroomPartitions />;
 }
