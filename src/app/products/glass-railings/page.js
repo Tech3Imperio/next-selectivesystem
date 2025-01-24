@@ -1,6 +1,7 @@
 import React from "react";
 // import GlassRailingLayout from "../../components/GlassRailing/GlassRailingLayout";
 import GlassRailings from "./GlassRailings";
+import glassrailing from "../../assets/Railing/HeroImage/railing2.jpg";
 
 export const metadata = {
   title:
@@ -16,6 +17,7 @@ export const metadata = {
     type: "website",
   },
   url: "https://selectivesystems.in/products/glass-railings",
+  image: glassrailing,
 };
 
 export default function page() {

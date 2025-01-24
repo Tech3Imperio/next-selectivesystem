@@ -1,34 +1,34 @@
 import React from "react";
 import InvisibleGrill from "./InvisibleGrill";
-
+import InvisibleBalcony from "../../assets/InvisibleGrill/Invisiblebacony.webp";
 export const metadata = {
-  title:
-    "Selective System: Invisible Grill | Stylish & Safe Balconies | Selective-Systems",
+  title: "Invisible Grills in Mumbai | Invisible Grille for Modern Home",
   description:
-    "Elevate your balcony space with Invisible Grill. Selective-System offers invisible grill with easy installation to enhance your balcony space. Get a Qoute Now!",
+    "Discover Selective Systems' premium Invisible Safety Grills for balconies & windows in Mumbai. Anti-rust, supports 400 kg impact. Install today for safety!",
   keywords: [
-    "Invisible Grill",
-    "balcony grills",
+    "invisible grill",
+    "invisible grill for balcony",
     "modern balcony safety",
-    "stylish balcony solutions",
+    "stylish balcony railing",
     "invisible grill installation",
-    "balcony safety systems",
-    "selective systems grills",
-    "invisible grills for balconies",
-    "safe and stylish balcony design",
-    "security grills for balconies",
-    "glass balcony grills",
-    "retractable balcony grills",
-    "custom invisible grills",
-    "durable balcony grills",
-    "minimalist balcony safety",
-    "safe balcony systems",
-    "modern home balcony grills",
-    "elegant balcony solutions",
-    "safety grilles for homes",
-    "invisible grills for apartments",
+    "invisible safety grill",
+    "invisible safety grill for balcony",
+    "invisible grill for balcony near me",
+    "balcony invisible grill",
+    "invisible grill for balcony price",
+    "invisible grill cost",
+    "transparent grill for balcony",
+    "invisible grill raw material suppliers",
+    "transparent grill",
+    "invisible grill wire",
+    "grill invisible",
+    "invisible grill near me",
+    "invisible grills for windows",
+    "invisible grill material",
+    "invisible grill for staircase",
   ],
   url: "https://selectivesystems.in/products/invisiblegrill",
+  image: InvisibleBalcony,
 };
 export default function page() {
   return <InvisibleGrill />;
