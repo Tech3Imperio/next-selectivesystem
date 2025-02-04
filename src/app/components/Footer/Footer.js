@@ -63,6 +63,15 @@ export const Footer = () => {
             Charni Road, Mumbai - 400004
           </Link>
         </p>
+        <p>
+          <Link
+            href="/PrivacyPolicy"
+            target="_blank"
+            className="text-black-300 hover:underline roboto-light"
+          >
+            Terms of Use. Privacy Policy
+          </Link>
+        </p>
       </div>
       <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
         <div className="mb-2">
