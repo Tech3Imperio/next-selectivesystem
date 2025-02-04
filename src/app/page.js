@@ -348,7 +348,7 @@ export default function RotatingHero() {
             </AnimatePresence>
 
             <div className="flex space-x-4">
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <motion.button
                   className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
                   whileHover={{ scale: 1.05 }}
@@ -356,7 +356,16 @@ export default function RotatingHero() {
                 >
                   Know More
                 </motion.button>
-              </Link>
+              </Link> */}
+              <Form isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+              <motion.button
+                className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsFormOpen(true)}
+              >
+                Enquire Now
+              </motion.button>
               {/* <Link href="tel:+919372593981">
                 <motion.button
                   className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
