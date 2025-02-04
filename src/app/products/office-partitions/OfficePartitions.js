@@ -8,6 +8,7 @@ import Officetwocab from "../../assets/Officepartition/Officetwocab.png";
 import OfficeData from "../../Data/OfficePartition/Officepartition";
 import Link from "next/link";
 import Image from "next/image";
+import Form from "@/app/components/Form/Form";
 
 const OfficePartitions = () => {
   const [sliderItems] = useState([
@@ -43,7 +44,7 @@ const OfficePartitions = () => {
 
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const moveSlider = (direction) => {
     if (direction === "next") {
       setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
@@ -131,7 +132,7 @@ const OfficePartitions = () => {
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Link href="/contact">
+                  {/* <Link href="/contact">
                     <motion.button
                       className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
                       whileHover={{ scale: 1.1 }}
@@ -139,7 +140,19 @@ const OfficePartitions = () => {
                     >
                       GET IN TOUCH
                     </motion.button>
-                  </Link>
+                  </Link> */}
+                  <Form
+                    isOpen={isFormOpen}
+                    onClose={() => setIsFormOpen(false)}
+                  />
+                  <motion.button
+                    className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setIsFormOpen(true)}
+                  >
+                    Enquire Now
+                  </motion.button>
                 </motion.div>
               </div>
             </motion.div>

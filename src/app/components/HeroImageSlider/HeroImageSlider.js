@@ -107,9 +107,10 @@ import circle from "../../assets/SliderImages/circle.jpg";
 // import OurProducts from "../OurProducts/OurProducts";
 import Banner from "../Banner/Banner";
 import Link from "next/link";
+import Form from "../Form/Form";
 export default function AluminumWindows() {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const containerVariants = {
     collapsed: { height: "auto" },
     expanded: { height: "auto" },
@@ -201,7 +202,7 @@ export default function AluminumWindows() {
               </motion.button>
 
               <div className="flex flex-rows gap-2 md:gap-0 items-center sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 py-4 px-14">
-                <Link href="/contact">
+                {/* <Link href="/contact">
                   <motion.button
                     className="rounded-[5px] bg-white mt-[16px] md:mt-0 w-[8rem] py-3 text-sm md:text-base md:px-4 md:py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black"
                     whileHover={{ scale: 1.05 }}
@@ -209,7 +210,19 @@ export default function AluminumWindows() {
                   >
                     Get in Touch
                   </motion.button>
-                </Link>
+                </Link> */}
+                <Form
+                  isOpen={isFormOpen}
+                  onClose={() => setIsFormOpen(false)}
+                />
+                <motion.button
+                  className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsFormOpen(true)}
+                >
+                  Enquire Now
+                </motion.button>
                 <Link href="tel:+919372593981">
                   <motion.button
                     className="rounded-[5px] w-[8.3rem] py-3 px-3 text-sm md:text-sm md:px-4 md:py-[13.5px] text-black bg-gradient-to-br from-gray-200 to-gray-400  roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black flex items-center gap-2"

@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
       <div className="py-16 md:py-20 lg:py-24 overflow-hidden px-4">
         <section className="p-4">
           <div>
-            <div className=" justify-center flex pt-10    ">
+            <div className=" justify-center flex pt-10   ">
               <Image
                 priority
                 src={Logo}

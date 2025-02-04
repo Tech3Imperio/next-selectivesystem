@@ -9,6 +9,7 @@ import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import Form from "../Form/Form";
 
 // Custom hook to detect screen size
 const useScreenSize = () => {
@@ -35,6 +36,7 @@ export default function BathroomPartition() {
   const springConfig = { damping: 25, stiffness: 700 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const [mounted, setMounted] = useState(false);
 
@@ -122,7 +124,7 @@ export default function BathroomPartition() {
 
             {/* Transform your bathroom with stylish bathroom glass partitions and durable bathroom partition systems. Our elegant and functional glass bathroom partitions offer both privacy and sophistication, making them ideal for any bathroom interior design. Whether you need a shower partition or a custom bathroom partition, we provide high-quality solutions that are perfect for homes or public restrooms. With a focus on privacy bathroom partitions, our options ensure a seamless, modern look while enhancing your space. Explore the best bathroom partitions with customizable features, including bathroom partition panels that suit your style and budget. We offer affordable bathroom partitions designed to fit every need, ensuring easy bathroom partition installation for a hassle-free experience. Upgrade your bathroom with the best bathroom partitions for long-lasting, stylish results. */}
             <div className="flex space-x-4">
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <motion.button
                   className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
                   whileHover={{ scale: 1.05 }}
@@ -130,7 +132,16 @@ export default function BathroomPartition() {
                 >
                   Get in Touch
                 </motion.button>
-              </Link>
+              </Link> */}
+              <Form isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+              <motion.button
+                className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsFormOpen(true)}
+              >
+                Enquire Now
+              </motion.button>
               <Link href="tel:+919372593981">
                 <motion.button
                   className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import terracefloor from "../assets/About/terracefloor.webp";
 import primage from "../assets/About/AboutpageImage/primage.png";
@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import Form from "../components/Form/Form";
 
 const About = () => {
   useEffect(() => {
@@ -35,7 +36,7 @@ const About = () => {
         "Experience unparalleled security with Selective Systems' invisible grills, offering a perfect balance of safety and sleek design. These invisible grills are the ideal solution for high-rise apartments, balconies, and offices, providing strong protection while maintaining an open, unobstructed view. Crafted from high-quality materials, they blend seamlessly with your space, making them virtually undetectable yet incredibly effective. Enjoy peace of mind knowing that your property is safe, while enhancing the aesthetics with modern invisible grilles that don’t compromise on style. Trust Selective Systems for durable and discreet security solutions for your home or office. Enhance your property’s security with the best invisible grills in Mumbai.",
     },
   ];
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <main className="relative">
       {/* Rest of your content */}
@@ -163,7 +164,7 @@ const About = () => {
               If you have any inquiries, please feel free to reach out.{" "}
             </p>
             <div className="flex space-x-4">
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <motion.button
                   className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
                   whileHover={{ scale: 1.05 }}
@@ -171,7 +172,16 @@ const About = () => {
                 >
                   Get in Touch
                 </motion.button>
-              </Link>
+              </Link> */}
+              <Form isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+              <motion.button
+                className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsFormOpen(true)}
+              >
+                Enquire Now
+              </motion.button>
               <Link href="tel:+919372593981">
                 <motion.button
                   className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"

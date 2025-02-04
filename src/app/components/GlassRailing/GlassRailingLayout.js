@@ -200,6 +200,7 @@ import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import Form from "../Form/Form";
 
 // Custom hook to detect screen size
 const useScreenSize = () => {
@@ -226,7 +227,7 @@ export default function GlassHeroSection() {
   const springConfig = { damping: 25, stiffness: 700 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   // Detect screen size using custom hook
@@ -306,7 +307,7 @@ export default function GlassHeroSection() {
               Protection and Aesthetic Appeal.
             </motion.h1>
             <div className="flex space-x-4">
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <motion.button
                   className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
                   whileHover={{ scale: 1.05 }}
@@ -314,7 +315,16 @@ export default function GlassHeroSection() {
                 >
                   Get in Touch
                 </motion.button>
-              </Link>
+              </Link> */}
+              <Form isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+              <motion.button
+                className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsFormOpen(true)}
+              >
+                Enquire Now
+              </motion.button>
               <Link href="tel:+919372593981">
                 <motion.button
                   className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
