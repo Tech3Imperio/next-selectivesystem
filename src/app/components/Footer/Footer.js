@@ -69,7 +69,7 @@ export const Footer = () => {
             target="_blank"
             className="text-black-300 hover:underline roboto-light"
           >
-            Privacy Policy
+            Terms of use Privacy Policy
           </Link>
         </p>
       </div>
