@@ -65,8 +65,7 @@ export const Footer = () => {
         </p>
         <p>
           <Link
-            href="/PrivacyPolicy"
-            target="_blank"
+            href="/privacypolicy"
             className="text-black-300 hover:underline roboto-light"
           >
             Terms of use Privacy Policy
