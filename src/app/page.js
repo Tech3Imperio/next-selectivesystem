@@ -353,10 +353,10 @@ export default function RotatingHero() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get in Touch
+                  Know More
                 </motion.button>
               </Link>
-              <Link href="tel:+919372593981">
+              {/* <Link href="tel:+919372593981">
                 <motion.button
                   className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
                   whileHover={{ scale: 1.05 }}
@@ -365,7 +365,7 @@ export default function RotatingHero() {
                   <BsFillTelephoneFill size={14} />
                   Call Now
                 </motion.button>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
