@@ -70,7 +70,7 @@ const Contact = () => {
         />
       </div>
 
-      <div className="relative container mx-auto px-4 md:px-0 text-center">
+      <div className="relative container mx-auto py-10 px-4 md:px-0 text-center">
         <h1 className="text-4xl din-bold text-white mb-12">CONTACT US</h1>
         <div className="flex flex-wrap justify-center space-y-4 md:space-y-0">
           <div className="w-full md:w-1/3 p-4">
