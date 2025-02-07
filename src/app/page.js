@@ -308,13 +308,17 @@ export default function RotatingHero() {
             priority
           />
         </div>
-        <motion.div
-          className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
-          style={{
-            left: cursorXSpring,
-            top: cursorYSpring,
-          }}
-        />
+        {window.innerWidth > 1024 ? (
+          <motion.div
+            className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
+            style={{
+              left: cursorXSpring,
+              top: cursorYSpring,
+            }}
+          />
+        ) : (
+          <></>
+        )}
 
         <div className="relative container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 md:flex-row z-10">
           <div className="mb-8 flex-1 md:mb-0 md:pr-8">

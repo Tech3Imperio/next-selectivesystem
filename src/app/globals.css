@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 255, 255, 255;
+  --foreground: 0, 0, 0;
+  --hover-bg: 229, 231, 235;
+  --hover-fg: 0, 0, 0;
+  --nested-icon-bg: 209, 213, 219;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 23, 23, 23;
+    --foreground: 255, 255, 255;
+    --hover-bg: 55, 65, 81;
+    --hover-fg: 255, 255, 255;
+    --nested-icon-bg: 75, 85, 99;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=din:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .din-thin {
@@ -88,6 +110,47 @@
   src: url("./fonts/GeistMonoVF.woff") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+.hamburger-menu {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  box-shadow: rgba(251, 253, 255, 0.1) 0px 2px 32px;
+}
+
+.menu-item {
+  @apply py-3 transition-colors duration-200 rounded-md text-base;
+  color: rgb(var(--foreground));
+  background-color: transparent;
+}
+
+/* .menu-item:hover {
+  background-color: rgb(var(--hover-bg));
+  color: rgb(var(--hover-fg));
+} */
+
+.menu-nested-icon {
+  @apply p-1 rounded-full transition-colors duration-200;
+  background-color: rgb(var(--nested-icon-bg));
+  color: rgb(var(--foreground));
+}
+
+/* .menu-nested-icon:hover {
+  @apply bg-opacity-80;
+} */
+
+.menu-back-button {
+  @apply rounded-full transition-colors duration-200;
+  color: rgb(var(--foreground));
+}
+
+/* .menu-back-button:hover {
+  background-color: rgb(var(--hover-bg));
+} */
+
+.menu-title {
+  @apply text-base font-medium;
+  color: rgb(var(--foreground));
 }
 
 /* .poppins-thin {
