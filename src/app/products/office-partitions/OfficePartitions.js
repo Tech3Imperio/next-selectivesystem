@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Form from "@/app/components/Form/Form";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
+import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 const OfficePartitions = () => {
   const [sliderItems] = useState([
     {
@@ -41,7 +42,7 @@ const OfficePartitions = () => {
         "Elevate your restroom design with bathroom partitions featuring a durable aluminum frame and high water-resistant glass, combining strength with modern elegance for long-lasting performance.",
     },
   ]);
-
+  const [isMobile, setIsMobile] = useState(true);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -58,7 +59,17 @@ const OfficePartitions = () => {
   const handleThumbnailClick = (index) => {
     setCurrentItemIndex(index);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
 
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   useEffect(() => {
     // Scroll to the top of the component when it comes into view
     if (aluminiumRef.current) {
@@ -84,13 +95,17 @@ const OfficePartitions = () => {
               transition={{ duration: 1 }}
             >
               <Image
-                src={parallesBlackLaptop}
-                alt=""
-                className="w-full h-full object-cover"
+                src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
+                alt="Background"
+                layout="fill"
+                objectFit="cover"
+                className="transition-opacity duration-300"
+                priority
               />
 
-              <div className="content absolute flex flex-row w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow harmony-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base">
-                <div className=" flex flex-col w-[50%] md:mb-0 md:pr-8 pt-24 ">
+              <div className="relative container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 md:flex-row z-10">
+                {/* Left Section - Text */}
+                <div className="mb-8 flex-1 md:mb-0 md:pr-8">
                   <AnimatePresence mode="wait">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
@@ -98,12 +113,12 @@ const OfficePartitions = () => {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <motion.div
+                      <motion.h2
                         className="pt-24 text-5xl lg:text-7xl din-bold text-white"
                         layout
                       >
                         {item.title}
-                      </motion.div>
+                      </motion.h2>
                       <motion.p
                         className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
                         layout
@@ -126,64 +141,23 @@ const OfficePartitions = () => {
                       </motion.button>
                     </motion.div>
                   </AnimatePresence>
-                  {/* <motion.div
-                    className="title text-[3em] font-bold leading-[1.3em]"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: index === currentItemIndex ? 1 : 0,
-                      y: index === currentItemIndex ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {item.title}
-                  </motion.div>
+
+                  {/* Button Section */}
                   <motion.div
-                    className="type text-[3em] font-bold leading-[1.3em] text-[#ffffff]"
+                    className="button mt-4 md:mt-6"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: index === currentItemIndex ? 1 : 0,
-                      y: index === currentItemIndex ? 0 : 20,
-                    }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    {item.type}
-                  </motion.div>
-                  <motion.div
-                    className="description text-[1em]"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: index === currentItemIndex ? 1 : 0,
-                      y: index === currentItemIndex ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {item.description}
-                  </motion.div> */}
-                  <motion.div
-                    className="button grid grid-cols-1 mt-5"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: index === currentItemIndex ? 1 : 0,
-                      y: index === currentItemIndex ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {/* <Link href="/contact">
-                    <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      GET IN TOUCH
-                    </motion.button>
-                  </Link> */}
                     <Form
                       isOpen={isFormOpen}
                       onClose={() => setIsFormOpen(false)}
                     />
                   </motion.div>
                 </div>
-                <div className="relative w-[50%] mb-4 lg:pt-14">
+
+                {/* Right Section - Image */}
+                <div className="relative flex-1 mb-4 lg:pt-14">
                   <motion.div
                     className="relative h-[250px] w-[350px] md:h-[550px] md:w-[800px]"
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -196,24 +170,8 @@ const OfficePartitions = () => {
                       alt="Long office"
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-[5px]"
+                      className="rounded-lg"
                     />
-
-                    {/* <motion.div
-                        className="absolute inset-0 rounded-lg"
-                        style={{
-                          background:
-                            "linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%)",
-                        }}
-                        animate={{
-                          backgroundPosition: ["0% 0%", "100% 100%"],
-                        }}
-                        transition={{
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                          duration: 5,
-                        }}
-                      /> */}
                   </motion.div>
                 </div>
               </div>

@@ -59,7 +59,7 @@ const Contact = () => {
     <main className="relative bg-gradient-to-br from-gray-800 to-gray-600 py-20 w-screen overflow-hidden">
       <Form isOpen={isOpen} onClose={handleClose} />
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <Image
           src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
           alt="Background"
