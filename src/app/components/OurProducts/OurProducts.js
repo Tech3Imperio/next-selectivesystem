@@ -284,16 +284,16 @@ const ProductData = [
       "Enhance your space with sleek, energy-efficient aluminum windows, offering modern aesthetics and long-lasting durability.",
     img: aluminumPhone,
   },
+  // {
+  //   id: 2,
+  //   title: "Invisible Grill",
+  //   link: "/products/invisiblegrill",
+  //   description:
+  //     "Invisible grills provide rust-resistant balcony safety, protecting children while maintaining panoramic views and sleek aesthetics.",
+  //   img: invisiblegrill,
+  // },
   {
     id: 2,
-    title: "Invisible Grill",
-    link: "/products/invisiblegrill",
-    description:
-      "Invisible grills provide rust-resistant balcony safety, protecting children while maintaining panoramic views and sleek aesthetics.",
-    img: invisiblegrill,
-  },
-  {
-    id: 3,
     title: "Glass Railing",
     link: "/products/glass-railings",
     description:
@@ -301,7 +301,7 @@ const ProductData = [
     img: glass,
   },
   {
-    id: 4,
+    id: 3,
     title: "Office Partition",
     link: "/products/office-partitions",
     description:

@@ -41,7 +41,7 @@ export default function Navbar() {
           name: "Glass Railings",
           href: "/products/glass-railings",
         },
-        { name: "Invisible Grill", href: "/products/invisiblegrill" },
+        // { name: "Invisible Grill", href: "/products/invisiblegrill" },
         { name: "Office Partitions", href: "/products/office-partitions" },
         { name: "Bathroom Partitions", href: "/products/bathroom-partitions" },
         { name: "Queue Manager", href: "/products/queue-manager" },
@@ -192,13 +192,13 @@ export default function Navbar() {
                         >
                           Glass Railings
                         </Link>
-                        <Link
+                        {/* <Link
                           onClick={toggleSidebar}
                           href="/products/invisiblegrill"
                           className="p-2 text-[1.25rem] flex items-center justify-center"
                         >
                           Invisible Grill
-                        </Link>
+                        </Link> */}
                         <Link
                           onClick={toggleSidebar}
                           href="/products/office-partitions"

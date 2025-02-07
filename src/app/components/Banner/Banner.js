@@ -532,34 +532,34 @@ const Section = ({ title, children }) => (
 // Updated FeatureCard with FadeUp Animation and `whileInView`
 const FeatureCard = ({ feature, delay }) => (
   <motion.div
-    className="bg-gradient-to-br from-gray-100 to-gray-400 p-8  rounded-3xl shadow-lg hover:shadow-xl"
+    className="bg-gradient-to-br from-gray-800 to-gray-600 p-8  rounded-3xl shadow-lg hover:shadow-xl"
     variants={FadeUp(delay)} // Apply FadeUp animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <span className="text-2xl din-bold  text-black  mb-4 py-2">
+    <span className="text-2xl din-bold  text-white  mb-4 py-2">
       {feature.title}
     </span>
-    <p className="text-black roboto-light">{feature.description}</p>
+    <p className="text-white roboto-light">{feature.description}</p>
   </motion.div>
 );
 
 // Updated ServiceCard with FadeLeft Animation and `whileInView`
 const ServiceCard = ({ service, delay }) => (
   <motion.div
-    className="bg-gradient-to-br from-gray-50 to-gray-400 p-6 rounded-3xl shadow-xl hover:shadow-2xl"
+    className="bg-gradient-to-br from-gray-800 to-gray-600 p-6 rounded-3xl shadow-xl hover:shadow-2xl"
     variants={FadeLeft(delay)} // Apply FadeLeft animation from your custom file
     initial="hidden" // Animation start state
     whileInView="visible" // Trigger animation when the element comes into view
     viewport={{ once: false }} // Ensure animation triggers every time it enters the view
     transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
   >
-    <h3 className="text-2xl poppins-semibold  din-bold drop-shadow-lg mb-2">
+    <h3 className="text-white text-2xl poppins-semibold  din-bold drop-shadow-lg mb-2">
       {service.name}
     </h3>
-    <p className=" roboto-light">{service.description}</p>
+    <p className="text-white roboto-light">{service.description}</p>
   </motion.div>
 );
 
