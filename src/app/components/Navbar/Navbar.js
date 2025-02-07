@@ -43,7 +43,7 @@ export default function Navbar() {
           name: "Glass Railings",
           href: "/products/glass-railings",
         },
-        { name: "Invisible Grill", href: "/products/invisiblegrill" },
+        // { name: "Invisible Grill", href: "/products/invisiblegrill" },
         { name: "Office Partitions", href: "/products/office-partitions" },
         { name: "Bathroom Partitions", href: "/products/bathroom-partitions" },
         { name: "Queue Manager", href: "/products/queue-manager" },

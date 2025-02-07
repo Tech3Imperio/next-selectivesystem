@@ -237,16 +237,16 @@ const ProductData = [
       "Transform your space with elegant glass railings that combine safety with sophistication. Our premium glass railings offer unobstructed views while providing robust protection, perfect for both indoor and outdoor applications.",
     img: glass,
   },
+  // {
+  //   id: 3,
+  //   title: "Invisible",
+  //   subtitle: "Grill",
+  //   description:
+  //     "Experience the perfect blend of safety and aesthetics with our invisible grills. These innovative solutions provide maximum security while maintaining your space's visual appeal, ideal for homes and offices seeking modern protection.",
+  //   img: invisiblegrill,
+  // },
   {
     id: 3,
-    title: "Invisible",
-    subtitle: "Grill",
-    description:
-      "Experience the perfect blend of safety and aesthetics with our invisible grills. These innovative solutions provide maximum security while maintaining your space's visual appeal, ideal for homes and offices seeking modern protection.",
-    img: invisiblegrill,
-  },
-  {
-    id: 4,
     title: "Office Glass",
     subtitle: "Partition",
     description:

@@ -103,7 +103,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
-import circle from "../../assets/SliderImages/circle.jpg";
+// import circle from "../../assets/SliderImages/circle.jpg";
+import aluminiumWindow from "../../assets/Tostem/AluminiumWindow.webp";
 // import OurProducts from "../OurProducts/OurProducts";
 import Banner from "../Banner/Banner";
 import Link from "next/link";
@@ -225,12 +226,13 @@ export default function AluminumWindows() {
                 </motion.button>
                 <Link href="tel:+919372593981">
                   <motion.button
-                    className="rounded-[5px] w-[8.3rem] py-3 px-3 text-sm md:text-sm md:px-4 md:py-[13.5px] text-black bg-gradient-to-br from-gray-200 to-gray-400  roboto-bold transition duration-700 border border-black hover:bg-white hover:text-black flex items-center gap-2"
+                    className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+               hover:bg-white hover:text-black hover:border-black"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <BsFillTelephoneFill size={14} />
-                    CALL NOW
+                    Call Now
                   </motion.button>
                 </Link>
               </div>
@@ -244,19 +246,19 @@ export default function AluminumWindows() {
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
           >
-            <motion.div
+            {/* <motion.div
               // whileHover="hover"
               variants={imageVariants}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
-            >
-              <Image
-                src={circle}
-                alt="Modern aluminum window"
-                width={400}
-                height={400}
-                className="rounded-full shadow-lg"
-              />
-            </motion.div>
+            > */}
+            <Image
+              src={aluminiumWindow}
+              alt="Modern aluminum window"
+              width={500}
+              height={400}
+              className="shadow-lg"
+            />
+            {/* </motion.div> */}
           </motion.div>
         </motion.div>
       </section>

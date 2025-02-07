@@ -1,18 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaFacebookF as Facebook,
   FaXTwitter as Twitter,
   FaInstagram as Instagram,
   FaLinkedinIn as Linkedin,
 } from "react-icons/fa6";
-import blackLogo from "../../assets/Logo/blackLogo.png";
+import blackLogo from "../../assets/Logo/whiteLogo.png";
 import Image from "next/image";
 import Link from "next/link";
+import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
+import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
   const [modalMessage, setModalMessage] = useState("");
+  const [isMobile, setIsMobile] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,10 +45,32 @@ export const Footer = () => {
       })
       .catch((error) => console.error("Error sending data:", error));
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <footer className="bg-gradient-to-br from-gray-50 to-gray-500 text-black-300 flex flex-col md:flex-row justify-evenly py-20 w-screen">
-      <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+    <footer className="relative bg-gradient-to-br from-gray-800 to-gray-500 text-white flex flex-col md:flex-row justify-evenly py-20 w-screen overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          className="transition-opacity duration-300"
+          priority
+        />
+        {/* Overlay for readability */}
+        {/* <div className="absolute inset-0 bg-black/50"></div> */}
+      </div>
+      <div className="relative flex flex-col items-center md:items-start mb-4 md:mb-0">
         <Link href="/">
           <Image
             src={blackLogo}
@@ -58,7 +83,7 @@ export const Footer = () => {
           <Link
             href="/"
             target="_blank"
-            className="text-black-300 hover:underline roboto-light"
+            className="text-white-300 hover:underline roboto-light"
           >
             Charni Road, Mumbai - 400004
           </Link>
@@ -72,7 +97,7 @@ export const Footer = () => {
           </Link>
         </p>
       </div>
-      <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+      <div className="relative flex flex-col items-center md:items-start mb-4 md:mb-0">
         <div className="mb-2">
           <h5 className="din-bold text-xl">
             <b>Contact Us</b>
@@ -91,7 +116,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center md:items-start text-xl">
+        <div className="relative flex flex-col items-center md:items-start text-xl">
           <h5 className=" din-bold py-1">
             <b>Follow Us</b>
           </h5>
@@ -111,7 +136,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center md:items-start">
+      <div className="relative flex flex-col items-center md:items-start">
         <form
           className="flex flex-col md:flex-row items-center gap-4"
           onSubmit={handleSubmit}
@@ -127,7 +152,7 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className=" bg-black text-white roboto-semibold rounded-[5px] px-4 py-2 w-[7rem] hover:bg-white  hover:text-black hover:border-black hover:scale-110 transition duration-700"
+            className=" bg-white text-black roboto-semibold rounded-[5px] px-4 py-2 w-[7rem] hover:bg-white  hover:text-black hover:border-black hover:scale-110 transition duration-700"
             id="button"
           >
             Subscribe
