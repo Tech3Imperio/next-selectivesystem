@@ -2,11 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import email from "../assets/Contact/email.png";
-import location from "../assets/Contact/location.png";
-import contact from "../assets/Contact/contact.png";
-import { FadeDown, FadeUp } from "../components/utility/animation";
+import email from "../assets/Contact/email-white.png";
+import location from "../assets/Contact/location-white.png";
+import contact from "../assets/Contact/contact-white.png";
+import { FadeDown } from "../components/utility/animation";
 import { motion } from "framer-motion";
+import parallesBlackLaptop from "../assets/HeroImg/home_illustriation2_d.webp";
+import parallesBlackPhone from "../assets/HeroImg/parallexBlackPhoneView.webp";
+import Form from "../components/Form/Form";
 
 const Contact = () => {
   const [isLoader, setIsLoader] = useState(false);
@@ -16,205 +19,139 @@ const Contact = () => {
     whatsappNo: "",
     message: "",
   });
-
+  const [isMobile, setIsMobile] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [hasClosedOnce, setHasClosedOnce] = useState(false);
   const router = useRouter();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoader(true); // Set loader to true when submitting
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setFormData({ name: "", email: "", whatsappNo: "", message: "" });
-        router.push("/"); // Redirect to homepage after successful submission
-      } else {
-        // If the response is not ok, log the error response
-        const errorText = await response.text();
-        console.error("Error submitting form:", errorText);
-        alert("There was an error. Please try again.");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-      alert("There was an error. Please try again.");
-    } finally {
-      setIsLoader(false); // Reset the loader state after the request
-    }
-  };
-
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!hasClosedOnce) setIsOpen(true);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [hasClosedOnce]);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setHasClosedOnce(true);
+  };
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
   return (
-    <main className="relative min-h-screen bg-gray-100">
-      {/* Contact Information Section */}
-      <motion.div
-        variants={FadeDown(0.1)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="pt-44  rounded-b-2xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-500"
-      >
-        <div className="container mx-auto px-4 md:px-0">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl  din-bold">CONTACT US</h1>
-          </div>
-          <div className="flex flex-wrap justify-center space-y-4 md:space-y-0">
-            {/* Contact Info Cards */}
-            <div className="w-full md:w-1/3 p-4">
-              <motion.div
-                initial={{ opacity: 0, x: -200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="bg-secondary border p-6 shadow-lg rounded-2xl text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <Image src={email} alt="Email Icon" className="w-12 h-12" />
-                </div>
-                <h3 className="text-xl din-bold mb-2">Email Address</h3>
-                <p className="roboto-light">info@selectivesystems.in</p>
-              </motion.div>
-            </div>
-            <div className="w-full md:w-1/3 p-4">
-              <div className="bg-secondary p-6 shadow-lg border rounded-2xl text-center">
-                <div className="flex justify-center mb-4">
-                  <Image src={contact} alt="Phone Icon" className="w-12 h-12" />
-                </div>
-                <h3 className="text-xl din-bold mb-2">Phone Number</h3>
-                <p className=" roboto-light">+91 9372593981</p>
-              </div>
-            </div>
+    <main className="relative bg-gradient-to-br from-gray-800 to-gray-600 py-20 w-screen overflow-hidden">
+      <Form isOpen={isOpen} onClose={handleClose} />
+
+      <div className="absolute inset-0">
+        <Image
+          src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          className="transition-opacity duration-300"
+          priority
+        />
+      </div>
+
+      <div className="relative container mx-auto px-4 md:px-0 text-center">
+        <h1 className="text-4xl din-bold text-white mb-12">CONTACT US</h1>
+        <div className="flex flex-wrap justify-center space-y-4 md:space-y-0">
+          <div className="w-full md:w-1/3 p-4">
             <motion.div
-              initial={{ opacity: 0, x: 200 }}
+              initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="w-full md:w-1/3 p-4"
+              className="bg-black text-white border p-6 shadow-lg rounded-2xl text-center"
             >
-              <div className="bg-secondary p-6 border shadow-lg rounded-2xl text-center">
-                <div className="flex justify-center mb-4">
-                  <Image
-                    src={location}
-                    alt="Location Icon"
-                    className="w-12 h-12"
-                  />
-                </div>
-                <h3 className="text-xl din-bold mb-2">Office Address</h3>
-                <p className="roboto-light">
-                  Aman Chambers Charni Road East, Mumbai 400004
-                </p>
+              <div className="flex justify-center mb-6">
+                <Image src={email} alt="Email Icon" className="w-12 h-12" />
               </div>
+              <h3 className="text-xl din-bold mb-2">Email Address</h3>
+              <p className="roboto-light">info@selectivesystems.in</p>
             </motion.div>
           </div>
-        </div>
-      </motion.div>
 
-      {/* Contact Form Section */}
-      <div className="flex justify-center items-center py-12 bg-white">
-        <motion.div
-          variants={FadeUp(0.3)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="w-full max-w-lg bg-secondary rounded-2xl p-8 shadow-lg"
-        >
-          <h2 className="text-3xl md:text-4xl din-bold text-center  mb-4">
-            Get in Touch
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-4">
-              {/* Name Field */}
-              <div>
-                <label htmlFor="name" className="block text-base roboto-light ">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-2xl shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-                />
+          <div className="w-full md:w-1/3 p-4">
+            <div className="bg-black text-white p-6 shadow-lg border rounded-2xl text-center">
+              <div className="flex justify-center mb-6">
+                <Image src={contact} alt="Phone Icon" className="w-12 h-12" />
               </div>
-              {/* Email Field */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-base roboto-light "
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-2xl shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-                />
-              </div>
-              {/* WhatsApp No */}
-              <div>
-                <label
-                  htmlFor="whatsappNo"
-                  className="block text-base roboto-light "
-                >
-                  WhatsApp No
-                </label>
-                <input
-                  type="tel"
-                  id="whatsappNo"
-                  name="whatsappNo"
-                  value={formData.whatsappNo}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-2xl shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-                />
-              </div>
-              {/* Message */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-base roboto-light "
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="4"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-2xl shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-                />
-              </div>
+              <h3 className="text-xl din-bold mb-2">Phone Number</h3>
+              <p className="roboto-light">+91 9372593981</p>
             </div>
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="bg-gradient-to-br from-gray-200 to-gray-400 w-full py-3 text-xl font-semibold  rounded-2xl shadow-sm "
-              >
-                {isLoader ? "Sending..." : "Send"}
-              </button>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="w-full md:w-1/3 p-4"
+          >
+            <div className="bg-black text-white p-6 border shadow-lg rounded-2xl text-center">
+              <div className="flex justify-center mb-6">
+                <Image
+                  src={location}
+                  alt="Location Icon"
+                  className="w-12 h-12"
+                />
+              </div>
+              <h3 className="text-xl din-bold mb-2">Office Address</h3>
+              <p className="roboto-light">
+                Aman Chambers Charni Road East, Mumbai 400004
+              </p>
             </div>
-          </form>
-        </motion.div>
+          </motion.div>
+          {/* "Book an Appointment" Button */}
+          <div className="relative flex justify-center mt-8">
+            <button
+              onClick={handleOpen}
+              className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+            >
+              Book an Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Embedded Google Map */}
+      <div
+        style={{
+          position: "relative",
+          width: "100vw",
+          height: "50vh",
+          boxSizing: "border-box",
+          marginTop: "50px",
+        }}
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.84352513496705!2d72.81715472488038!3d18.953672262667236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce3d2de2bdd7%3A0x6ebf171c718b4540!2sImperio%20Railing%20Systems!5e0!3m2!1sen!2sin!4v1719488265959!5m2!1sen!2sin"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            borderRadius: "10px",
+            boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)",
+          }}
+          allowFullScreen
+          loading="lazy"
+        />
       </div>
     </main>
   );
