@@ -274,7 +274,7 @@ export default function RotatingHero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     // Set initial value
@@ -308,7 +308,9 @@ export default function RotatingHero() {
             priority
           />
         </div>
-        {window.innerWidth > 1024 ? (
+        {isMobile ? (
+          <></>
+        ) : (
           <motion.div
             className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
             style={{
@@ -316,8 +318,6 @@ export default function RotatingHero() {
               top: cursorYSpring,
             }}
           />
-        ) : (
-          <></>
         )}
 
         <div className="relative container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 md:flex-row z-10">
