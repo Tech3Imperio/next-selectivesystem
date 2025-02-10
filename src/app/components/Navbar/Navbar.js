@@ -100,7 +100,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`absolute xl:fixed text-white w-[100vw] z-50 `}>
+    <nav
+      className={`absolute xl:fixed text-white w-[100vw] z-50 bg-black bg-opacity-50 backdrop-blur-md`}
+    >
       {/* {isMobileView ? (
         <HamburgerMenu />
       )  */}
