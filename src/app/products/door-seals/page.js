@@ -35,7 +35,7 @@ export const metadata = {
     "Aluminium Windows door in Tajikistan",
     "Aluminium Windows door in China",
   ],
-  url: "https://selectivesystems.in/products/door-seals",
+  // url: "https://selectivesystems.in/products/door-seals",
 };
 
 const page = () => {
