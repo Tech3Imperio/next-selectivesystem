@@ -1,11 +1,18 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import queuemanager from "../../assets/QueueManager/HeroQueue-manager/queuemanager.png";
 import queuemanager2 from "../../assets/QueueManager/HeroQueue-manager/queuemanager2.png";
 import queuemanager3 from "../../assets/QueueManager/HeroQueue-manager/queuemanager3.png";
 import queuemanager4 from "../../assets/QueueManager/HeroQueue-manager/queuemanager4.png";
 import QueueData from "../../Data/QueueManager/QueueManager";
+import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
+import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "@/app/components/Form/Form";
@@ -41,10 +48,15 @@ const QueueManager = () => {
         "Upgrade your crowd management with our modern stainless steel barrier post. Perfect for events and public areas, offering both strength and elegance.",
     },
   ]);
-
+  const [isMobile, setIsMobile] = useState(true);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+  const springConfig = { damping: 25, stiffness: 700 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
   const moveSlider = (direction) => {
     if (direction === "next") {
       setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
@@ -58,6 +70,25 @@ const QueueManager = () => {
   const handleThumbnailClick = (index) => {
     setCurrentItemIndex(index);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      cursorX.set(e.clientX - 16);
+      cursorY.set(e.clientY - 16);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   useEffect(() => {
     // Scroll to the top of the component when it comes into view
@@ -69,9 +100,20 @@ const QueueManager = () => {
   return (
     <main className="relative">
       <div
-        ref={aluminiumRef}
+        // ref={aluminiumRef}
         className="slider h-screen w-screen overflow-hidden relative"
       >
+        {isMobile ? (
+          <></>
+        ) : (
+          <motion.div
+            className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
+            style={{
+              left: cursorXSpring,
+              top: cursorYSpring,
+            }}
+          />
+        )}
         <div className="list relative w-full h-full">
           {sliderItems.map((item, index) => (
             <motion.div
@@ -84,81 +126,87 @@ const QueueManager = () => {
               transition={{ duration: 1 }}
             >
               <Image
-                src={item.imgSrc}
-                alt=""
-                className="w-full h-full object-cover"
+                src={isMobile ? parallesBlackPhone : parallesBlackLaptop}
+                alt="Background"
+                layout="fill"
+                objectFit="cover"
+                className="transition-opacity duration-300"
+                priority
               />
-              <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-              <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow harmony-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base">
-                <motion.div
-                  className="title text-[3em] font-bold leading-[1.3em]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.title}
-                </motion.div>
-                <motion.div
-                  className="type text-[3em] font-bold leading-[1.3em] text-[#14ff72cb]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.type}
-                </motion.div>
-                <motion.div
-                  className="description text-[1em]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.description}
-                </motion.div>
-                <motion.div
-                  className="button grid grid-cols-1 mt-5"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {/* <Link href="/contact">
-                    <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] harmony-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+              {/* <div className="gradient-overlay absolute inset-0"></div> */}
+              <div className="relative container mx-auto flex min-h-screen flex-col gap-8 items-center justify-center px-4 md:flex-row z-10">
+                <div className="mb-8 flex-1 md:mb-0 md:pr-8">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
                     >
-                      GET IN TOUCH
-                    </motion.button>
-                  </Link> */}
-                  <Form
-                    isOpen={isFormOpen}
-                    onClose={() => setIsFormOpen(false)}
-                  />
-                  <motion.button
-                    className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsFormOpen(true)}
+                      <motion.h2
+                        className="pt-24 text-5xl lg:text-7xl din-bold text-white"
+                        layout
+                      >
+                        {item.title}
+                      </motion.h2>
+                      <motion.p
+                        className="mb-6 text-4xl lg:text-5xl roboto-light text-white"
+                        layout
+                      >
+                        {item.subtitle}
+                      </motion.p>
+                      <motion.h1
+                        className="mb-8 text-sm lg:text-lg roboto-light text-white text-justify"
+                        layout
+                      >
+                        {item.description}
+                      </motion.h1>
+                      <motion.button
+                        className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setIsFormOpen(true)}
+                      >
+                        Enquire Now
+                      </motion.button>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* Button Section */}
+                  <motion.div
+                    className="button mt-4 md:mt-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    Enquire Now
-                  </motion.button>
-                </motion.div>
+                    <Form
+                      isOpen={isFormOpen}
+                      onClose={() => setIsFormOpen(false)}
+                    />
+                  </motion.div>
+                </div>
+                <div className="relative flex-1 mb-4 lg:pt-14">
+                  <motion.div
+                    className="relative h-[250px] w-[350px] md:h-[550px] md:w-[800px]"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Image
+                      src={queuemanager}
+                      alt="Queue Manager"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-lg"
+                    />
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-        <div className="thumbnail absolute bottom-2 xl4:bottom-12 left-1/1 gap-1 ml- transform -translate-x-2/7 flex z-10 md:-translate-x-[-10rem] md:gap-3 lg:gap-4 lg:left-[12%] lg:-translate-x-[-1rem] xl:gap-5 xl:translate-x-60 xl:left-[32%] xl4:mx-[15%] 2xl:-mb-8">
+        {/* <div className="thumbnail absolute bottom-2 xl4:bottom-12 left-1/1 gap-1 ml- transform -translate-x-2/7 flex z-10 md:-translate-x-[-10rem] md:gap-3 lg:gap-4 lg:left-[12%] lg:-translate-x-[-1rem] xl:gap-5 xl:translate-x-60 xl:left-[32%] xl4:mx-[15%] 2xl:-mb-8">
           {sliderItems.map((item, index) => (
             <div
               key={index}
@@ -172,8 +220,8 @@ const QueueManager = () => {
               />
             </div>
           ))}
-        </div>
-        <div className="nextPrevArrows absolute top-[65%] right-[65%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr- md:top-[78%] md:right-[65%] md:gap-5 lg:mr-24 lg:top-[70%] lg:right-[45%] xl:top-[70%] xl:gap-5 xl:right-[36%] xl4:top-[70%] ">
+        </div> */}
+        {/* <div className="nextPrevArrows absolute top-[65%] right-[65%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr- md:top-[78%] md:right-[65%] md:gap-5 lg:mr-24 lg:top-[70%] lg:right-[45%] xl:top-[70%] xl:gap-5 xl:right-[36%] xl4:top-[70%] ">
           <button
             className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem] xl4:ml-[8rem]"
             onClick={() => moveSlider("prev")}
@@ -186,7 +234,7 @@ const QueueManager = () => {
           >
             {">"}
           </button>
-        </div>
+        </div> */}
       </div>
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 harmony-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">

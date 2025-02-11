@@ -161,7 +161,7 @@ export default function Navbar() {
                           <div key={subItem.name} className="relative group">
                             <Link
                               href={subItem.href}
-                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-gradient-to-br from-gray-50 to-gray-500 hover:text-black rounded-md flex items-center roboto-regular"
+                              className=" px-4 py-2 text-md whitespace-nowrap text-[#000] hover:bg-gradient-to-br from-gray-50 to-gray-100 hover:text-black rounded-md flex items-center roboto-regular"
                             >
                               {subItem.name}
                             </Link>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import windows1 from "../../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
 import windows2 from "../../../assets/AluminiumProduct/AluminiumWindows/windows2.webp";
@@ -636,10 +637,15 @@ export default function ProductPage({ params }) {
             </div>
 
             <Link href="tel:+919372593981">
-              <button className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2 hover:scale-110">
-                <BsFillTelephoneFill size={16} />
-                CALL NOW
-              </button>
+              <motion.button
+                className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+               hover:bg-white hover:text-black hover:border-black"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BsFillTelephoneFill size={14} />
+                Call Now
+              </motion.button>
             </Link>
           </div>
         </div>
