@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.selectivesystems.in/
+Host: https://www.selectivesystems.in
 
 # Sitemaps
 Sitemap: https://www.selectivesystems.in/sitemap.xml
