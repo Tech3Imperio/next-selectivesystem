@@ -11,15 +11,15 @@ const nextConfig = {
     GOOGLE_SHEET_ID: process.env.GOOGLE_SHEET_ID,
     // Add this line
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        destination: "https://www.selectivesystems.in/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/:path*",
+  //       destination: "https://www.selectivesystems.in/:path*",
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 console.log("MONGODB_URI:", process.env.MONGODB_URI);
 export default nextConfig;
