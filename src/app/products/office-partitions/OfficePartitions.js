@@ -1,6 +1,11 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import Longoffice from "../../assets/Officepartition/Longoffice.png";
 import Officearea from "../../assets/Officepartition/Officearea.png";
 import Officecabins from "../../assets/Officepartition/Officecabins.png";
@@ -8,7 +13,7 @@ import Officetwocab from "../../assets/Officepartition/Officetwocab.png";
 import OfficeData from "../../Data/OfficePartition/Officepartition";
 import Link from "next/link";
 import Image from "next/image";
-import Form from "@/app/components/Form/Form";
+import Form from "../../components/Form/Form";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 const OfficePartitions = () => {
@@ -42,10 +47,15 @@ const OfficePartitions = () => {
         "Elevate your restroom design with bathroom partitions featuring a durable aluminum frame and high water-resistant glass, combining strength with modern elegance for long-lasting performance.",
     },
   ]);
-  const [isMobile, setIsMobile] = useState(true);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(true);
   const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+  const springConfig = { damping: 25, stiffness: 700 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
   const moveSlider = (direction) => {
     if (direction === "next") {
       setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
@@ -71,6 +81,14 @@ const OfficePartitions = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
+    const handleMouseMove = (e) => {
+      cursorX.set(e.clientX - 16);
+      cursorY.set(e.clientY - 16);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+  useEffect(() => {
     // Scroll to the top of the component when it comes into view
     if (aluminiumRef.current) {
       aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
@@ -83,6 +101,17 @@ const OfficePartitions = () => {
         // ref={aluminiumRef}
         className="slider h-screen w-screen overflow-hidden relative"
       >
+        {isMobile ? (
+          <></>
+        ) : (
+          <motion.div
+            className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
+            style={{
+              left: cursorXSpring,
+              top: cursorYSpring,
+            }}
+          />
+        )}
         <div className="list relative w-full h-full">
           {sliderItems.map((item, index) => (
             <motion.div

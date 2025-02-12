@@ -4,13 +4,23 @@ import Link from "next/link";
 import terracefloor from "../assets/About/terracefloor.webp";
 import primage from "../assets/About/AboutpageImage/primage.png";
 import rightsideimage from "../assets/About/AboutpageImage/rightsideimage.png";
-import { motion } from "framer-motion";
-
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import Form from "../components/Form/Form";
 
 const About = () => {
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+  const springConfig = { damping: 25, stiffness: 700 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
+  const [isMobile, setIsMobile] = useState(true);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,7 +28,25 @@ const About = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      cursorX.set(e.clientX - 16);
+      cursorY.set(e.clientY - 16);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
 
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const Alldata = [
     {
       title: "Glass Railings",
@@ -41,6 +69,17 @@ const About = () => {
     <main className="relative">
       {/* Rest of your content */}
       <div className="py-16 md:py-24 lg:py-32 overflow-hidden px-4">
+        {isMobile ? (
+          <></>
+        ) : (
+          <motion.div
+            className="pointer-events-none fixed left-0 top-0 z-50 h-8 w-8 rounded-full bg-gray-200 mix-blend-difference"
+            style={{
+              left: cursorXSpring,
+              top: cursorYSpring,
+            }}
+          />
+        )}
         <motion.div
           className="container mx-auto px-4"
           initial="hidden"
