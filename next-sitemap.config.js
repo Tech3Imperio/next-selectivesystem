@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://www.selectivesystems.in/", // Replace with your actual domain
+  siteUrl: "https://www.selectivesystems.in", // Replace with your actual domain
   generateRobotsTxt: true, // Automatically generate robots.txt
   sitemapSize: 7000, // Number of URLs per sitemap file
   changefreq: "daily", // Frequency of changes

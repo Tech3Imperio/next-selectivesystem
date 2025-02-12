@@ -18,7 +18,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.selectivesystems.in"),
   alternates: {
-    canonical: "/",
+    canonical: "",
   },
 };
 const geistSans = localFont({
