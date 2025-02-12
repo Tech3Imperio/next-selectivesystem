@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     type: "website",
   },
-  metadataBase: new URL("https://selectivesystems.in"),
+  metadataBase: new URL("https://www.selectivesystems.in"),
   alternates: {
     canonical: "/",
   },
