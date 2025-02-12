@@ -33,7 +33,7 @@ module.exports = {
     ];
 
     return dynamicPaths.map((path) => ({
-      loc: `https://selectivesystems.in${path}`,
+      loc: `https://www.selectivesystems.in${path}`,
       lastmod: new Date().toISOString(), // Last modified date
     }));
   },
