@@ -27,7 +27,10 @@ export const metadata = {
     "invisible grill material",
     "invisible grill for staircase",
   ],
-  url: "https://selectivesystems.in/products/invisiblegrill",
+  // url: "https://selectivesystems.in/products/invisiblegrill",
+  alternates: {
+    canonical: "/products/invisiblegrill",
+  },
   image: InvisibleBalcony,
 };
 export default function page() {

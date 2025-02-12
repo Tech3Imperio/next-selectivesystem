@@ -14,7 +14,10 @@ export const metadata = {
   openGraph: {
     type: "website",
   },
-  url: "https://selectivesystems.in/products/queue-manager",
+  // url: "https://selectivesystems.in/products/queue-manager",
+  alternates: {
+    canonical: "/products/queue-manager",
+  },
 };
 
 export default function page() {

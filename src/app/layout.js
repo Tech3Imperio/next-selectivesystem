@@ -16,7 +16,10 @@ export const metadata = {
   openGraph: {
     type: "website",
   },
-  url: "https://selectivesystems.in/",
+  metadataBase: new URL("https://selectivesystems.in"),
+  alternates: {
+    canonical: "/",
+  },
 };
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

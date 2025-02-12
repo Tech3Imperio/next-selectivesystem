@@ -22,7 +22,10 @@ export const metadata = {
     "modern bathroom partitions",
     "stylish bathroom partitions",
   ],
-  url: "https://selectivesystems.in/products/bathroom-partitions",
+  // url: "https://selectivesystems.in/products/bathroom-partitions",
+  alternates: {
+    canonical: "/products/bathroom-partitions",
+  },
 };
 
 export default function page() {
