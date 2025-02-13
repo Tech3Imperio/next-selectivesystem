@@ -1,3 +1,5 @@
+"use server";
+
 import { AluminiumProductsPanel } from "./data";
 
 export async function generateMetadata({ params }, parent) {
@@ -21,4 +23,4 @@ export async function generateMetadata({ params }, parent) {
   };
 }
 
-export default function Page() {}
+export default async function Page() {}

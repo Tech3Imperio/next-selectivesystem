@@ -19,7 +19,10 @@ export const metadata = {
     "aluminium window suppliers",
     "selective systems products",
   ],
-  url: "https://www.selectivesystems.in/contact",
+  // url: "https://www.selectivesystems.in/contact",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function page() {
