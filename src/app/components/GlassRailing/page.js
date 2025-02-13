@@ -296,7 +296,7 @@
 //     </div>
 //   );
 // }
-"use client";
+// "use client";
 import { useState } from "react"; // Import useState here
 import Image from "next/image";
 import Link from "next/link";

@@ -86,7 +86,7 @@
 // }
 
 // Add this at the very top of your file
-"use client";
+// "use client";
 
 import Image from "next/image";
 import Link from "next/link";
