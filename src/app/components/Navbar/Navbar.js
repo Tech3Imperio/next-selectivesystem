@@ -177,6 +177,15 @@ export default function Navbar() {
                   GET IN TOUCH
                 </button>
               </Link>
+              <Link
+                href="https://shop.selectivesystems.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-black text-white border-2 roboto-bold w-[4rem] h-[2rem] cursor-pointer lg:h-[3.5rem] lg:w-[8rem] lg:px-2 rounded-[5px] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm  hover:scale-110 transition duration-700 border-white hover:bg-white hover:text-black px-4 py-2 rounded-md">
+                  Online Store
+                </button>
+              </Link>
             </div>
           </div>
         </div>
