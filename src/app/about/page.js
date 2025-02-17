@@ -24,9 +24,8 @@ export const metadata = {
     "Glass railing systems",
     "High-quality window solutions",
   ],
-  // url: "https://www.selectivesystems.in/about",
   alternates: {
-    canonical: "/products/about",
+    canonical: "/about",
   },
 };
 
