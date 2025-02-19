@@ -220,6 +220,7 @@ import parallesBlackLaptop from "../app/assets/HeroImg/home_illustriation2_d.web
 import parallesBlackPhone from "../app/assets/HeroImg/parallexBlackPhoneView.webp";
 import Form from "./components/Form/Form";
 
+const doorSealVideo = "/videos/DoorSeals/doorSealVideo.mp4";
 const ProductData = [
   {
     id: 1,
@@ -253,6 +254,14 @@ const ProductData = [
       "Create sophisticated workspaces with our premium office partitions. These versatile solutions offer the perfect balance of privacy and openness, enhancing your office environment while maintaining a professional atmosphere.",
     img: officepartition,
   },
+  // {
+  //   id: 4,
+  //   title: "Door seals",
+  //   subtitle: "Partition",
+  //   description:
+  //     "Create sophisticated workspaces with our premium office partitions. These versatile solutions offer the perfect balance of privacy and openness, enhancing your office environment while maintaining a professional atmosphere.",
+  //   video: doorSealVideo,
+  // },
 ];
 
 export default function RotatingHero() {
@@ -393,13 +402,23 @@ export default function RotatingHero() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image
-                  src={currentProduct.img || "/placeholder.svg"}
-                  alt={`${currentProduct.title} ${currentProduct.subtitle}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[5px]"
-                />
+                {currentProduct.video ? (
+                  <video
+                    src="/public/videos/SelectingSystemDesktop.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    className="rounded-[5px] object-cover h-full w-full"
+                  />
+                ) : (
+                  <Image
+                    src={currentProduct.img || "/placeholder.svg"}
+                    alt={`${currentProduct.title} ${currentProduct.subtitle}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-[5px]"
+                  />
+                )}
 
                 <motion.div
                   className="absolute inset-0 rounded-lg"

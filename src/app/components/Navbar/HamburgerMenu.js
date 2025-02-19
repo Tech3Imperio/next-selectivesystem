@@ -52,6 +52,7 @@ const mainNavItems = [
   // { name: "Blogs", type: "link", href: "/blogs" },
   { name: "About Us", type: "link", href: "/about" },
   { name: "Contact Us", type: "link", href: "/contact" },
+  { name: "Categories", type: "link", href: "/category" },
 ];
 
 export default function HamburgerMenu() {

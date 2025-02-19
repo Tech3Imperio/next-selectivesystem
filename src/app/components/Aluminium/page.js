@@ -96,6 +96,17 @@ import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.we
 import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.webp";
 import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.webp";
 import windows6 from "../../assets/AluminiumProduct/AluminiumWindows/windows6.webp";
+
+import Awning from "../../assets/AluminiumProduct/AluminiumCategories/AwningWindows/Awning-Window.jpg";
+import Casement from "../../assets/AluminiumProduct/AluminiumCategories/CasementDoors/casement-Window.jpg";
+import Fixed from "../../assets/AluminiumProduct/AluminiumCategories/FixedWindows/Fixed-Window-.jpg";
+// import French from "../../assets/AluminiumProduct/AluminiumCategories/FrenchWindows/French-Windows.jpg";
+import GlassToGlass from "../../assets/AluminiumProduct/AluminiumCategories/GlassToGlassCornerWindows/Glass-to-Glass-Corner-Window.jpg";
+import Sliding from "../../assets/AluminiumProduct/AluminiumCategories/SlidingWindow/Sliding-Window.jpg";
+import Slit from "../../assets/AluminiumProduct/AluminiumCategories/SlitWindows/Slit-Window.jpg";
+// import Tilt from "../../assets/AluminiumProduct/AluminiumCategories/TiltAndSlide/Tilt-slide-Window-size.jpg";
+import Vertical from "../../assets/AluminiumProduct/AluminiumCategories/VerticalSlide/Verticle-sliding-window.jpg";
+
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const AluminiumProductsPanel = [
@@ -124,6 +135,53 @@ const AluminiumProductsPanel = [
     image: windows6,
     ProductName: "Aluminium Glass To Glass Corner Windows",
   },
+];
+const AluminiumCategory = [
+  {
+    id: "awning-windows",
+    image: Awning,
+    ProductName: "Awning Windows",
+  },
+  {
+    id: "casement-aluminium-window",
+    image: Casement,
+    ProductName: "Casement Windows",
+  },
+  {
+    id: "fixed-windows",
+    image: Fixed,
+    ProductName: "Fixed Windows",
+  },
+  {
+    id: "vertical-slide",
+    image: Vertical,
+    ProductName: "Vertical Sliding Windows",
+  },
+  // {
+  //   id: "french-windows",
+  //   image: French,
+  //   ProductName: "French Windows",
+  // },
+  {
+    id: "glass-to-glass-corner",
+    image: GlassToGlass,
+    ProductName: "Glass To Glass Corner Windows",
+  },
+  {
+    id: "sliding-window",
+    image: Sliding,
+    ProductName: "Sliding Windows",
+  },
+  // {
+  //   id: "slit-window",
+  //   image: Slit,
+  //   ProductName: "Slit Windows",
+  // },
+  // {
+  //   id: "tilt-and-slide",
+  //   image: Tilt,
+  //   ProductName: "Tilt And Slide Windows",
+  // },
 ];
 
 const benefits = [
@@ -207,8 +265,13 @@ export default function AluminiumWindows() {
         </p>
       </div>
 
+      <div className="max-w-6xl mx-auto px-4">
+        <p className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
+          Aluminium Window Categories
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
-        {AluminiumProductsPanel.map((item) => (
+        {AluminiumCategory.map((item) => (
           <Link
             href={`/products/aluminium-windows/${item.id}`}
             key={item.id}
