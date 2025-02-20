@@ -17,7 +17,10 @@ export const metadata = {
     "Aluminium window replacement",
     "Custom aluminium windows",
   ],
-  url: "https://selectivesystems.in/products/aluminium-windows",
+  // url: "https://selectivesystems.in/products/aluminium-windows",,
+  alternates: {
+    canonical: "/products/aluminium-windows",
+  },
   image: windows1,
 };
 const page = () => {

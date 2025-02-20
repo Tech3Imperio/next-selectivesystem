@@ -41,7 +41,10 @@ export const metadata = {
   openGraph: {
     type: "website",
   },
-  url: "https://selectivesystems.in/products/office-partitions",
+  // url: "https://selectivesystems.in/products/office-partitions",
+  alternates: {
+    canonical: "/products/office-partitions",
+  },
 };
 
 export default function page() {

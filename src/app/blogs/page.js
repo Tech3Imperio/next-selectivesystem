@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./About";
+import Blog from "./Blog";
 export const metadata = {
   title:
     "Selective Systems: Premium Aluminium Windows | Glass Railing in Mumbai | Tostem Partener ",
@@ -24,11 +24,9 @@ export const metadata = {
     "Glass railing systems",
     "High-quality window solutions",
   ],
-  alternates: {
-    canonical: "/about",
-  },
+  url: "https://www.selectivesystems.in/blogs",
 };
 
 export default function page() {
-  return <About />;
+  return <Blog />;
 }

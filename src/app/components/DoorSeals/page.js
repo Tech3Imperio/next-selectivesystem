@@ -41,6 +41,30 @@ const DoorSealProductsPanel = [
   },
 ];
 
+// export const metadata = {
+//   title: "Door Seals | Drop Down Door Seals",
+//   description:
+//     "Looking for the best aluminium windows, modern glass railings, invisible grills, stainless steel windows, bathroom partitions, and office partitions? Selective Systems offers high-quality products for homes and offices in Bangalore, Mumbai, Chennai, Pune, and beyond. Contact us today for premium solutions!",
+//   keywords: [
+//     "aluminium windows Bangalore",
+//     "glass railings in Mumbai",
+//     "best invisible grills in Chennai",
+//     "bathroom glass partitions",
+//     "queue manager systems",
+//     "stainless steel windows",
+//     "aluminium door solutions",
+//     "modern office partitions",
+//     "balcony glass railings",
+//     "modern aluminium window design",
+//     "aluminium window suppliers",
+//     "selective systems products",
+//   ],
+//   // url: "https://www.selectivesystems.in/contact",
+//   alternates: {
+//     canonical: "/components/DoorSeals",
+//   },
+// };
+
 export default function DoorSealProduct() {
   return (
     <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center pt-14">

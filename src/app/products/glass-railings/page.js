@@ -16,7 +16,10 @@ export const metadata = {
   openGraph: {
     type: "website",
   },
-  url: "https://selectivesystems.in/products/glass-railings",
+  // url: "https://selectivesystems.in/products/glass-railings",
+  alternates: {
+    canonical: "/products/glass-railings",
+  },
   image: glassrailing,
 };
 
