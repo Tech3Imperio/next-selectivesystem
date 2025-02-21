@@ -3,55 +3,51 @@ import Image from "next/image";
 
 const SeriesComponent = ({ product }) => {
   const [selectedSeries, setSelectedSeries] = useState("Grant");
-  const [expandedIndex, setExpandedIndex] = useState(null); // State to track expanded card
+  const [expandedIndex, setExpandedIndex] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
 
-  // Get the series data from the product
   const seriesData = product.series;
   const currentSeries = seriesData.find(
     (series) => series.seriesName === selectedSeries
   );
 
   if (!currentSeries) {
-    return <div>Loading...</div>; // Show loading if the series is not found
+    return <div>Loading...</div>;
   }
 
   const handleCardClick = (index) => {
     if (expandedIndex === index) {
-      setExpandedIndex(null); // If clicked again, collapse the card
+      setExpandedIndex(null);
       setIsClicked(false);
     } else {
-      setExpandedIndex(index); // Expand the clicked card
+      setExpandedIndex(index);
       setIsClicked(true);
     }
   };
 
   const handleCloseSlide = () => {
-    setExpandedIndex(null); // Close the slide by resetting expandedIndex
+    setExpandedIndex(null);
     setIsClicked(false);
   };
 
-  // Lock and unlock the scroll when the slide is open
   useEffect(() => {
     if (expandedIndex !== null) {
-      document.body.style.overflow = "hidden"; // Disable scroll
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Enable scroll
+      document.body.style.overflow = "auto";
     }
-
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup on unmount
+      document.body.style.overflow = "auto";
     };
   }, [expandedIndex]);
 
   return (
     <div>
-      {/* Series Selection */}
-      <div className="flex space-x-6 mb-6 rounded-sm justify-center">
+      <div className="flex flex-wrap space-x-6 mb-6 rounded-sm justify-center">
         {["Grant", "ATIS", "WePlus"].map((seriesName) => (
           <button
             key={seriesName}
-            className={`px-8 py-2  text-white ${
+            className={`px-8 py-2 text-white ${
               selectedSeries === seriesName ? "bg-black" : "bg-gray-600"
             }`}
             onClick={() => setSelectedSeries(seriesName)}
@@ -61,17 +57,15 @@ const SeriesComponent = ({ product }) => {
         ))}
       </div>
 
-      {/* Series Data */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-7 py-5 gap-8 relative">
-        {/* Cards for Products */}
         {currentSeries.products && currentSeries.products.length > 0 ? (
           currentSeries.products.map((product, index) => (
             <div
               key={index}
-              className={`bg-white shadow-lg rounded-lg overflow-hidden w-60  ${
+              className={`bg-white shadow-lg rounded-lg overflow-hidden w-60 ${
                 expandedIndex === index
                   ? "scale-100 z-10 shadow-2xl transform"
-                  : "scale-75" // Scale the card to 0.75 times
+                  : "scale-75"
               } ${
                 isClicked && expandedIndex !== index ? "filter blur-sm" : ""
               }`}
@@ -83,13 +77,12 @@ const SeriesComponent = ({ product }) => {
                 transform:
                   expandedIndex === index ? "translate(-50%, -50%)" : "none",
                 zIndex: expandedIndex === index ? 9999 : "auto",
-                width: expandedIndex === index ? "80vw" : "auto", // Adjust width of the expanded card
-                height: expandedIndex === index ? "70vh" : "auto", // Adjust height for expanded card
-                maxWidth: expandedIndex === index ? "900px" : "auto", // Limit max width for the expanded card
-                borderRadius: expandedIndex === index ? "15px" : "0px", // Rounded corners for the expanded card
+                width: expandedIndex === index ? "90vw" : "auto",
+                height: expandedIndex === index ? "80vh" : "auto",
+                maxWidth: expandedIndex === index ? "900px" : "auto",
+                borderRadius: expandedIndex === index ? "15px" : "0px",
               }}
             >
-              {/* Cross Button to Close the Slide */}
               {expandedIndex === index && (
                 <button
                   onClick={handleCloseSlide}
@@ -100,14 +93,13 @@ const SeriesComponent = ({ product }) => {
                 </button>
               )}
 
-              {/* Regular Card Image */}
               {expandedIndex !== index && (
                 <div className="relative w-full h-64">
                   <Image
                     src={product.image}
                     alt={product.productName}
                     layout="fill"
-                    objectFit="contain" // Ensures the full image is visible
+                    objectFit="contain"
                     className="rounded-lg"
                     loading="lazy"
                   />
@@ -118,15 +110,11 @@ const SeriesComponent = ({ product }) => {
                 <h3 className="text-md font-semibold mb-2">
                   {product.productName}
                 </h3>
-                {/* Optional description for the regular card */}
-                {/* <p className="text-gray-600 mb-4">{product.description}</p> */}
               </div>
 
-              {/* Expanded card content with flexbox */}
               {expandedIndex === index && (
-                <div className="flex flex-row mt-4 p-6 space-x-8">
-                  {/* Image on the Left */}
-                  <div className="flex-shrink-0 w-1/2 h-64">
+                <div className="flex flex-col md:flex-row mt-4 p-6 space-y-4 md:space-y-0 md:space-x-8">
+                  <div className="flex-shrink-0 w-full md:w-1/2 h-64">
                     <Image
                       src={product.image}
                       alt={product.productName}
@@ -137,7 +125,6 @@ const SeriesComponent = ({ product }) => {
                     />
                   </div>
 
-                  {/* Content on the Right */}
                   <div className="flex-1 space-y-4">
                     <h3 className="text-2xl font-semibold mb-2">
                       {product.productName}

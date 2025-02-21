@@ -217,7 +217,7 @@ export default function AluminiumWindows() {
   };
 
   return (
-    <div className="max-w-[85rem] mx-auto container flex flex-col justify-center items-center pt-14">
+    <div className="max-w-[90rem] mx-auto container flex flex-col justify-center items-center pt-14">
       <div className="m-4">
         <h1 className="text-2xl lg:text-5xl din-bold text-black mb-8 text-center">
           Premium Aluminum Windows Combining Durability, Style, and Modern
@@ -235,15 +235,15 @@ export default function AluminiumWindows() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
+      <div className="flex flex-wrap justify-center gap-4 w-full max-w-screen-lg mx-auto px-4 md:px-8">
         {AluminiumCategory.map((item) => (
           <Link
             href={`/products/aluminium-windows/${item.id}`}
             key={item.id}
-            className="group"
+            className="group flex-1 min-w-[280px] sm:basis-[48%] lg:basis-[30%]"
           >
             <div className="rounded-lg flex flex-col overflow-hidden transition-transform duration-300 group-hover:scale-105">
-              <div className="flex justify-center items-center p-8 lg:p-4">
+              <div className="flex justify-center items-center p-2">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.ProductName}
@@ -252,7 +252,7 @@ export default function AluminiumWindows() {
                 />
               </div>
             </div>
-            <p className="text-center text-xl roboto-light text-gray-800">
+            <p className="text-center text-xl font-bold roboto-light text-gray-900 transition-transform duration-300 group-hover:scale-105">
               {item.ProductName}
             </p>
           </Link>

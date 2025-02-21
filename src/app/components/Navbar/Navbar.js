@@ -28,7 +28,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Categories", href: "/category" },
+    // { name: "Categories", href: "/category" },
     { name: "Blogs", href: "/blogs" },
 
     {
