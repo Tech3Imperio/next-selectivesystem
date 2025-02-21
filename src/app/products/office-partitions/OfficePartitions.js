@@ -14,8 +14,10 @@ import OfficeData from "../../Data/OfficePartition/Officepartition";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form/Form";
+
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
+import { BsFillTelephoneFill } from "react-icons/bs";
 const OfficePartitions = () => {
   const [sliderItems] = useState([
     {
@@ -160,14 +162,31 @@ const OfficePartitions = () => {
                       >
                         {item.description}
                       </motion.h1>
-                      <motion.button
-                        className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setIsFormOpen(true)}
-                      >
-                        Enquire Now
-                      </motion.button>
+                      <div className="flex space-x-4">
+                        <motion.button
+                          className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white "
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => setIsFormOpen(true)}
+                        >
+                          Enquire Now
+                        </motion.button>
+                        <Link
+                          href="https://wa.me/919372593981"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <motion.button
+                            className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <BsFillTelephoneFill size={14} />
+                            Chat Now
+                          </motion.button>
+                        </Link>
+                      </div>
                     </motion.div>
                   </AnimatePresence>
 

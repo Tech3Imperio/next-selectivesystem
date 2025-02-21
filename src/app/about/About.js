@@ -233,7 +233,7 @@ const About = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <BsFillTelephoneFill size={14} />
-                  Call Now
+                  Chat Now
                 </motion.button>
               </Link>
             </div>
