@@ -1,5 +1,3 @@
-// // pages/aluminium-windows/index.js
-
 // import Image from "next/image";
 // import Link from "next/link";
 // import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
@@ -96,7 +94,7 @@ import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.we
 import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.webp";
 import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.webp";
 import windows6 from "../../assets/AluminiumProduct/AluminiumWindows/windows6.webp";
-import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+
 import Awning from "../../assets/AluminiumProduct/AluminiumCategories/AwningWindows/Awning-Window.jpg";
 import Casement from "../../assets/AluminiumProduct/AluminiumCategories/CasementDoors/casement-Window.jpg";
 import Fixed from "../../assets/AluminiumProduct/AluminiumCategories/FixedWindows/Fixed-Window-.jpg";
@@ -107,6 +105,35 @@ import Slit from "../../assets/AluminiumProduct/AluminiumCategories/SlitWindows/
 // import Tilt from "../../assets/AluminiumProduct/AluminiumCategories/TiltAndSlide/Tilt-slide-Window-size.jpg";
 import Vertical from "../../assets/AluminiumProduct/AluminiumCategories/VerticalSlide/Verticle-sliding-window.jpg";
 
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+
+const AluminiumProductsPanel = [
+  {
+    id: "fixed-aluminium-window-01",
+    image: windows1,
+    ProductName: "Modern Aluminum Fixed Windows",
+  },
+  {
+    id: "awning-aluminium-window01",
+    image: windows2,
+    ProductName: "Aluminum Awning Windows",
+  },
+  {
+    id: "sliding-aluminium-window1",
+    image: windows3,
+    ProductName: "Aluminum Sliding Windows",
+  },
+  {
+    id: "casement-aluminium-window",
+    image: windows4,
+    ProductName: "Casement Aluminum Window",
+  },
+  {
+    id: "glass-corner-alum-windows",
+    image: windows6,
+    ProductName: "Aluminium Glass To Glass Corner Windows",
+  },
+];
 const AluminiumCategory = [
   {
     id: "awning-windows",
@@ -154,6 +181,7 @@ const AluminiumCategory = [
   //   ProductName: "Tilt And Slide Windows",
   // },
 ];
+
 const benefits = [
   {
     title: "Durability",
@@ -217,7 +245,7 @@ export default function AluminiumWindows() {
   };
 
   return (
-    <div className="max-w-[90rem] mx-auto container flex flex-col justify-center items-center pt-14">
+    <div className="max-w-[85rem] mx-auto container flex flex-col justify-center items-center pt-14">
       <div className="m-4">
         <h1 className="text-2xl lg:text-5xl din-bold text-black mb-8 text-center">
           Premium Aluminum Windows Combining Durability, Style, and Modern
@@ -235,15 +263,20 @@ export default function AluminiumWindows() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 w-full max-w-screen-lg mx-auto px-4 md:px-8">
+      <div className="max-w-6xl mx-auto px-4">
+        <p className="text-3xl lg:text-4xl din-bold text-black mb-8 text-center">
+          Aluminium Window Categories
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
         {AluminiumCategory.map((item) => (
           <Link
             href={`/products/aluminium-windows/${item.id}`}
             key={item.id}
-            className="group flex-1 min-w-[280px] sm:basis-[48%] lg:basis-[30%]"
+            className="group"
           >
             <div className="rounded-lg flex flex-col overflow-hidden transition-transform duration-300 group-hover:scale-105">
-              <div className="flex justify-center items-center p-2">
+              <div className="flex justify-center items-center p-8 lg:p-4">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.ProductName}
@@ -252,7 +285,7 @@ export default function AluminiumWindows() {
                 />
               </div>
             </div>
-            <p className="text-center text-xl font-bold roboto-light text-gray-900 transition-transform duration-300 group-hover:scale-105">
+            <p className="text-center text-xl roboto-light text-gray-800">
               {item.ProductName}
             </p>
           </Link>

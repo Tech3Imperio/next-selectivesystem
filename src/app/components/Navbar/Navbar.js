@@ -14,7 +14,8 @@ import {
 } from "../utility/animation";
 import Image from "next/image";
 import Logo from "../../assets/Logo/whiteLogo.png";
-
+import { ShoppingBag } from "lucide-react";
+ShoppingBag;
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
@@ -27,6 +28,9 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    // { name: "Categories", href: "/category" },
+    { name: "Blogs", href: "/blogs" },
+
     {
       name: "Products",
       href: "#",
@@ -49,7 +53,7 @@ export default function Navbar() {
         { name: "Queue Manager", href: "/products/queue-manager" },
       ],
     },
-    { name: "Contact Us", href: "/contact" },
+    // { name: "Contact Us", href: "/contact" },
   ];
 
   useEffect(() => {
@@ -182,8 +186,9 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="bg-black text-white border-2 roboto-bold w-[4rem] h-[2rem] cursor-pointer lg:h-[3.5rem] lg:w-[8rem] lg:px-2 rounded-[5px] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm  hover:scale-110 transition duration-700 border-white hover:bg-white hover:text-black px-4 py-2 rounded-md">
-                  Online Store
+                <button className="bg-black text-white border-2 roboto-bold w-[10-rem] h-[2rem] cursor-pointer flex justify-center gap-2 items-center lg:h-[3.5rem] lg:w-[10rem] lg:px-2 lg:text-sm xl:h-[2.7rem] xl:w-[10rem] xl:text-sm  hover:scale-110 transition duration-700 border-white hover:bg-white hover:text-black px-4 py-2 rounded-md">
+                  <ShoppingBag />
+                  SHOP NOW
                 </button>
               </Link>
             </div>

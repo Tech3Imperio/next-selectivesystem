@@ -220,6 +220,7 @@ import parallesBlackLaptop from "../app/assets/HeroImg/home_illustriation2_d.web
 import parallesBlackPhone from "../app/assets/HeroImg/parallexBlackPhoneView.webp";
 import Form from "./components/Form/Form";
 
+const doorSealVideo = "/videos/DoorSeals/doorSealVideo.mp4";
 const ProductData = [
   {
     id: 1,
@@ -253,6 +254,14 @@ const ProductData = [
       "Create sophisticated workspaces with our premium office partitions. These versatile solutions offer the perfect balance of privacy and openness, enhancing your office environment while maintaining a professional atmosphere.",
     img: officepartition,
   },
+  // {
+  //   id: 4,
+  //   title: "Door seals",
+  //   subtitle: "Partition",
+  //   description:
+  //     "Create sophisticated workspaces with our premium office partitions. These versatile solutions offer the perfect balance of privacy and openness, enhancing your office environment while maintaining a professional atmosphere.",
+  //   video: doorSealVideo,
+  // },
 ];
 
 export default function RotatingHero() {
@@ -370,16 +379,21 @@ export default function RotatingHero() {
               >
                 Enquire Now
               </motion.button>
-              {/* <Link href="tel:+919372593981">
+              <Link
+                href="https://wa.me/919372593981"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <motion.button
-                  className="rounded-[5px] px-5 py-3 bg-gradient-to-br from-gray-50 to-gray-500 text-black roboto-bold  transition duration-700 border border-black hover:bg-white flex items-center gap-2"
+                  className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <BsFillTelephoneFill size={14} />
-                  Call Now
+                  Chat Now
                 </motion.button>
-              </Link> */}
+              </Link>
             </div>
           </div>
 
@@ -393,13 +407,23 @@ export default function RotatingHero() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image
-                  src={currentProduct.img || "/placeholder.svg"}
-                  alt={`${currentProduct.title} ${currentProduct.subtitle}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[5px]"
-                />
+                {currentProduct.video ? (
+                  <video
+                    src="/public/videos/SelectingSystemDesktop.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    className="rounded-[5px] object-cover h-full w-full"
+                  />
+                ) : (
+                  <Image
+                    src={currentProduct.img || "/placeholder.svg"}
+                    alt={`${currentProduct.title} ${currentProduct.subtitle}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-[5px]"
+                  />
+                )}
 
                 <motion.div
                   className="absolute inset-0 rounded-lg"
