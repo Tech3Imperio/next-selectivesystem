@@ -30,6 +30,7 @@ module.exports = {
       "/products/bathroom-partitions",
       "/products/queue-manager",
       "/contact",
+      "/testblog/url-id-1",
     ];
 
     return dynamicPaths.map((path) => ({
