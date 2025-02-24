@@ -109,14 +109,19 @@ import Vertical from "../../assets/AluminiumProduct/AluminiumCategories/Vertical
 
 const AluminiumCategory = [
   {
-    id: "awning-windows",
-    image: Awning,
-    ProductName: "Awning Windows",
+    id: "sliding-window",
+    image: Sliding,
+    ProductName: "Sliding Windows",
   },
   {
     id: "casement-aluminium-window",
     image: Casement,
     ProductName: "Casement Windows",
+  },
+  {
+    id: "awning-windows",
+    image: Awning,
+    ProductName: "Awning Windows",
   },
   {
     id: "fixed-windows",
@@ -138,11 +143,7 @@ const AluminiumCategory = [
     image: GlassToGlass,
     ProductName: "Glass To Glass Corner Windows",
   },
-  {
-    id: "sliding-window",
-    image: Sliding,
-    ProductName: "Sliding Windows",
-  },
+
   // {
   //   id: "slit-window",
   //   image: Slit,

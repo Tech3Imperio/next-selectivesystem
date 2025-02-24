@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { IoIosClose } from "react-icons/io";
 
 const SeriesComponent = ({ product }) => {
   const [selectedSeries, setSelectedSeries] = useState("Grant");
@@ -86,10 +87,10 @@ const SeriesComponent = ({ product }) => {
               {expandedIndex === index && (
                 <button
                   onClick={handleCloseSlide}
-                  className="absolute top-6 right-4 text-white bg-black px-2 rounded-full shadow-lg flex justify-center items-center"
+                  className="absolute top-6 right-4 text-white bg-black rounded-full shadow-lg flex justify-center items-center"
                   aria-label="Close"
                 >
-                  ×
+                  <IoIosClose />
                 </button>
               )}
 
