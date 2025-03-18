@@ -121,17 +121,23 @@ export const Footer = () => {
             <b>Follow Us</b>
           </h5>
           <div className="flex justify-start gap-4 text-xl">
-            <Link target="_blank" href="/">
-              <Facebook className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
+            <Link
+              target="_blank"
+              href="https://www.facebook.com/people/Selective-Systems/61572393583699/"
+            >
+              <Facebook className="w-10 h-10 bg-black text-white p-2   transition duration-500" />
             </Link>
-            <Link target="_blank" href="/">
-              <Twitter className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/selectivesystems.in/"
+            >
+              <Instagram className="w-10 h-10 bg-black text-white p-2   transition duration-500" />
             </Link>
-            <Link target="_blank" href="/">
-              <Instagram className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
-            </Link>
-            <Link target="_blank" href="/">
-              <Linkedin className="w-10 h-10 bg-black text-white p-2 rounded-full  transition duration-500" />
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/106315789/admin/dashboard/"
+            >
+              <Linkedin className="w-10 h-10 bg-black text-white p-2   transition duration-500" />
             </Link>
           </div>
         </div>

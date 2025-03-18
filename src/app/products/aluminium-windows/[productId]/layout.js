@@ -1303,20 +1303,42 @@ export default function ProductPage({ params }) {
 
   return (
     <>
-      <div className="relative h-[500px] mb-8 rounded-lg overflow-hidden">
-        <Image
-          src={product.images[0]}
-          alt={product.ProductName}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white text-center">
-            {product.ProductName}
-          </h1>
+      <div className="relative h-[500px] sm:h-[600px] mb-8 rounded-lg overflow-hidden">
+        <div className="absolute inset-0 bg-black flex flex-col sm:flex-row items-center justify-center px-6 sm:px-12">
+          {/* Text Section */}
+          <div className="flex flex-col gap-6 sm:w-1/2 text-center sm:text-left px-20">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white leading-tight">
+              {product.ProductName}
+            </h1>
+            <Link
+              href="https://wa.me/919372593981"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                className="rounded-md px-6 py-3 bg-white text-black roboto-bold transition duration-300 border border-black flex items-center gap-2
+                     hover:bg-black hover:text-white hover:border-white"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BsFillTelephoneFill size={16} />
+                Chat Now
+              </motion.button>
+            </Link>
+          </div>
+
+          {/* Image Section */}
+          <div className="w-full sm:w-1/2 flex justify-left">
+            <Image
+              src={product.images[0]}
+              alt={product.ProductName}
+              priority
+              className="max-w-full h-auto object-cover rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-4 py-8 ">
         <Link
           href="/products/aluminium-windows"
@@ -1485,9 +1507,9 @@ export default function ProductPage({ params }) {
             </div>
 
             {/* Right Column - Specifications */}
-            <section className="flex flex-col w-full md:w-1/2">
+            <section className="flex flex-col w-full md:w-1/2 ">
               <h2 className="flex text-2xl din-bold mb-4">Specifications</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 {product.specifications.map((spec, index) => (
                   <div key={index} className="bg-secondary p-4 rounded-lg">
                     <h3 className="poppins-semibold text-gray-700">
@@ -1497,6 +1519,21 @@ export default function ProductPage({ params }) {
                   </div>
                 ))}
               </div>
+              <Link
+                href="https://wa.me/919372593981"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <BsFillTelephoneFill size={14} />
+                  Chat Now
+                </motion.button>
+              </Link>
             </section>
           </div>
           <div className="flex flex-col md:flex-row gap-8 border-black border-t py-8">
@@ -1513,6 +1550,23 @@ export default function ProductPage({ params }) {
                 {product.maintenance}
               </p>
             </section>
+          </div>
+          <div className="w-full flex justify-center">
+            <Link
+              href="https://wa.me/919372593981"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BsFillTelephoneFill size={14} />
+                Connect with us
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>
