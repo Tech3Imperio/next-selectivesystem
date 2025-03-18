@@ -33,7 +33,7 @@ const AluminiumProductsPanel = [
   {
     id: "sliding-window",
     images: [Sliding, S3p2t, S4p2t],
-    title: "Glass-to-Glass Corner Windows | Sleek & Modern Design",
+    title: "Sliding Glass Windows | Sleek & Modern Design for Elegance",
     series: [
       {
         seriesName: "Grant",
@@ -620,7 +620,7 @@ const AluminiumProductsPanel = [
   {
     id: "awning-windows",
     images: [Awning, awningwindows, awningwindowsBlack],
-    title: "Luxury Frameless Glass Railings | Modern & Durable Designs",
+    title: "Awning Glass Windows | Sleek & Modern Design for Ventilation",
     ProductName: "Modern Awning Windows",
     keywords: [
       "Frameless Glass Railings",

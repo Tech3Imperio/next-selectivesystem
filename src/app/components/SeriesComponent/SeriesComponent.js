@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { IoIosClose } from "react-icons/io";
+import Form from "../Form/Form";
 
 const SeriesComponent = ({ product }) => {
   const [selectedSeries, setSelectedSeries] = useState("Grant");
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [hasClosedOnce, setHasClosedOnce] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
   const seriesData = product.series;
@@ -41,9 +44,17 @@ const SeriesComponent = ({ product }) => {
       document.body.style.overflow = "auto";
     };
   }, [expandedIndex]);
+  const handleClose = () => {
+    setIsOpen(false);
+    setHasClosedOnce(true);
+  };
 
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
   return (
     <div>
+      <Form isOpen={isOpen} onClose={handleClose} />
       <div className="flex flex-wrap space-x-6 mb-6 rounded-sm justify-center">
         {["Grant", "ATIS", "WePlus"].map((seriesName) => (
           <button
@@ -63,7 +74,7 @@ const SeriesComponent = ({ product }) => {
           currentSeries.products.map((product, index) => (
             <div
               key={index}
-              className={`bg-white shadow-lg rounded-lg overflow-hidden w-60 ${
+              className={`bg-white cursor-pointer shadow-lg rounded-lg overflow-hidden w-60 ${
                 expandedIndex === index
                   ? "scale-100 z-10 shadow-2xl transform"
                   : "scale-75"
@@ -82,6 +93,8 @@ const SeriesComponent = ({ product }) => {
                 height: expandedIndex === index ? "80vh" : "auto",
                 maxWidth: expandedIndex === index ? "900px" : "auto",
                 borderRadius: expandedIndex === index ? "15px" : "0px",
+                overflowY: expandedIndex === index ? "auto" : "hidden",
+                maxHeight: "70vh",
               }}
             >
               {expandedIndex === index && (
@@ -138,14 +151,51 @@ const SeriesComponent = ({ product }) => {
                       ))}
                     </ul>
                     <div className="mt-4">
-                      <h5 className="font-semibold">Dimensions:</h5>
                       <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                        {product.dimensions.map((dimension, idx) => (
+                        {/* {product.dimensions.map((dimension, idx) => (
                           <li key={idx}>
                             {dimension.name}: {dimension.value}
                           </li>
-                        ))}
+                        ))} */}
+                        <span className="text-xl din-bold">Dimensions:</span>
+                        <table className="min-w-full border-collapse border border-gray-300 table-auto mb-2">
+                          <thead>
+                            <tr className="bg-gray-200">
+                              <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
+                                Name
+                              </th>
+                              <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
+                                Value
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {product.dimensions.map((dimension, index) => (
+                              <tr
+                                key={index}
+                                className={`${
+                                  index % 2 === 0 ? "bg-white" : "bg-gray-100"
+                                }`}
+                              >
+                                <td className="py-2 px-4 font-semibold text-gray-700 border border-gray-300">
+                                  {dimension.name}
+                                </td>
+                                <td className="py-2 px-4 text-gray-700 border border-gray-300">
+                                  {dimension.value}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </ul>
+                    </div>
+                    <div className="relative flex mt-8 mb-4">
+                      <button
+                        onClick={handleOpen}
+                        className="rounded-[5px] bg-white px-4 py-3 text-black roboto-bold transition duration-700 border border-black hover:bg-white"
+                      >
+                        Book an Appointment
+                      </button>
                     </div>
                   </div>
                 </div>

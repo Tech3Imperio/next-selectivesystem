@@ -150,7 +150,7 @@ export default function Navbar() {
                     {item.name}
                     {item.name === "Products" && (
                       <MdArrowForwardIos
-                        className={`mt-1 ${
+                        className={` ${
                           hoveredItem === item.name
                             ? "rotate-90 transition-all duration-500 "
                             : "rotate-0 transition-all duration-500"

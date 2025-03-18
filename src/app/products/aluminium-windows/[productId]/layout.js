@@ -1338,7 +1338,7 @@ export default function ProductPage({ params }) {
           functional needs.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-2">
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex gap-4 md:flex-col pt-4 mt-20 md:pt-14">
               {product.images.map((image, index) => (
@@ -1391,39 +1391,6 @@ export default function ProductPage({ params }) {
                 ))}
               </ul>
             </div>
-            <div className="text-black">
-              <span className="text-xl din-bold">Dimensions:</span>
-              <table className="min-w-full border-collapse border border-gray-300 table-auto mt-2">
-                <thead>
-                  <tr className="bg-gray-200">
-                    <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
-                      Name
-                    </th>
-                    <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
-                      Value
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.dimensions.map((dimension, index) => (
-                    <tr
-                      key={index}
-                      className={`${
-                        index % 2 === 0 ? "bg-white" : "bg-gray-100"
-                      }`}
-                    >
-                      <td className="py-2 px-4 font-semibold text-gray-700 border border-gray-300">
-                        {dimension.name}
-                      </td>
-                      <td className="py-2 px-4 text-gray-700 border border-gray-300">
-                        {dimension.value}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
             <Link
               href="https://wa.me/919372593981"
               target="_blank"
@@ -1440,22 +1407,43 @@ export default function ProductPage({ params }) {
               </motion.button>
             </Link>
           </div>
+          {/* <span className="text-xl din-bold">Dimensions:</span>
+          <table className="min-w-full border-collapse border border-gray-300 table-auto mb-2">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
+                  Name
+                </th>
+                <th className="py-2 px-4 text-left font-bold text-gray-800 border border-gray-300">
+                  Value
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {product.dimensions.map((dimension, index) => (
+                <tr
+                  key={index}
+                  className={`${index % 2 === 0 ? "bg-white" : "bg-gray-100"}`}
+                >
+                  <td className="py-2 px-4 font-semibold text-gray-700 border border-gray-300">
+                    {dimension.name}
+                  </td>
+                  <td className="py-2 px-4 text-gray-700 border border-gray-300">
+                    {dimension.value}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table> */}
         </div>
-        <div className="my-8">
-          <h1 className="flex justify-center text-4xl din-bold text-black mb-12">
-            Choose a Series
-          </h1>
-          <SeriesComponent product={product} />
-        </div>
-        <div className="space-y-12">
-          <section>
-            <h2 className="text-2xl din-bold mb-4">Product Description</h2>
+        <div className="text-black">
+          <section className="flex flex-col">
+            <h2 className="text-2xl din-bold mb-2">Product Description</h2>
             <p className="text-black roboto-light mb-6 text-justify px-2">
               {product.longDescription.title}
             </p>
-
-            <main className="product-description py-4 px-4">
-              <ul className="list-disc pl-6 space-y-6 text-black">
+            <main className="product-description py-2 px-4">
+              <ul className="list-disc pl-6 space-y-2 text-black">
                 {product.longDescription.features.map((feature, index) => (
                   <li key={index}>
                     <h3 className="din-bold text-lg text-black">
@@ -1469,52 +1457,63 @@ export default function ProductPage({ params }) {
               </ul>
             </main>
           </section>
-
-          <div>
-            {" "}
-            <h2 className="text-2xl din-bold mb-4">Applications</h2>
-            <div className="rounded-lg overflow-hidden">
-              {accordionData.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  title={item.title}
-                  content={item.content}
-                  isOpen={openAccordion === index}
-                  onClick={() =>
-                    setOpenAccordion(openAccordion === index ? -1 : index)
-                  }
-                />
-              ))}
+        </div>
+        <div className="my-8 border-black border-t border-b py-2">
+          <h2 className="text-2xl din-bold mt-4 mb-4 flex justify-center ">
+            SERIES
+          </h2>
+          <SeriesComponent product={product} />
+        </div>
+        <div className="space-y-12">
+          <div className="flex flex-col md:flex-row gap-16">
+            {/* Left Column - Applications */}
+            <div className="flex flex-col w-full md:w-1/2">
+              <h2 className="text-2xl din-bold mb-4">Applications</h2>
+              <div className="rounded-lg overflow-hidden px-2">
+                {accordionData.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    title={item.title}
+                    content={item.content}
+                    isOpen={openAccordion === index}
+                    onClick={() =>
+                      setOpenAccordion(openAccordion === index ? -1 : index)
+                    }
+                  />
+                ))}
+              </div>
             </div>
+
+            {/* Right Column - Specifications */}
+            <section className="flex flex-col w-full md:w-1/2">
+              <h2 className="flex text-2xl din-bold mb-4">Specifications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {product.specifications.map((spec, index) => (
+                  <div key={index} className="bg-secondary p-4 rounded-lg">
+                    <h3 className="poppins-semibold text-gray-700">
+                      {spec.name}
+                    </h3>
+                    <p className="text-gray-700 text-base">{spec.value}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
+          <div className="flex flex-col md:flex-row gap-8 border-black border-t py-8">
+            <section className="w-full md:w-1/2 h-auto">
+              <h2 className="text-2xl din-bold mb-4">Installation</h2>
+              <p className="text-gray-700 text-base roboto-light text-justify">
+                {product.installation}
+              </p>
+            </section>
 
-          <section>
-            <h2 className="text-2xl din-bold mb-4">Specifications</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {product.specifications.map((spec, index) => (
-                <div key={index} className="bg-secondary p-4 rounded-lg">
-                  <h3 className="poppins-semibold text-gray-700">
-                    {spec.name}
-                  </h3>
-                  <p className="text-gray-700 text-base">{spec.value}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl din-bold mb-4">Installation</h2>
-            <p className="text-gray-700 text-base roboto-light text-justify">
-              {product.installation}
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl din-bold mb-4">Maintenance</h2>
-            <p className="text-gray-700 text-base roboto-light text-justify">
-              {product.maintenance}
-            </p>
-          </section>
+            <section className="w-full md:w-1/2 h-auto">
+              <h2 className="text-2xl din-bold mb-4">Maintenance</h2>
+              <p className="text-gray-700 text-base roboto-light text-justify">
+                {product.maintenance}
+              </p>
+            </section>
+          </div>
         </div>
       </div>
     </>
