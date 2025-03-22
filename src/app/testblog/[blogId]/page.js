@@ -1,8 +1,8 @@
 "use server";
-import getBlogsData from "../getBlogsData";
-import BlogDetails from "./BlogDetails";
+import getTestBlogsData from "../getTestBlogsData";
+import TestBlogDetails from "./TestBlogDetails";
 
-const blogsData = await getBlogsData();
+const blogsData = await getTestBlogsData();
 
 export async function generateMetadata({ params }, parent) {
   // read route params
@@ -28,5 +28,5 @@ export default async function Page({ params }) {
   const id = (await params).blogId;
   const blog = blogsData.find((blog) => blog.urlId === id);
 
-  return <BlogDetails blog={blog} />;
+  return <TestBlogDetails blog={blog} />;
 }

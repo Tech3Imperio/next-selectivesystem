@@ -11,6 +11,14 @@ const nextConfig = {
   //   });
   //   return config;
   // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
+  },
   env: {
     MONGODB_URI: process.env.MONGODB_URI,
     GOOGLE_CLIENT_EMAIL: process.env.GOOGLE_CLIENT_EMAIL,

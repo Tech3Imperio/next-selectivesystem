@@ -19,7 +19,7 @@ const images = [
   },
 ];
 
-const Blog = () => {
+const Blog = ({ blogsData }) => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   const springConfig = { damping: 25, stiffness: 700 };
@@ -59,7 +59,7 @@ const Blog = () => {
 
   const router = useRouter();
   const [isFormOpen, setIsFormOpen] = useState(false);
-
+  console.log("Blog Data from admin panel", blogsData);
   return (
     <main className="relative">
       <div className="py-16 md:py-24 lg:py-32 overflow-hidden px-4 relative">
@@ -95,17 +95,19 @@ const Blog = () => {
 
           {/* Grid of Images */}
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 p-12">
-            {images.map((image, index) => (
+            {blogsData.map((blog, index) => (
               <div key={index} className="flex flex-col">
                 <motion.div
                   className="relative w-full h-[250px] md:h-[300px] lg:h-[350px] cursor-pointer rounded-lg overflow-hidden shadow-lg transition-transform duration-700 hover:scale-105"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onClick={() => router.push(image.link)}
+                  onClick={() =>
+                    router.push(`/blogs/${blog.metadata.blogSlug}`)
+                  }
                 >
                   <Image
-                    src={image.src}
+                    src={blog.metadata.image.src}
                     alt={`Image ${index + 1}`}
                     width={300}
                     height={300}
@@ -116,10 +118,10 @@ const Blog = () => {
 
                 {/* Title Below Image with Background for Readability */}
                 <h1 className="relative z-20 text-white mt-2 text-2xl">
-                  {image.title}
+                  {blog.metadata.title}
                 </h1>
                 <p className="relative z-20 text-white mt-2 text-md font-semibold bg-black bg-opacity-70 py-1 rounded-md">
-                  {image.subTitle}
+                  {blog.metadata.description}
                 </p>
               </div>
             ))}

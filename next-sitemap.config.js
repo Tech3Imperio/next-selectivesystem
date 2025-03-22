@@ -1,3 +1,5 @@
+"use server";
+import getBlogsData from "@/app/blogs/getBlogsData";
 module.exports = {
   siteUrl: "https://www.selectivesystems.in/", // Replace with your actual domain
   generateRobotsTxt: true, // Automatically generate robots.txt
@@ -5,7 +7,11 @@ module.exports = {
   changefreq: "daily", // Frequency of changes
   priority: 0.7, // Default priority for URLs
   additionalPaths: async (config) => {
+    const blogsData = await getBlogsData();
     // Add dynamic URLs here (if any)
+    const blogUrls = blogsData.map((blog) => {
+      return `/blogs/${blog.metadata.blogSlug}`;
+    });
     const dynamicPaths = [
       "/about",
       "/products/aluminium-windows",
@@ -31,6 +37,7 @@ module.exports = {
       "/products/queue-manager",
       "/contact",
       "/testblog/url-id-1",
+      ...blogUrls,
     ];
 
     return dynamicPaths.map((path) => ({
