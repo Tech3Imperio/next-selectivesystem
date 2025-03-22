@@ -4,7 +4,8 @@ import ImageCarousel from "@/app/components/Blogs/ImageCarousel";
 import Metadata from "@/app/components/Blogs/Metadata";
 import React from "react";
 import { Delta } from "quill";
-const BlogDetails = ({ blog }) => {
+import { BlogType } from "../../../models/BlogType";
+const BlogDetails = ({ blog }: { blog: BlogType }) => {
   console.log(blog);
   const metadata = blog.metadata;
   const sections = blog.sections;

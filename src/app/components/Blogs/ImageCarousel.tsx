@@ -10,9 +10,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ImageType } from "@/models/BlogType";
 
 interface ImageCarouselPreviewProps {
-  images: any[];
+  images: ImageType[];
   bodyImages: boolean;
 }
 

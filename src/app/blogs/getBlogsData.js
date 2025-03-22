@@ -13,10 +13,7 @@ if (!uri) {
 
 async function getBlogsData() {
   try {
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(uri);
   } catch (error) {
     console.log("Error connecting to MongoDB", error);
   }

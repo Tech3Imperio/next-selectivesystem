@@ -4,8 +4,9 @@ import React from "react";
 import dynamic from "next/dynamic";
 import "react-quill-new/dist/quill.bubble.css";
 import ImageCarousel from "./ImageCarousel";
+import { BodyType } from "@/models/BlogType";
 const Quill = dynamic(() => import("react-quill-new"), { ssr: false });
-const BodyPreview = ({ subSection }: { subSection: any }) => {
+const BodyPreview = ({ subSection }: { subSection: BodyType }) => {
   return (
     <>
       {subSection.hasImages ? (

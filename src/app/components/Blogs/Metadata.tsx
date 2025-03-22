@@ -2,11 +2,11 @@
 import React from "react";
 // import { BlogMetadataType } from "@/models/blogs/metadata/BlogMetadata";
 import Image from "next/image";
-
+import { BlogMetadataType } from "@/models/BlogType";
 const noImage =
   "https://res.cloudinary.com/dwujy2ixt/image/upload/v1742295592/no-image.png";
 
-const MetadataPreview = ({ metadata }: { metadata: any }) => {
+const MetadataPreview = ({ metadata }: { metadata: BlogMetadataType }) => {
   return (
     <div className="relative w-full h-[50vh] overflow-hidden rounded-br-3xl rounded-bl-3xl shrink-0">
       {/* Image as background */}

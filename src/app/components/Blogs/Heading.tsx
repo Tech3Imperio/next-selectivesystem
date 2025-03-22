@@ -3,8 +3,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import "react-quill-new/dist/quill.bubble.css";
+import { HeadingType } from "@/models/BlogType";
 const Quill = dynamic(() => import("react-quill-new"), { ssr: false });
-const Heading = ({ subSection }: { subSection: any }) => {
+const Heading = ({ subSection }: { subSection: HeadingType }) => {
   return (
     <div className="w-full h-max flex flex-row justify-start items-center font-quill-heading">
       <Quill
