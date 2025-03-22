@@ -220,6 +220,11 @@ async function getBlogsData() {
   return JSON.parse(JSON.stringify(blogsData));
 }
 
+const disconnectDB = async () => {
+  await mongoose.disconnect();
+  console.log("MongoDB connection closed");
+};
+
 module.exports = {
   siteUrl: "https://www.selectivesystems.in/", // Replace with your actual domain
   generateRobotsTxt: true, // Automatically generate robots.txt
@@ -232,6 +237,8 @@ module.exports = {
     const blogUrls = blogsData.map((blog) => {
       return `/blogs/${blog.metadata.blogSlug}`;
     });
+
+    disconnectDB();
     const dynamicPaths = [
       "/about",
       "/products/aluminium-windows",
