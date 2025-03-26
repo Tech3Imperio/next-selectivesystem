@@ -195,7 +195,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
 import AluminiumWindows from "./page";
-import heroImg from "../../assets/AluminiumProduct/heroImg.webp";
+import heroImg from "../../assets/AluminiumProduct/img2.jpg";
 import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";

@@ -1303,8 +1303,8 @@ export default function ProductPage({ params }) {
 
   return (
     <>
-      <div className="relative h-[500px] sm:h-[600px] mb-8 rounded-lg overflow-hidden">
-        <div className="absolute inset-0 bg-black flex flex-col sm:flex-row items-center justify-center px-6 sm:px-12">
+      <div className="relative h-[500px] sm:h-[600px]  bg-black mb-8 rounded-lg overflow-hidden">
+        <div className="max-w-7xl mx-auto py-8 absolute inset-0 flex flex-col sm:flex-row items-center justify-start">
           {/* Text Section */}
           <div className="flex flex-col gap-6 sm:w-1/2 text-center sm:text-left px-20">
             <h1 className="text-3xl sm:text-5xl font-bold text-white leading-tight">
@@ -1333,7 +1333,7 @@ export default function ProductPage({ params }) {
               src={product.images[0]}
               alt={product.ProductName}
               priority
-              className="max-w-full h-auto object-cover rounded-lg shadow-lg"
+              className="w-full h-auto object-cover rounded-lg shadow-lg opacity-80"
             />
           </div>
         </div>

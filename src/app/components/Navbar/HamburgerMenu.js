@@ -72,7 +72,7 @@ export default function HamburgerMenu() {
           className="absolute w-full z-75 h-[100vh] top-0 left-0 bottom-0 backdrop-blur-sm"
           onClick={() => setIsOpen(false)}
         >
-          <div className="absolute h-min top-5 right-3 w-64 rounded-lg   bg-white dark:bg-black z-100 hamburger-menu">
+          <div className="absolute h-min top-5 right-3 w-64 rounded-lg   bg-white !dark:bg-black z-100 hamburger-menu">
             <NestedNavigation
               items={mainNavItems}
               onClose={() => setIsOpen(false)}
