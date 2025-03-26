@@ -20,7 +20,7 @@ const testSchema = new mongoose.Schema({
 const TestBlog =
   mongoose.models.TestBlog || mongoose.model("TestBlog", testSchema);
 
-async function getBlogsData() {
+async function getTestBlogsData() {
   try {
     await mongoose.connect(uri, {
       useNewUrlParser: true,
@@ -41,4 +41,4 @@ async function getBlogsData() {
   return blogsData;
 }
 
-export default getBlogsData;
+export default getTestBlogsData;

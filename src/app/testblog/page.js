@@ -1,5 +1,5 @@
 // page.tsx
-import getBlogsData from "./getBlogsData";
+import getBlogsData from "./getTestBlogsData";
 import BlogList from "./BlogList";
 
 export default async function Page() {

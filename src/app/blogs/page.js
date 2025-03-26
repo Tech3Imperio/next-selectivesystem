@@ -1,5 +1,6 @@
 import React from "react";
 import Blog from "./Blog";
+import getBlogsData from "./getBlogsData";
 export const metadata = {
   title:
     "Selective Systems: Premium Aluminium Windows | Glass Railing in Mumbai | Tostem Partener ",
@@ -27,6 +28,7 @@ export const metadata = {
   url: "https://www.selectivesystems.in/blogs",
 };
 
-export default function page() {
-  return <Blog />;
+export default async function page() {
+  const blogsData = await getBlogsData();
+  return <Blog blogsData={blogsData} />;
 }
