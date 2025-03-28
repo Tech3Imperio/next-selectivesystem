@@ -220,6 +220,7 @@ import aluminumPhone from "../app/assets/AluminiumProduct/heroImg.webp";
 import parallesBlackLaptop from "../app/assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../app/assets/HeroImg/parallexBlackPhoneView.webp";
 import Form from "./components/Form/Form";
+import { usePathname } from "next/navigation";
 
 const doorSealVideo = "/videos/DoorSeals/doorSealVideo.mp4";
 const ProductData = [
@@ -274,6 +275,7 @@ export default function RotatingHero() {
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
   const [isFormOpen, setIsFormOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % ProductData.length);
@@ -302,6 +304,12 @@ export default function RotatingHero() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const currentProduct = ProductData[currentIndex];
 

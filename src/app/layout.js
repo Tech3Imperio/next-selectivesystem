@@ -1,9 +1,11 @@
+"use-client";
 import "./globals.css";
 import { Footer } from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Whatsapp from "./components/Whatsapp/Whatsapp";
 import localFont from "next/font/local";
 import Favicon from "./favicon.ico";
+
 export const metadata = {
   title: "Selective Systems: Aluminium Windows | Glass Railing",
   description:
