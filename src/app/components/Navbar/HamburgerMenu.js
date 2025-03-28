@@ -27,7 +27,8 @@ const mainNavItems = [
   {
     name: "Products",
     type: "nested",
-    href: "/products",
+    href: "/category",
+    // href: "/products",
     // items: Array.from({ length: 9 }, (_, i) => ({
     //   name: `Category ${i + 1}`,
     //   type: "nested",
