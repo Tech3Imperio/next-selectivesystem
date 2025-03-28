@@ -195,7 +195,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
 import AluminiumWindows from "./page";
-import heroImg from "../../assets/AluminiumProduct/img2.jpg";
+import heroImg from "../../assets/AluminiumProduct/7.png";
 import Link from "next/link";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
@@ -341,7 +341,7 @@ export default function HeroSection() {
           </div>
           <div className="relative flex-1 mb-4 lg:pt-14">
             <motion.div
-              className="relative h-[250px] w-[350px] md:h-[500px] md:w-[700px] lg:h-[550px] lg:w-[800px]"
+              className="relative h-[350px] w-[350px] md:h-[600px] md:w-[700px] lg:h-[600px] lg:w-[800px]"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
