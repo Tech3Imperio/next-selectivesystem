@@ -1306,7 +1306,7 @@ export default function ProductPage({ params }) {
       <div className="relative h-[600px] sm:h-[600px]  bg-black mb-8 rounded-lg overflow-hidden">
         <div className="max-w-7xl mx-auto py-8 absolute inset-0 flex flex-col sm:flex-row items-center justify-start mt-16 sm:mt-0">
           {/* Text Section */}
-          <div className="flex flex-col gap-6 w-full md:w-1/2 justify-center md:text-left px-20">
+          <div className="flex flex-col gap-6 w-full md:w-1/2 justify-center md:text-left px-10 md:px-20">
             <h1 className="text-3xl sm:text-5xl font-bold text-white leading-tight">
               {product.ProductName}
             </h1>
