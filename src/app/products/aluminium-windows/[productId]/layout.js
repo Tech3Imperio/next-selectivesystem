@@ -1303,10 +1303,10 @@ export default function ProductPage({ params }) {
 
   return (
     <>
-      <div className="relative h-[500px] sm:h-[600px]  bg-black mb-8 rounded-lg overflow-hidden">
-        <div className="max-w-7xl mx-auto py-8 absolute inset-0 flex flex-col sm:flex-row items-center justify-start">
+      <div className="relative h-[600px] sm:h-[600px]  bg-black mb-8 rounded-lg overflow-hidden">
+        <div className="max-w-7xl mx-auto py-8 absolute inset-0 flex flex-col sm:flex-row items-center justify-start mt-16 sm:mt-0">
           {/* Text Section */}
-          <div className="flex flex-col gap-6 sm:w-1/2 text-center sm:text-left px-20">
+          <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left px-20">
             <h1 className="text-3xl sm:text-5xl font-bold text-white leading-tight">
               {product.ProductName}
             </h1>
@@ -1316,7 +1316,7 @@ export default function ProductPage({ params }) {
               rel="noopener noreferrer"
             >
               <motion.button
-                className="rounded-md px-6 py-3 bg-white text-black roboto-bold transition duration-300 border border-black flex items-center gap-2
+                className="rounded-md px-6 py-3 mb-10 bg-white text-black roboto-bold transition duration-300 border border-black flex items-center gap-2
                      hover:bg-black hover:text-white hover:border-white"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -1394,7 +1394,7 @@ export default function ProductPage({ params }) {
           </div>
 
           <div className="flex flex-col pt-6 gap-6 mt-10">
-            <h2 className="text-3xl text-center md:p-0 md:text-start din-bold">
+            <h2 className="text-3xl text-center p-10 md:p-0 md:text-start din-bold">
               {product.ProductName}
             </h2>
             <p className="text-gray-700 text-justify px-2 roboto-light">
@@ -1419,7 +1419,7 @@ export default function ProductPage({ params }) {
               rel="noopener noreferrer"
             >
               <motion.button
-                className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+                className="rounded-[5px] px-5 py-3 mb-10 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
     hover:bg-white hover:text-black hover:border-black"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

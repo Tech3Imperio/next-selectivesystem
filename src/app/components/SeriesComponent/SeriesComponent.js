@@ -140,7 +140,7 @@ const SeriesComponent = ({ product }) => {
                   </div>
 
                   <div className="flex-1 space-y-4">
-                    <h3 className="text-2xl font-semibold mb-2">
+                    <h3 className="text-2xl font-semibold mb-2 mt-10 md:mt-0">
                       {product.productName}
                     </h3>
                     <p className="text-gray-600">{product.description}</p>
