@@ -236,20 +236,20 @@ export default function AluminiumWindows() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 w-full max-w-screen-lg mx-auto px-4 md:px-8">
+      <div className="flex flex-wrap justify-center gap-4 w-full max-w-screen-lg mx-auto md:px-8">
         {AluminiumCategory.map((item) => (
           <Link
             href={`/products/aluminium-windows/${item.id}`}
             key={item.id}
             className="group flex-1 min-w-[280px] sm:basis-[48%] lg:basis-[30%]"
           >
-            <div className="rounded-lg flex flex-col overflow-hidden transition-transform duration-300 group-hover:scale-105">
-              <div className="flex justify-center items-center p-2">
+            <div className="flex flex-col overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <div className="flex justify-center items-center py-2">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.ProductName}
                   loading="lazy"
-                  className="h-[100%] w-[100%] object-cover rounded-2xl"
+                  className="h-[100%] w-[100%] object-cover"
                 />
               </div>
             </div>
