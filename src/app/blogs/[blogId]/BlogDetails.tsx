@@ -1,19 +1,42 @@
+"use client";
+
 import Body from "@/app/components/Blogs/Body";
 import Heading from "@/app/components/Blogs/Heading";
 import ImageCarousel from "@/app/components/Blogs/ImageCarousel";
-import Metadata from "@/app/components/Blogs/Metadata";
-import React from "react";
+import React, { useState } from "react";
 import { Delta } from "quill";
 import { BlogType } from "../../../models/BlogType";
+import SectionList from "./SectionList";
+import MetadataPreview from "@/app/components/Blogs/Metadata";
 const BlogDetails = ({ blog }: { blog: BlogType }) => {
-  console.log(blog);
+  console.log("Checking Blog", blog);
+  const [activeSectionId, setActiveSectionId] = useState<string>("Metadata");
   const metadata = blog.metadata;
+  console.log("Checking metadata", metadata);
   const sections = blog.sections;
   return (
-    <>
-      <Metadata metadata={metadata} />
-      <div className="flex flex-row w-full items-start h-max justify-center gap-4 px-16 py-8">
-        {/* <div className="w-[15%]">Section List</div> */}
+    <div className="w-full h-full flex flex-col items-center">
+      <MetadataPreview metadata={blog.metadata} />
+      <div className="flex flex-row w-full items-start h-max justify-center gap-4 px-16 py-8 relative">
+        <div className="w-[15%] flex flex-col h-max gap-2 sticky top-[80px] bg-white p-4">
+          <SectionList
+            sectionId="Metadata"
+            sectionName="Metadata"
+            activeSectionId={activeSectionId}
+            setActiveSectionId={setActiveSectionId}
+          />
+          {sections.map((section, index) => {
+            return (
+              <SectionList
+                key={index}
+                sectionId={section.sectionId}
+                sectionName={section.name}
+                activeSectionId={activeSectionId}
+                setActiveSectionId={setActiveSectionId}
+              />
+            );
+          })}
+        </div>
         <div
           id="testing"
           className="flex flex-col w-[50%] gap-12 justify-start items-center h-max scrollbar-none"
@@ -72,7 +95,7 @@ const BlogDetails = ({ blog }: { blog: BlogType }) => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

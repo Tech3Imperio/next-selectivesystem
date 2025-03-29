@@ -1,17 +1,19 @@
-"use server";
+"use client";
 import React from "react";
 // import { BlogMetadataType } from "@/models/blogs/metadata/BlogMetadata";
 import Image from "next/image";
 import { BlogMetadataType } from "@/models/BlogType";
-const noImage =
-  "https://res.cloudinary.com/dwujy2ixt/image/upload/v1742295592/no-image.png";
+import { NoImage } from "@/app/assets/NoImage";
 
 const MetadataPreview = ({ metadata }: { metadata: BlogMetadataType }) => {
   return (
-    <div className="relative w-full h-[50vh] overflow-hidden rounded-br-3xl rounded-bl-3xl shrink-0">
+    <div
+      className=" w-full h-[50vh] overflow-hidden rounded-br-3xl rounded-bl-3xl relative z-10 shrink-0"
+      id="Metadata"
+    >
       {/* Image as background */}
       <Image
-        src={metadata.image.src === "" ? noImage : metadata.image.src}
+        src={metadata.image.src === "" ? NoImage : metadata.image.src}
         alt={metadata.image.alt}
         width={1200}
         height={360}

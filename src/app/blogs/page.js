@@ -30,5 +30,7 @@ export const metadata = {
 
 export default async function page() {
   const blogsData = await getBlogsData();
-  return <Blog blogsData={blogsData} />;
+  const blogs = blogsData.filter((blog) => blog.isDraft === false);
+  console.log("These are the blogs", blogs);
+  return <Blog blogsData={blogs} />;
 }
