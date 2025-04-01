@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import Blog from "./Blog";
 import getBlogsData from "./getBlogsData";
