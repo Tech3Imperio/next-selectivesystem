@@ -25,7 +25,8 @@ export async function generateMetadata({ params }, parent) {
 
 export default async function Page({ params }) {
   const id = (await params).blogId;
+  console.log("Working till here")
   const blog = blogsData.find((blog) => blog.metadata.blogSlug === id);
-
+  console.log("Working till here too", blog)
   return <BlogDetails blog={blog} />;
 }

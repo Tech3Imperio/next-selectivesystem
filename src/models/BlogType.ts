@@ -44,6 +44,7 @@ export type BodyType = {
 };
 
 export type SectionType = {
+  sectionId: string;
   name: string;
   subSections: (HeadingType | BodyType | ImageCarouselType)[];
 };
