@@ -18,7 +18,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Form from "@/app/components/Form/Form";
 import { BsFillTelephoneFill } from "react-icons/bs";
-
+import { FaWhatsapp } from "react-icons/fa";
 const QueueManager = () => {
   const [sliderItems] = useState([
     {
@@ -183,7 +183,7 @@ const QueueManager = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            <BsFillTelephoneFill size={14} />
+                            <FaWhatsapp size={24} />
                             Chat Now
                           </motion.button>
                         </Link>

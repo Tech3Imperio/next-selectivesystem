@@ -212,7 +212,7 @@ import {
 import Image from "next/image";
 import HeroImageSlider from "./components/HeroImageSlider/HeroImageSlider";
 import Link from "next/link";
-import { BsFillTelephoneFill } from "react-icons/bs";
+// import { BsFillTelephoneFill } from "react-icons/bs";
 import invisiblegrill from "../app/assets/InvisibleGrill/Invisiblebacony.webp";
 import glass from "../app/assets/Railing/HeroImage/railing1.png";
 import officepartition from "../app/assets/Officepartition/Officecabins.png";
@@ -221,7 +221,7 @@ import parallesBlackLaptop from "../app/assets/HeroImg/home_illustriation2_d.web
 import parallesBlackPhone from "../app/assets/HeroImg/parallexBlackPhoneView.webp";
 import Form from "./components/Form/Form";
 import { usePathname } from "next/navigation";
-
+import { FaWhatsapp } from "react-icons/fa";
 const doorSealVideo = "/videos/DoorSeals/doorSealVideo.mp4";
 const ProductData = [
   {
@@ -399,10 +399,18 @@ export default function RotatingHero() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <BsFillTelephoneFill size={14} />
+                  <FaWhatsapp size={24} />
                   Chat Now
                 </motion.button>
               </Link>
+
+              {/* Backdrop overlay */}
+              {isFormOpen && (
+                <div
+                  className="fixed inset-0 bg-black opacity-50 z-10"
+                  onClick={() => setIsFormOpen(false)}
+                />
+              )}
             </div>
           </div>
 

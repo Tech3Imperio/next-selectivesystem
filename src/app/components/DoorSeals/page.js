@@ -8,6 +8,9 @@ import Doorseal3 from "../../assets/DoorSeals/Doorseal3.png";
 import Doorseal4 from "../../assets/DoorSeals/Doorseal4.png";
 import Doorseal5 from "../../assets/DoorSeals/Doorseal5.png";
 import Doorseal6 from "../../assets/DoorSeals/Doorseal6.png";
+import { motion } from "framer-motion";
+import { BsFillTelephoneFill } from "react-icons/bs";
+
 const DoorSealProductsPanel = [
   {
     id: "threshold-floor",
@@ -106,6 +109,23 @@ export default function DoorSealProduct() {
             </p>
           </Link>
         ))}
+      </div>
+      <div className="flex w-[100vw] justify-center">
+        <Link
+          href="https://wa.me/919372593981"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <motion.button
+            className="rounded-[5px] px-5 py-3 m-10 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <BsFillTelephoneFill size={14} />
+            Connect with us
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

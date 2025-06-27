@@ -304,7 +304,14 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import framelessImg from "../../assets/Railing/RailingProducts/ModernBalcony.webp";
 import TopMuntedImg from "../../assets/Railing/RailingProducts/TopMountedImg.webp";
 import FramedGlassImg from "../../assets/Railing/RailingProducts/FramedGlassImg.webp";
-
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { BsFillTelephoneFill } from "react-icons/bs";
 const GlassRailingProductsPanel = [
   {
     id: "frameless-glass-railing",
@@ -499,6 +506,22 @@ export default function GlassRailingProduct() {
           </div>
         ))}
       </div>
+
+      <Link
+        href="https://wa.me/919372593981"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <motion.button
+          className="rounded-[5px] px-5 py-3 m-10 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaWhatsapp size={24} />
+          Chat Now
+        </motion.button>
+      </Link>
     </div>
   );
 }

@@ -46,6 +46,7 @@ import S2p2t from "../../../assets/AluminiumProduct/AluminiumCategories/SlidingW
 import S4p2tAtis from "../../../assets/AluminiumProduct/AluminiumCategories/SlidingWindow/ATIS-2-panels-on-2-tracks.png";
 import Sd2p2t from "../../../assets/AluminiumProduct/AluminiumCategories/SlidingWindow/sliding-door-2-panels-on-2-tracks.png";
 import Sd6p2t from "../../../assets/AluminiumProduct/AluminiumCategories/SlidingWindow/6-panels-on-3-tracks.png";
+import { FaWhatsapp } from "react-icons/fa";
 const AluminiumProductsPanel = [
   // categories
   {
@@ -1321,7 +1322,7 @@ export default function ProductPage({ params }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <BsFillTelephoneFill size={16} />
+                <FaWhatsapp size={24} />
                 Chat Now
               </motion.button>
             </Link>
@@ -1424,7 +1425,7 @@ export default function ProductPage({ params }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <BsFillTelephoneFill size={14} />
+                <FaWhatsapp size={24} />
                 Chat Now
               </motion.button>
             </Link>
@@ -1530,7 +1531,7 @@ export default function ProductPage({ params }) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <BsFillTelephoneFill size={14} />
+                  <FaWhatsapp size={24} />
                   Chat Now
                 </motion.button>
               </Link>

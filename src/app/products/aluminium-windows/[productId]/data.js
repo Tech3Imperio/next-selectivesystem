@@ -504,7 +504,7 @@ import Sliding from "../../../assets/AluminiumProduct/AluminiumCategories/Slidin
 import Slit from "../../../assets/AluminiumProduct/AluminiumCategories/SlitWindows/Slit-Window.jpg";
 import Tilt from "../../../assets/AluminiumProduct/AluminiumCategories/TiltAndSlide/Tilt-slide-Window-size.jpg";
 import Vertical from "../../../assets/AluminiumProduct/AluminiumCategories/VerticalSlide/Verticle-sliding-window.jpg";
-
+import { FaWhatsapp } from "react-icons/fa";
 import awningWindowWePlusSingleLock from "../../../assets/AluminiumProduct/AluminiumCategories/AwningWindows/Awning-window-Single-lock.png";
 import casementWindow from "../../../assets/AluminiumProduct/AluminiumCategories/CasementDoors/aluminium-casement-window.webp";
 import casementGrant from "../../../assets/AluminiumProduct/AluminiumCategories/CasementDoors/casementGrant.png";
@@ -1909,7 +1909,7 @@ export default function ProductPage({ params }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <BsFillTelephoneFill size={14} />
+                <FaWhatsapp size={24} />
                 Chat Now
               </motion.button>
             </Link>

@@ -109,6 +109,7 @@ import aluminiumWindow from "../../assets/Tostem/AluminiumWindow.webp";
 import Banner from "../Banner/Banner";
 import Link from "next/link";
 import Form from "../Form/Form";
+import { FaWhatsapp } from "react-icons/fa";
 export default function AluminumWindows() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -235,7 +236,7 @@ export default function AluminumWindows() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <BsFillTelephoneFill size={14} />
+                    <FaWhatsapp size={24} />
                     Chat Now
                   </motion.button>
                 </Link>

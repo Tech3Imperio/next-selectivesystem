@@ -14,7 +14,7 @@ import OfficeData from "../../Data/OfficePartition/Officepartition";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form/Form";
-
+import { FaWhatsapp } from "react-icons/fa";
 import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp";
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -182,7 +182,7 @@ const OfficePartitions = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            <BsFillTelephoneFill size={14} />
+                            <FaWhatsapp size={24} />
                             Chat Now
                           </motion.button>
                         </Link>
@@ -307,6 +307,23 @@ const OfficePartitions = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center">
+        <Link
+          href="https://wa.me/919372593981"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <motion.button
+            className="rounded-[5px] px-5 py-3 bg-black text-white roboto-bold transition duration-700 border border-white flex items-center gap-2
+    hover:bg-white hover:text-black hover:border-black"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaWhatsapp size={24} />
+            Chat Now
+          </motion.button>
+        </Link>
       </div>
     </main>
   );

@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import Form from "../components/Form/Form";
-
+import { FaWhatsapp } from "react-icons/fa";
 const About = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -232,7 +232,7 @@ const About = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <BsFillTelephoneFill size={14} />
+                  <FaWhatsapp size={24} />
                   Chat Now
                 </motion.button>
               </Link>

@@ -10,7 +10,7 @@ import parallesBlackLaptop from "../../assets/HeroImg/home_illustriation2_d.webp
 import parallesBlackPhone from "../../assets/HeroImg/parallexBlackPhoneView.webp";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import Form from "../Form/Form";
-
+import { FaWhatsapp } from "react-icons/fa";
 // Custom hook to detect screen size
 const useScreenSize = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -149,7 +149,7 @@ export default function Invisiblegrill() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <BsFillTelephoneFill size={14} />
+                  <FaWhatsapp size={24} />
                   Chat Now
                 </motion.button>
               </Link>
