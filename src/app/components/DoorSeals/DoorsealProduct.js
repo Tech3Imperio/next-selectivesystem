@@ -68,7 +68,7 @@ const DoorSealProductsPanel = [
 //   },
 // };
 
-export default function DoorSealProduct() {
+export default function DoorsealProduct() {
   return (
     <div className="max-w-[85rem] mx-auto flex flex-col justify-center items-center pt-14">
       <div className="m-4">

@@ -1,4 +1,4 @@
-import DoorSeals from "@/app/components/DoorSeals/DoorSeals";
+import DoorSeals from "../../components/DoorSeals/DoorSeals";
 
 export const metadata = {
   title:

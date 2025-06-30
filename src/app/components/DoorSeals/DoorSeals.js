@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-import DoorSealProduct from "./page";
+import DoorSealProduct from "./DoorsealProduct";
 
 const DoorSeals = () => {
   // const videoRef = useRef(null);
@@ -201,5 +201,4 @@ const DoorSeals = () => {
     </main>
   );
 };
-
 export default DoorSeals;
