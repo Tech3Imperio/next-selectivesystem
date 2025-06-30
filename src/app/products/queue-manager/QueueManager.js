@@ -93,7 +93,6 @@ const QueueManager = () => {
   }, []);
 
   useEffect(() => {
-    // Scroll to the top of the component when it comes into view
     if (aluminiumRef.current) {
       aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -101,10 +100,7 @@ const QueueManager = () => {
 
   return (
     <main className="relative">
-      <div
-        // ref={aluminiumRef}
-        className="slider h-screen w-screen overflow-hidden relative"
-      >
+      <div className="slider h-screen w-screen overflow-hidden relative">
         {isMobile ? (
           <></>
         ) : (
